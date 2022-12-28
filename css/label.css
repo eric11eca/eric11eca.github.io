@@ -1,0 +1,100 @@
+@charset "utf-8";
+/* CSS Document */
+
+.label{
+    display:inline;
+    padding:.2em .6em .3em;
+    font-size:75%;
+    font-weight:700;
+    line-height:1;
+    color:#fff;
+    text-align:center;
+    white-space:nowrap;
+    vertical-align:baseline;
+    border-radius:.25em;
+    text-decoration:none;
+}
+
+a.label:focus,a.label:hover{
+    color:#fff;
+    text-decoration:none;
+    cursor:pointer
+}
+
+.label:empty{
+    display:none
+}
+
+.btn .label{
+    position:relative;
+    top:-1px
+}
+
+.label-default{
+    background-color:#777
+}
+
+.label-default[href]:focus,.label-default[href]:hover{
+    background-color:#5e5e5e;
+    text-decoration: none;
+}
+.label-primary{
+    background-color:#337ab7
+}
+.label-primary[href]:focus,.label-primary[href]:hover{
+    background-color:#286090
+}
+
+/* .label{
+    border:1px solid #000
+} */
+
+.label-journal {
+    background-color: #5789b6;
+}
+
+.label-arxiv {
+    background-color: #925846;
+}
+
+.label-conference {
+    background-color: #5b8f8c;
+}
+
+.label-workshop {
+    background-color: #9b59b6;
+}
+
+.label-video {
+    background-color: #335169;
+}
+
+.label-code {
+    background-color: #66720b;
+}	
+
+.label-poster {
+    background-color: #d27979;
+}
+
+.label-oral {
+    background-color: #26004d;
+}
+
+.label-best {
+    background-color: #e89b30;
+}
+
+.post-info-noncaps {
+    display: inline;
+    margin-right: 8px;
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    font-size: 14px;
+    line-height: 18px;
+    text-align: justify;
+    letter-spacing: 1px;
+    font-family: Lato, sans-serif;
+}
