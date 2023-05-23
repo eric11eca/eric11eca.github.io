@@ -1,6 +1,11 @@
 @charset "utf-8";
 /* CSS Document */
 
+.label_link {
+    text-decoration: none;
+    cursor:pointer
+}
+
 .label{
     display:inline;
     padding:.2em .6em .3em;
@@ -50,27 +55,27 @@ a.label:focus,a.label:hover{
 } */
 
 .label-journal {
-    background-color: #5789b6;
+    background-color: #107733;
 }
 
 .label-arxiv {
-    background-color: #925846;
-}
-
-.label-conference {
-    background-color: #5b8f8c;
-}
-
-.label-workshop {
     background-color: #9b59b6;
 }
 
+.label-conference {
+    background-color: #322288;
+}
+
+.label-workshop {
+    background-color: #925846;
+}
+
 .label-video {
-    background-color: #335169;
+    background-color: #ffd866;
 }
 
 .label-code {
-    background-color: #66720b;
+    background-color: #638fff;
 }	
 
 .label-poster {
@@ -78,11 +83,15 @@ a.label:focus,a.label:hover{
 }
 
 .label-oral {
-    background-color: #26004d;
+    background-color: #ddcc76;
 }
 
 .label-best {
     background-color: #e89b30;
+}
+
+.label-bib {
+    background-color: #785ef0;
 }
 
 .post-info-noncaps {
