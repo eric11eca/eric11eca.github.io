@@ -54,7 +54,7 @@
         <div class="about-block">
           <div class="site-name navigation-link"><strong><em class="italic-text-site">Zeming (Eric) chen</em></strong></div>
           <ul role="list" class="list-frontpage">
-            <li class="list-item-frontpage">Ph.D. student at <a href="https://nlp.epfl.ch/" target="_blank" class="description-link-highlight"><strong>EPFL NLP LAB</strong></a>. Supervised by <a href="https://atcbosselut.github.io/" target="_blank" class="description-link-highlight"><strong>Antoine Bosselut.</strong></a>
+            <li class="list-item-frontpage">Ph.D. student at the <a href="https://nlp.epfl.ch/" target="_blank" class="description-link-highlight"><strong>EPFL NLP LAB</strong></a>. Supervised by <a href="https://atcbosselut.github.io/" target="_blank" class="description-link-highlight"><strong>Antoine Bosselut.</strong></a>
             </li>
             <li class="list-item-frontpage-smaller"><strong><em>Goal</em></strong>: to help intelligent machines achieve a broad range of human cognitive abilities.</li>
             <li class="list-item-frontpage-smaller"><strong><em>Priors</em></strong>: Research Intern at Allen Institute for AI (AI2); Bachelor in Computer Science and Mathematics, <a href="https://www.rose-hulman.edu/" target="_blank" class="description-link-highlight"><strong>Rose-Hulman</strong></a>, <em>22.</em></li>
@@ -189,35 +189,29 @@
             </div>
           </div>
         </div>
+
+        <!-- News Section -->
         <div class="column-right w-col w-col-6">
-          <div data-w-id="93f354a5-dd01-6a72-ba58-b1447765f896" style="opacity:0" class="wf-section">
+          <div data-w-id="93f354a5-dd01-6a72-ba58-b1447765f896" id="news" style="opacity:0" class="wf-section">
             <div class="white-wrapper">
               <div class="center-div-full">
                 <h2 class="heading-tight"><strong><em>News</em></strong></h2>
               </div>
-              <ul role="list" class="list-news">
-                <li><strong>[May 2023]</strong>: Our new learning algorithm for knowledge & reasoning, called <a href="https://arxiv.org/abs/2305.06349" target="_blank">RECKONING</a>, is released on Arxiv.</li>
-                <li><strong>[May 2023]</strong>:Both of our papers, <a href="https://arxiv.org/abs/2212.10534" target="_blank">DISCO</a> and &quotLabel Bias Mitigation&quot are accepted by <a href="https://2023.aclweb.org/" target="_blank">ACL 2023</a> main conference!</li>
-                <li><strong>[Dec 2022]</strong>: Our new paper, <a href="https://arxiv.org/abs/2212.10534" target="_blank">DISCO</a>, is released on Arxiv.</li>
-                <li><strong>[Sep 2022]</strong>: Started my PhD at <a href="https://nlp.epfl.ch/" target="_blank">EPFL&#x27;s NLP Lab</a>.</li>
-                <li><strong>[Jul 2022]</strong>: Presented <a href="https://aclanthology.org/2022.naacl-main.234/" target="_blank">Curriculum Benchmark</a> at <a href="https://2022.naacl.org/" target="_blank">NAACL-HLT 2022</a>.</li>
-                <li><strong>[Jun 2022]</strong>: Started my internship at the <a href="https://allenai.org/" target="_blank">Allen Institute for AI (AI2)</a>.</li>
-                <li><strong>[Apr 2022]</strong>: Our <a href="https://aclanthology.org/2022.naacl-main.234/" target="_blank">Curriculum Benchmark</a> paper is accepted by the <a href="https://2022.naacl.org/" target="_blank">NAACL-HLT 2022</a> conference!</li>
-              </ul>
+              <ul role="list" class="list-news" id="news-items"></ul>
               <div class="div-block-10">
                 <a data-w-id="93f354a5-dd01-6a72-ba58-b1447765f8ba" href="#" class="show-hide-button w-button">Show &amp; Hide More News</a>
               </div>
-              <ul role="list" class="list-frontpage-shift-up">
-                <li><strong>[Feb 2022]</strong>: Presented my paper on &quot;<a href="https://ojs.aaai.org/index.php/AAAI/article/view/21294" target="_blank">Probing Linguistic Information</a>&quot; at the <a href="https://aaai.org/Conferences/AAAI-22/" target="_blank">AAAI 2022</a> conference.</li>
-                <li><strong>[Jan 2022]</strong>: I got an offer from <a href="https://allenai.org/" target="_blank">AI2</a> for research internship.</li>
-              </ul>
+              <ul role="list" class="list-frontpage-shift-up" id="news-items-old"></ul>
             </div>
           </div>
         </div>
+
       </div>
     </div>
 
     <div class="container-adjust-width w-container">
+      
+      <!-- Research Interest Section -->
       <div id="research" class="white-wrapper">
         <div class="center-div-full">
           <h2 class="heading-tight">Research Interests</h2>
@@ -235,6 +229,7 @@
         </div>
       </div>
       
+      <!-- Publications Section -->
       <div id="publications" data-current="Papers" data-easing="ease" data-duration-in="300" data-duration-out="100" class="w-tabs">
         <div class="wide-tabs w-tab-menu">
           <a data-w-tab="Papers" class="tab-tab-wide-left w-inline-block w-tab-link w--current">
@@ -258,14 +253,10 @@
                   <img width="2839" height="240" alt="" src="images/meta-kg.png" loading="lazy" srcset="images/meta-kg.png 500w, images/meta-kg.png 800w, images/meta-kg.png 1080w, images/meta-kg.png 1600w" sizes="(max-width: 479px) 100vw, (max-width: 767px) 89vw, 31vw" class="image-9"></div>
                 <div class="w-col w-col-8">
                   <div class="wf-section">
-                    <h2 class="heading-15"><b>RECKONING: Reasoning through Dynamic Knowledge Encoding</b></h2>
+                    <h2 class="heading-15">RECKONING: Reasoning through Dynamic Knowledge Encoding</h2>
                   </div>
                   <div class="wf-section">
-                    <a href="https://arxiv.org/abs/2305.06349" target="_blank"><span class="post-info label label-primary">pdf</span></a>
-                    <!-- <div class="post-info mobile-mask">|</div> -->
-                    <!-- <a href="https://github.com/eric11eca/disco" target="_blank"><span class="post-info label label-code">code</span></a> -->
-                    <!-- <div class="post-info mobile-mask">|</div> -->
-                    <!-- <a href="https://2023.aclweb.org" target="_blank"><span class="post-info label label-conference">conference</span></a> -->
+                    <a href="https://arxiv.org/abs/2305.06349" target="_blank" class="label_link"><span class="post-info label label-primary">pdf</span></a>
                   </div>
                   <br>
                   <div class="wf-section">
@@ -287,14 +278,14 @@
                   <img width="2839" height="240" alt="" src="images/distillation.png" loading="lazy" srcset="images/distillation-p-500.png 500w, images/distillation-p-800.png 800w, images/distillation-p-1080.png 1080w, images/distillation-p-1600.png 1600w" sizes="(max-width: 479px) 100vw, (max-width: 767px) 89vw, 31vw" class="image-9"></div>
                 <div class="w-col w-col-8">
                   <div class="wf-section">
-                    <h2 class="heading-15"><b>DISCO: Distilling Counterfactuals with Large Language Models</b></h2>
+                    <h2 class="heading-15">DISCO: Distilling Counterfactuals with Large Language Models</h2>
                   </div>
                   <div class="wf-section">
-                    <a href="https://arxiv.org/abs/2212.10534" target="_blank"><span class="post-info label label-primary">pdf</span></a>
+                    <a href="https://arxiv.org/abs/2212.10534" target="_blank" class="label_link"><span class="post-info label label-primary">pdf</span></a>
                     <div class="post-info mobile-mask">|</div>
-                    <a href="https://github.com/eric11eca/disco" target="_blank"><span class="post-info label label-code">code</span></a>
+                    <a href="https://github.com/eric11eca/disco" target="_blank" class="label_link"><span class="post-info label label-code">code</span></a>
                     <div class="post-info mobile-mask">|</div>
-                    <a href="https://2023.aclweb.org" target="_blank"><span class="post-info label label-conference">conference</span></a>
+                    <a href="https://2023.aclweb.org" target="_blank" class="label_link"><span class="post-info label label-conference">conference</span></a>
                   </div>
                   <br>
                   <div class="wf-section">
@@ -315,14 +306,14 @@
                 <div class="column-17 w-col w-col-4"><img width="2839" height="240" alt="" src="images/bias_sources.png" loading="lazy" srcset="images/bias_sources.png 500w, images/bias_sources.png 800w, images/bias_sources.png 1080w, images/bias_sources.png 1600w" sizes="(max-width: 479px) 100vw, (max-width: 767px) 89vw, 31vw" class="image-9"></div>
                 <div class="w-col w-col-8">
                   <div class="wf-section">
-                    <h2 class="heading-15"><b>Mitigating Label Biases for In-context Learning</b></h2>
+                    <h2 class="heading-15">Mitigating Label Biases for In-context Learning</h2>
                   </div>
                   <div class="wf-section">
                     <!-- <a href="https://arxiv.org/abs/2212.10534" target="_blank"><span class="post-info label label-primary">pdf</span></a>
                     <div class="post-info mobile-mask">|</div>
                     <a href="https://github.com/eric11eca/disco" target="_blank"><span class="post-info label label-code">code</span></a>
                     <div class="post-info mobile-mask">|</div> -->
-                    <a href="https://2023.aclweb.org" target="_blank"><span class="post-info label label-conference">conference</span></a>
+                    <a href="https://2023.aclweb.org" target="_blank" class="label_link"><span class="post-info label label-conference">conference</span></a>
                   </div>
                   <br>
                   <div class="wf-section">
@@ -343,16 +334,16 @@
                 <div class="column-17 w-col w-col-4"><img sizes="(max-width: 479px) 100vw, (max-width: 767px) 63vw, (max-width: 991px) 30vw, 300px" height="240" alt="" src="images/EvaluationPip.png" loading="lazy" srcset="images/EvaluationPip-p-500.png 500w, images/EvaluationPip-p-800.png 800w, images/EvaluationPip-p-1080.png 1080w, images/EvaluationPip-p-1600.png 1600w" class="image-9"></div>
                 <div class="w-col w-col-8">
                   <div class="wf-section">
-                    <h2 class="heading-15"><b>Curriculum: A Broad-Coverage Benchmark for Linguistic Phenomena in Natural Language Understanding</b></h2>
+                    <h2 class="heading-15">Curriculum: A Broad-Coverage Benchmark for Linguistic Phenomena in Natural Language Understanding</h2>
                   </div>
                   <div class="wf-section">
-                    <a href="https://aclanthology.org/2022.naacl-main.234/" target="_blank"><span class="post-info label label-primary">pdf</span></a>
+                    <a href="https://aclanthology.org/2022.naacl-main.234/" target="_blank" class="label_link"><span class="post-info label label-primary">pdf</span></a>
                     <div class="post-info mobile-mask">|</div>
-                    <a href="https://github.com/eric11eca/curriculum-ling" target="_blank"><span class="post-info label label-code">code</span></a>
+                    <a href="https://github.com/eric11eca/curriculum-ling" target="_blank" class="label_link"><span class="post-info label label-code">code</span></a>
                     <div class="post-info mobile-mask">|</div>
-                    <a href="https://aclanthology.org/2022.naacl-main.234.mp4" target="_blank"><span class="post-info label label-video">video</span></a>
+                    <a href="https://aclanthology.org/2022.naacl-main.234.mp4" target="_blank" class="label_link"><span class="post-info label label-video">video</span></a>
                     <div class="post-info mobile-mask">|</div>
-                    <a href="https://2022.naacl.org" target="_blank"><span class="post-info label label-conference">conference</span></a>
+                    <a href="https://2022.naacl.org" target="_blank" class="label_link"><span class="post-info label label-conference">conference</span></a>
                   </div>
                   <br>
                   <div class="wf-section">
@@ -378,14 +369,14 @@
                 <div class="column-16 w-col w-col-4 w-col-medium-4"><img sizes="(max-width: 479px) 100vw, (max-width: 767px) 63vw, (max-width: 991px) 30vw, 300px" height="240" alt="" src="images/inferencekg_probe.png" loading="lazy" srcset="images/inferencekg_probe-p-500.png 500w, images/inferencekg_probe-p-800.png 800w, images/inferencekg_probe-p-1080.png 1080w, images/inferencekg_probe-p-1600.png 1600w, images/inferencekg_probe-p-2000.png 2000w, images/inferencekg_probe-p-2600.png 2600w, images/inferencekg_probe-p-3200.png 3200w" class="image-9"></div>
                 <div class="w-col w-col-8 w-col-medium-8">
                   <div class="wf-section">
-                    <h2 class="heading-15"><b>Probing Linguistic Information For Logical Inference In Pre-trained Language Models</b></h2>
+                    <h2 class="heading-15">Probing Linguistic Information For Logical Inference In Pre-trained Language Models</h2>
                   </div>
                   <div class="wf-section">
-                    <a href="https://arxiv.org/abs/2112.01753" target="_blank"><span class="post-info label label-primary">pdf</span></a>
+                    <a href="https://arxiv.org/abs/2112.01753" target="_blank" class="label_link"><span class="post-info label label-primary">pdf</span></a>
                     <div class="post-info mobile-mask">|</div>
-                    <a href="https://github.com/eric11eca/inference-information-probing" target="_blank"><span class="post-info label label-code">code</span></a>
+                    <a href="https://github.com/eric11eca/inference-information-probing" target="_blank" class="label_link"><span class="post-info label label-code">code</span></a>
                     <div class="post-info mobile-mask">|</div>
-                    <a href="https://aaai.org/Conferences/AAAI-22/" target="_blank"><span class="post-info label label-conference">conference</span></a>
+                    <a href="https://aaai.org/Conferences/AAAI-22/" target="_blank" class="label_link"><span class="post-info label label-conference">conference</span></a>
                   </div>
                   <br>
                   <div class="wf-section">
@@ -411,14 +402,14 @@
                 <div class="column-16 w-col w-col-4 w-col-medium-4"><img sizes="(max-width: 479px) 100vw, (max-width: 767px) 63vw, (max-width: 991px) 30vw, 300px" height="240" alt="" src="images/NeuralLog.png" loading="lazy" srcset="images/NeuralLog-p-500.png 500w, images/NeuralLog-p-800.png 800w, images/NeuralLog-p-1080.png 1080w, images/NeuralLog-p-1600.png 1600w" class="image-9"></div>
                 <div class="w-col w-col-8 w-col-medium-8">
                   <div class="wf-section">
-                    <h2 class="heading-15"><b>NeuralLog: Natural Language Inference with Joint Neural and Logical Reasoning</b></h2>
+                    <h2 class="heading-15">NeuralLog: Natural Language Inference with Joint Neural and Logical Reasoning</h2>
                   </div>
                   <div class="wf-section">
-                    <a href="https://aclanthology.org/2021.starsem-1.7/" target="_blank"><span class="post-info label label-primary">pdf</span></a>
+                    <a href="https://aclanthology.org/2021.starsem-1.7/" target="_blank" class="label_link"><span class="post-info label label-primary">pdf</span></a>
                     <div class="post-info mobile-mask">|</div>
-                    <a href="https://github.com/eric11eca/NeuralLog" target="_blank"><span class="post-info label label-code">code</span></a>
+                    <a href="https://github.com/eric11eca/NeuralLog" target="_blank" class="label_link"><span class="post-info label label-code">code</span></a>
                     <div class="post-info mobile-mask">|</div>
-                    <a href="https://sites.google.com/view/starsem2021/home" target="_blank"><span class="post-info label label-conference">conference</span></a>
+                    <a href="https://sites.google.com/view/starsem2021/home" target="_blank" class="label_link"><span class="post-info label label-conference">conference</span></a>
                   </div>
                   <br>
                   <div class="wf-section">
@@ -439,16 +430,16 @@
                 <div class="column-16 w-col w-col-4 w-col-medium-4"><img sizes="(max-width: 479px) 100vw, (max-width: 767px) 71vw, 31vw" height="240" alt="" src="images/udep2mono.png" loading="lazy" srcset="images/udep2mono-p-500.png 500w, images/udep2mono.png 536w" class="image-9"></div>
                 <div class="w-col w-col-8 w-col-medium-8">
                   <div class="wf-section">
-                    <h2 class="heading-15"><b>Monotonicity Marking from Universal Dependency Trees</b></h2>
+                    <h2 class="heading-15">Monotonicity Marking from Universal Dependency Trees</h2>
                   </div>
                   <div class="wf-section">
-                    <a href="https://aclanthology.org/2021.iwcs-1.12/" target="_blank"><span class="post-info label label-primary">pdf</span></a>
+                    <a href="https://aclanthology.org/2021.iwcs-1.12/" target="_blank" class="label_link"><span class="post-info label label-primary">pdf</span></a>
                     <div class="post-info mobile-mask">|</div>
-                    <a href="https://github.com/eric11eca/Udep2Mono" target="_blank"><span class="post-info label label-code">code</span></a>
+                    <a href="https://github.com/eric11eca/Udep2Mono" target="_blank" class="label_link"><span class="post-info label label-code">code</span></a>
                     <div class="post-info mobile-mask">|</div>
-                    <a href="https://iwcs2021.github.io/index.html" target="_blank"><span class="post-info label label-conference">conference</span></a>
+                    <a href="https://iwcs2021.github.io/index.html" target="_blank" class="label_link"><span class="post-info label label-conference">conference</span></a>
                     <div class="post-info mobile-mask">|</div>
-                    <a href="https://iwcs2021.github.io/proceedings.html" target="_blank"><span class="post-info label label-best">award</span></a>
+                    <a href="https://iwcs2021.github.io/proceedings.html" target="_blank" class="label_link"> <span class="post-info label label-best">award</span></a>
                   </div>
                   <br>
                   <div class="wf-section">
@@ -459,7 +450,7 @@
                     </div>
                     <br><br>
                     <font color="firebrick">
-                      <h4><b>Outstanding Paper Award</b></h4>
+                      <h4><b>Outstanding Paper Award 🏆</b></h4>
                     </font>
                     <b>TL;DR: </b> This paper presents a system that automatically annotates monotonicity information based on Universal Dependency parse trees, which utilizes surface-level monotonicism facts about quantifiers, lexical items, and token-level polarity information. Evaluations on shwo that the proposed system achieves SOTA performance.
                   </div>
@@ -472,12 +463,12 @@
                   <div class="column-16 w-col w-col-4 w-col-medium-4"><img sizes="125.54167175292969px" height="240" alt="" src="images/att_tree_lstm.png" loading="lazy" srcset="images/att_tree_lstm-p-500.png 500w, images/att_tree_lstm-p-800.png 800w, images/att_tree_lstm-p-1080.png 1080w, images/att_tree_lstm-p-1600.png 1600w, images/att_tree_lstm.png 1848w" class="image-9"></div>
                   <div class="w-col w-col-8 w-col-medium-8">
                     <div class="wf-section">
-                      <h2 class="heading-15"><b>Attentive Tree-structured Network for Monotonicity Reasoning</b></h2>
+                      <h2 class="heading-15">Attentive Tree-structured Network for Monotonicity Reasoning</h2>
                     </div>
                     <div class="wf-section">
-                      <a href="https://aclanthology.org/2021.naloma-1.3/" target="_blank"><span class="post-info label label-primary">pdf</span></a>
+                      <a href="https://aclanthology.org/2021.naloma-1.3/" target="_blank" class="label_link"><span class="post-info label label-primary">pdf</span></a>
                       <div class="post-info mobile-mask">|</div>
-                      <a href="https://typo.uni-konstanz.de/naloma21/index.html" target="_blank"><span class="post-info label label-workshop">Workshop</span></a>
+                      <a href="https://typo.uni-konstanz.de/naloma21/index.html" target="_blank" class="label_link"><span class="post-info label label-workshop">Workshop</span></a>
                     </div>
                     <br>
                     <div class="wf-section">
@@ -577,7 +568,7 @@
 
   <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=63a7cef8a56bae66b476d828" type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
   <script src="js/webflow.js" type="text/javascript"></script>
-  <!-- <a rel="me" href="https://sigmoid.social/@natolambert"></a> -->
+  <script src="js/update.js" type="text/javascript"></script>
 
 </body>
 </html>

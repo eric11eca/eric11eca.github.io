@@ -1,0 +1,113 @@
+{
+  "newsItems": [
+    {
+      "date": "May 2023",
+      "content": "Our new learning algorithm for knowledge & reasoning, called RECKONING, is released on Arxiv.",
+      "links": [
+        {
+          "text": "RECKONING",
+          "url": "https://arxiv.org/abs/2305.06349"
+        }
+      ]
+    },
+    {
+      "date": "May 2023",
+      "content": "Both of our papers, DISCO and \"Label Bias Mitigation\" are accepted by ACL 2023 main conference!",
+      "links": [
+        {
+          "text": "DISCO",
+          "url": "https://arxiv.org/abs/2212.10534"
+        },
+        {
+          "text": "ACL 2023",
+          "url": "https://2023.aclweb.org/"
+        }
+      ]
+    },
+    {
+      "date": "Dec 2022",
+      "content": "Our new paper, DISCO, is released on Arxiv.",
+      "links": [
+        {
+          "text": "DISCO",
+          "url": "https://arxiv.org/abs/2212.10534"
+        }
+      ]
+    },
+    {
+      "date": "Sep 2022",
+      "content": "Started my PhD at EPFL's NLP Lab.",
+      "links": [
+        {
+          "text": "EPFL's NLP Lab",
+          "url": "https://nlp.epfl.ch/"
+        }
+      ]
+    },
+    {
+      "date": "Jul 2022",
+      "content": "Presented Curriculum Benchmark at NAACL-HLT 2022.",
+      "links": [
+        {
+          "text": "Curriculum Benchmark",
+          "url": "https://aclanthology.org/2022.naacl-main.234/"
+        },
+        {
+          "text": "NAACL-HLT 2022",
+          "url": "https://2022.naacl.org/"
+        }
+      ]
+    },
+    {
+      "date": "Jun 2022",
+      "content": "Started my internship at the Allen Institute for AI (AI2).",
+      "links": [
+        {
+          "text": "Allen Institute for AI (AI2)",
+          "url": "https://allenai.org/"
+        }
+      ]
+    }
+  ],
+  "oldNewsItems": [
+    {
+      "date": "Apr 2022",
+      "content": "Our Curriculum Benchmark paper is accepted by the NAACL-HLT 2022 conference!",
+      "links": [
+        {
+          "text": "Curriculum Benchmark",
+          "url": "https://aclanthology.org/2022.naacl-main.234/"
+        },
+        {
+          "text": "NAACL-HLT 2022",
+          "url": "https://2022.naacl.org/"
+        }
+      ]
+    },
+    {
+      "date": "Feb 2022",
+      "content": "Presented my paper on \"Probing Linguistic Information\" at the AAAI 2022 conference.",
+      "links": [
+        {
+          "text": "Probing Linguistic Information",
+          "url": "https://ojs.aaai.org/index.php/AAAI/article/view/21294"
+        },
+        {
+          "text": "AAAI 2022",
+          "url": "https://aaai.org/Conferences/AAAI-22/"
+        }
+      ]
+    },
+    {
+      "date": "Jan 2022",
+      "content": "I got an offer from AI2 for research internship.",
+      "links": [
+        {
+          "text": "AI2",
+          "url": "https://allenai.org/"
+        }
+      ]
+    }
+  ]
+}
+
