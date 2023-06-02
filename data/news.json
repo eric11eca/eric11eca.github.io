@@ -2,7 +2,7 @@
   "newsItems": [
     {
       "date": "May 2023",
-      "content": "Our new learning algorithm for knowledge & reasoning, called RECKONING, is released on Arxiv.",
+      "content": "🔥 Our new learning algorithm for knowledge & reasoning, called RECKONING, is released on Arxiv.",
       "links": [
         {
           "text": "RECKONING",
@@ -12,11 +12,15 @@
     },
     {
       "date": "May 2023",
-      "content": "Both of our papers, DISCO and \"Label Bias Mitigation\" are accepted by ACL 2023 main conference!",
+      "content": "🔥 Both of our papers, DISCO and Label Bias Mitigation are accepted by ACL 2023 main conference!",
       "links": [
         {
           "text": "DISCO",
           "url": "https://arxiv.org/abs/2212.10534"
+        },
+        {
+          "text": "Label Bias Mitigation",
+          "url": "https://arxiv.org/abs/2305.19148"
         },
         {
           "text": "ACL 2023",
