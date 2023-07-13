@@ -1,6 +1,16 @@
 {
   "newsItems": [
     {
+      "date": "July 2023",
+      "content": "🔥 I received an Outstanding Reviewer Award for ACL 2023",
+      "links": [
+        {
+          "text": "Outstanding Reviewer Award",
+          "url": "https://2023.aclweb.org/program/best_reviewers/"
+        }
+      ]
+    },
+    {
       "date": "May 2023",
       "content": "🔥 Our new learning algorithm for knowledge & reasoning, called RECKONING, is released on Arxiv.",
       "links": [
