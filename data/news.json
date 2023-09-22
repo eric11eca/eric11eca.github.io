@@ -1,6 +1,20 @@
 {
   "newsItems": [
     {
+      "date": "Sep 2023",
+      "content": "🔥 Our new paper, RECKONING on inference-time knowlegde encoding for reaosning is accepted by NeurIPS 2023 main track!",
+      "links": [
+        {
+          "text": "RECKONING",
+          "url": "https://arxiv.org/abs/2305.06349"
+        },
+        {
+          "text": "NeurIPS 2023",
+          "url": "https://nips.cc/"
+        }
+      ]
+    },
+    {
       "date": "July 2023",
       "content": "🔥 I received an Outstanding Reviewer Award for ACL 2023",
       "links": [
