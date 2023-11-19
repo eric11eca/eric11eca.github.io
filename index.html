@@ -16,12 +16,13 @@
   <meta charset="utf-8">
   <title>Zeming Chen (Eric)</title>
 
-  <meta content="Zeming or Eric is a researcher, engineer, musician, and a fan of hiking. Find research on large language models, natural language processing, semantics, and more." name="description">
+  <meta content="Zeming or Eric is a researcher, engineer, musician, and a fan of hiking. Find research on large language models, natural language reasoning, semantics, and more." name="description">
   <meta content="Eric Zeming Chen" property="og:title">
-  <meta content="Zeming or Eric is a researcher, engineer, musician, and a fan of hiking. Find research on large language models, natural language processing, semantics, and more." property="og:description">
+  <meta content="Zeming or Eric is a researcher, engineer, musician, and a fan of hiking. Find research on large language models, natural language reasoning, semantics, and more." property="og:description">
   <meta content="Eric Zeming Chen" property="twitter:title">
-  <meta content="Zeming or Eric is a researcher, engineer, musician, and a fan of hiking. Find research on large language models, natural language processing, semantics, and more." property="twitter:description">
+  <meta content="Zeming or Eric is a researcher, engineer, musician, and a fan of hiking. Find research on large language models, natural language reasoning, semantics, and more." property="twitter:description">
   <meta property="og:type" content="website">
+
   <meta content="summary_large_image" name="twitter:card">
   <meta content="width=device-width, initial-scale=1" name="viewport">
   <meta content="Webflow" name="generator">
@@ -30,6 +31,7 @@
   <link href="css/webflow.css" rel="stylesheet" type="text/css">
   <link href="css/chens-personal-site.webflow.css" rel="stylesheet" type="text/css">
   <link href="css/label.css" rel="stylesheet" type="text/css">
+  <link href="css/timeline.css" rel="stylesheet" type="text/css">
 
   <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" type="text/javascript"></script>
   <script type="text/javascript">WebFont.load({  google: {    families: ["Lato:100,100italic,300,300italic,400,400italic,700,700italic,900,900italic","Merriweather:300,300italic,400,400italic,700,700italic,900,900italic","Exo:100,100italic,200,200italic,300,300italic,400,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic"]  }});</script>
@@ -43,15 +45,15 @@
 <body>
   <div data-collapse="small" data-animation="default" data-duration="400" data-easing="ease-in" data-easing2="ease-out" data-no-scroll="1" role="banner" class="navigation-bar w-nav">
     <div class="container w-container">
-      <a href="index.html" aria-current="page" class="brand w-nav-brand w--current"><img src="images/zc_main.png" loading="lazy" alt="Modern site logo." height="50" sizes="65px, (max-width: 991px) 2vw, 15px"  class="icon-nav-bar">
-        <div class="site-name navigation-link">Zeming Chen</div>
+      <a href="index.html" aria-current="page" class="brand w-nav-brand w--current">
+        <img src="images/zc2.png" loading="lazy" alt="Modern site logo." height="50" sizes="65px, (max-width: 991px) 2vw, 15px"  class="icon-nav-bar">
+        <div class="site-name navigation-link book-heading"><strong><em class="book-heading">Zeming (Eric) chen</em></strong></div>
       </a>
       <nav role="navigation" class="navigation-menu w-nav-menu">
-        <a href="#research" class="navigation-link w-nav-link">Research</a>
-        <a href="#publications" class="navigation-link w-nav-link">Publications</a>
-        <!-- <a href="https://democraticrobots.substack.com/" target="_blank" class="substack-link w-nav-link">Democratizing Automation </a> -->
-        <!-- <a href="about-me.html" class="navigation-link w-nav-link">About Me</a> -->
-        <a href="#about_me" class="navigation-link w-nav-link">About Me</a>
+        <a href="#about-me" class="navigation-link w-nav-link">About Me</a>
+        <a href="#news-items" class="navigation-link w-nav-link">News</a>
+        <!-- <a href="#research" class="navigation-link w-nav-link">Research</a> -->
+        <a href="#paper-items" class="navigation-link w-nav-link">Publications</a>
       </nav>
       <div class="w-nav-button">
         <div class="w-icon-nav-menu"></div>
@@ -60,149 +62,96 @@
   </div>
   <div class="content-wrapper">
     <div class="container-adjust-width w-container">
-      <div class="about-wrapper"><img src="images/ai2.jpg" srcset="images/ai2-p-500.jpg 500w, images/ai2-p-800.jpg 800w, images/ai2-p-1080.jpg 1080w, images/ai2-p-1600.jpg 1600w, images/ai2.jpg 1853w" sizes="(max-width: 479px) 100vw, (max-width: 767px) 42vw, 300px" alt="" class="circle-profile-small-tight">
+      <div class="about-wrapper">
+        <!-- <img src="images/ai2.jpg" srcset="images/ai2-p-500.jpg 500w, images/ai2-p-800.jpg 800w, images/ai2-p-1080.jpg 1080w, images/ai2-p-1600.jpg 1600w, images/ai2.jpg 1853w" sizes="(max-width: 479px) 100vw, (max-width: 767px) 42vw, 300px" alt="" class="circle-profile-small-tight"> -->
+        <img src="images/epfl-pro.jpg" srcset="images/epfl-pro.jpg 500w, images/epfl-pro.jpg 800w, images/epfl-pro.jpg 1080w, images/epfl-pro.jpg 1600w, images/epfl-pro.jpg 1853w" sizes="(max-width: 479px) 100vw, (max-width: 767px) 42vw, 300px" alt="" class="circle-profile-small-tight">
         <div class="about-block">
-          <div class="site-name navigation-link"><strong><em class="italic-text-site">Zeming (Eric) chen</em></strong></div>
+          <div class="site-name navigation-link"><strong><em class="book-heading">Zeming (Eric) chen</em></strong></div>
           <ul role="list" class="list-frontpage">
-            <li class="list-item-frontpage">Ph.D. candidate at the <a href="https://nlp.epfl.ch/" target="_blank" class="description-link-highlight"><strong>EPFL NLP LAB</strong></a>. Supervised by Prof. <a href="https://atcbosselut.github.io/" target="_blank" class="description-link-highlight"><strong>Antoine Bosselut.</strong></a>
-            </li>
-            <li class="list-item-frontpage-smaller"><strong><em>Goal</em></strong>: to help intelligent machines achieve a broad range of human cognitive abilities.</li>
+            <li class="list-item-frontpage">Ph.D. candidate at the <a href="https://nlp.epfl.ch/" target="_blank" class="description-link-highlight"><strong>EPFL NLP LAB</strong></a>. Supervised by Prof. <a href="https://atcbosselut.github.io/" target="_blank" class="description-link-highlight"><strong>Antoine Bosselut.</strong></a></li>
+            <li class="list-item-frontpage-smaller"><strong><em>Goal</em></strong>: Engineer & interpret intelligent agents with a broad range of human cognitive abilities (learn, comprehend, reason, plan, solve problems).</li>
+            <li class="list-item-frontpage-smaller"><strong><em>Research</em></strong>: Large Language Model, Complex Reasoning, Meta-Learning, Interpretability & Evaluation, Semantics & Inference</li>
             <li class="list-item-frontpage-smaller"><strong><em>Priors</em></strong>: Research Intern at Allen Institute for AI (AI2); Bachelor in Computer Science and Mathematics, <a href="https://www.rose-hulman.edu/" target="_blank" class="description-link-highlight"><strong>Rose-Hulman</strong></a>, <em>22.</em></li>
-            <li class="list-item-frontpage-smaller"><strong><em>Contact</em></strong>: Please feel free to say hi through my email or LinkedIn!</li>
+            <li class="list-item-frontpage-smaller"><strong><em>Contact</em></strong>: Please feel free to say hi through my email, twitter, or LinkedIn!</li>
           </ul>
           <div class="social-link-group-tight">
-            <a href="https://twitter.com/ZemingChen5" target="_blank" class="social-icon-link-pad w-inline-block"><img src="images/social-18.svg" width="30" alt="Twitter Logo." class="icon-image"></a>
+            <a href="https://twitter.com/eric_zemingchen" target="_blank" class="social-icon-link-pad w-inline-block"><img src="images/social-18.svg" width="30" alt="Twitter Logo." class="icon-image"></a>
+            <a href="https://www.semanticscholar.org/author/Zeming-Chen/2111435018epfl" target="_blank" class="social-icon-link-pad w-inline-block"><img src="images/semantic-scholar.svg" width="30" alt="Twitter Logo." class="icon-image"></a>
             <a href="https://scholar.google.com/citations?user=-gqyv8cAAAAJ&amp;hl=en" target="_blank" class="social-icon-link-pad w-inline-block"><img src="images/google-scholar.svg" width="30" alt="Google Scholar Logo." class="icon-image"></a>
             <a href="https://github.com/eric11eca" target="_blank" class="social-icon-link-pad w-inline-block"><img src="images/social-33.svg" width="30" alt="Github Logo." class="icon-image"></a>
             <a href="https://www.linkedin.com/in/zeming-chen-769985123/" target="_blank" class="social-icon-link-pad w-inline-block"><img src="images/social-09.svg" width="30" alt="LinkedIn Logo." class="icon-image"></a>
             <a href="cv.html" class="social-icon-cv-link-pad w-inline-block"><img src="images/cv.svg" width="33" alt="A link to my CV page." class="icon-image"></a>
             <a href="mailto:zeming.chen@epfl.ch?subject=%5BWebsite%5D%20Hi%20Zeming!" class="social-icon-link-pad w-inline-block"><img src="images/social-30.svg" width="30" alt="Email logo." class="icon-image"></a>
           </div>
-          <div class="space"></div>
-          <div class="columns-front-page w-row">
-            <div class="w-col w-col-6">
-              <h4 class="small-heading">Featured Posts:</h4>
-              <div class="feature-posts-list-2 w-dyn-list">
-                <div role="list" class="w-dyn-items">
-                  <div role="listitem" class="w-dyn-item">
-                    <a href="#" class="small-post-link-header"></a>
-                  </div>
-                </div>
-                <div class="w-dyn-empty">
-                  <p>No items found.</p>
-                </div>
-              </div>
-            </div>
-            <div class="w-col w-col-6">
-              <h4 class="small-heading">Research Directions:</h4>
-              <div class="collection-list-wrapper-8 w-dyn-list">
-                <div role="list" class="collection-list-9 w-dyn-items">
-                  <div role="listitem" class="w-dyn-item">
-                    <a href="#" class="tag-link"></a>
-                  </div>
-                </div>
-                <div class="w-dyn-empty">
-                  <div>No items found.</div>
-                </div>
-              </div>
-              <div class="space"></div>
-              <p class="built-with-webflow">Built with <a target="_blank" href="https://webflow.com" class="webflow-link"> Webflow</a>
-              </p>
-            </div>
-          </div>
         </div>
       </div>
       <div class="columns-7 w-row">
         <div class="column-left w-col w-col-6">
           <div data-w-id="93f354a5-dd01-6a72-ba58-b1447765f805" style="opacity:0" class="section-center wf-section">
-            <div class="white-wrapper" id="about_me">
+            <div class="white-wrapper" id="about-me">
               <div class="center-div-full">
                 <h2 class="heading-tight"><strong><em>About me</em></strong></h2>
               </div>
               <div class="div-block-43">
-                <div data-duration-in="300" data-duration-out="100" data-current="Short" data-easing="ease" class="w-tabs">
+                <div data-duration-in="300" data-duration-out="100" data-current="Bio" data-easing="ease" class="w-tabs">
                   <div class="tabs-menu w-tab-menu">
-                    <a data-w-tab="Short" class="tab-tab w-inline-block w-tab-link w--current">
-                      <div>Short</div>
+                    <a data-w-tab="Bio" class="tab-tab w-inline-block w-tab-link w--current">
+                      <div>Bio</div>
                     </a>
-                    <a data-w-tab="Long" class="tab-tab w-inline-block w-tab-link">
-                      <div>Long</div>
+                    <a data-w-tab="Research" class="tab-tab w-inline-block w-tab-link">
+                      <div>Research</div>
                     </a>
                     <a data-w-tab="Awards" class="tab-tab w-inline-block w-tab-link">
                       <div>Awards</div>
                     </a>
-                    <a data-w-tab="Services" class="tab-tab tab-mobile-remove w-inline-block w-tab-link">
-                      <div>Services</div>
+                    <a data-w-tab="Service" class="tab-tab tab-mobile-remove w-inline-block w-tab-link">
+                      <div>Service</div>
                     </a>
                     <a data-w-tab="Fun" class="tab-link-fun w-inline-block w-tab-link">
                       <div>Fun</div>
                     </a>
                   </div>
                   <div class="w-tab-content">
-                    <div data-w-tab="Short" class="tab-pane-short w-tab-pane w--tab-active">
+                    <!-- Bio Section-->
+                    <div data-w-tab="Bio" class="tab-pane-short w-tab-pane w--tab-active">
                       <div class="w-richtext">
-                        <p>Hello! I am a PhD student at <a href="https://nlp.epfl.ch/" target="_blank">EPFL&#x27;s NLP Lab</a>, supervised by <a href="https://atcbosselut.github.io/" target="_blank">Dr. Antoine Bosselut</a>. My primary study covers NLP and Machine Learning. Currently, I focus on complex reasoning for Lagre Language Models and lead an interdisciplinary project on pretraining and developing large language models for the medical and clinical domains.</p>
-                        <p>I completed my research internship at the <a href="https://allenai.org/" target="_blank">Allen Institute for AI </a>(AI2) working with <a href="https://www.nlp-kyle.com/" target="_blank">Kyle Richardson</a>. I am currently in collaboration with AI2.</p>
-                        <p>I received my bachelor in 2022, at the <a href="https://www.rose-hulman.edu/" target="_blank">Rose-Hulman Institute of Technology</a>, with a double major in Computer Science and Mathematics. </p>
+                        <p>Hello! I am a PhD student at <a href="https://nlp.epfl.ch/" target="_blank">EPFL NLP Lab</a>, supervised by <a href="https://atcbosselut.github.io/" target="_blank">Dr. Antoine Bosselut</a>. My primary study covers NLP and Machine Learning.</p>
+                        <p>Currently, I focus on complex reasoning over natural language and large language model development. I am leading an interdisciplinary project on developing a 70B large language model for the medical and clinical domains.</p></p>
+                        <p>I completed my research internship at the <a href="https://allenai.org/" target="_blank">Allen Institute for AI </a>(AI2), supervised by <a href="https://www.nlp-kyle.com/" target="_blank">Kyle Richardson</a> and <a href="https://allenai.org/team/ashishs" target="_blank">Ashish Sabharwal</a>. I am currently in collaboration with AI2.</p>
+                        <p>I received my bachelor's in 2022 at the <a href="https://www.rose-hulman.edu/" target="_blank">Rose-Hulman Institute of Technology</a>, with a double major in Computer Science and Mathematics. I learned to do research in NLP from <a href="https://iulg.sitehost.iu.edu/moss/" target="_blank">Larry Moss </a> (Indiana University) and <a href="https://www.rose-hulman.edu/~wollowsk/" target="_blank">Michael Wollowski</a>.</p>
                       </div>
                     </div>
-                    <div data-w-tab="Long" class="tab-pane-long w-tab-pane">
-                      <div href="" class="w-richtext" id="short-intro">
-                        <p>Hello! I am a PhD student at <a href="https://nlp.epfl.ch/" target="_blank">EPFL&#x27;s NLP Lab</a>, supervised by <a href="https://atcbosselut.github.io/" target="_blank">Dr. Antoine Bosselut</a>. My primary study covers NLP and Machine Learning.</p>
-                        <p>I completed my research internship at the <a href="https://allenai.org/" target="_blank">Allen Institute for AI </a>(AI2). I was a member of the Aristo group and supervised by <a href="https://www.nlp-kyle.com/" target="_blank">Kyle Richardson</a> and <a href="https://allenai.org/team/ashishs" target="_blank">Ashish Sabharwal</a>. I worked on distilling counterfactual knowledge from large general language models. I am currently in collaboration with AI2.</p>
-                        <p>Prior to EPFL, I was a proud member of Rose-Hulman Computer Science and Software Engineering 2022 where I learned to do research in NLP with <a href="https://iulg.sitehost.iu.edu/moss/" target="_blank">Larry Moss </a>from Indiana University and <a href="https://www.rose-hulman.edu/~wollowsk/" target="_blank">Michael Wollowski</a>. At Rose-Hulman, I was also the lead software developer for the Rose-Hulman Mars Rover Team.</p>
-                        <p>My primary research interest are natural language understanding and reasoning. The fundamental goal of my Ph.D. research is to help intelligent machines achieve a broad range of human cognitive abilities such as learning, comprehension, and reasoning. In particular, I am interested in neural-symbolic reasoners, knowledge representation, meta-learning and life-long learning, improving and probing language models. I wish to contribute to human-centered AI technologies that can benefit human life.</p>
-                      </div>
+
+                    <!-- Research Section-->
+                    <div data-w-tab="Research" class="tab-pane-long w-tab-pane">
+                      <ol role="list" class="list">
+                        <li><em class="italic-text-5">Neuro-symbolic reasoning methods</em>: I am interested in how symbolic methods and statistic learning can jointly teach models to conduct complex reasoning on knowledge and information. This also covers how models can acquire, encode, and apply knowledge to solve various problems.</li>
+                        <li><em class="italic-text-4">Large language model NLP</em>: I am fascinated by how large language models can encode vast amounts of information and generate fluent text. I want to explore how these general-purpose models can be used in downstream NLP tasks such as open-domain QA and commonsense reasoning. I am interested in building systems that allow general-purpose models to be used in a dynamic, real-life setting.</li>
+                        <li><em class="italic-text-6">Interpretability, benchmarking, and verified AI</em>: I want to develop new tools and theories that help interpret and probe model behaviors. I also want to build benchmarks that can evaluate models' ability and diagnose potential issues in data and learning, especially asses how reliable a model can be in real-life use cases. I recently started to explore the idea of verified AI, where the goal is to have provable assurances of correctness concerning mathematically-specified requirements.</li>
+                        <li><em class="italic-text-3">Design new learning algorithms</em>: How machines can learn to understand and reason similarly to human learning is still open for exploration. I want to design new learning algorithms that help models learn continually, actively, comprehensively, and transparently by drawing inspiration from human cognition. </li>
+                      </ol>
                     </div>
+
+                    <!-- Awards Section-->
                     <div data-w-tab="Awards" class="tab-pane-honors w-tab-pane" target="_blank">
-                      <ul role="list" class="list-news">
-                        <li>
-                          <a href="https://2023.aclweb.org/program/best_reviewers/" target="_blank">Outstanding Reviewer Award</a>: The 61st Annual Meeting of the Association for Computational Linguistics (ACL) 2023
-                        </li>
-                        <li>
-                          <a href="https://iwcs2021.github.io/proceedings.html" target="_blank">Outstanding Paper Award</a>: 14th International Conference on Computational Semantics (IWCS) 2021
-                        </li>
-                        <li>
-                          <a href="https://www.rose-hulman.edu/news/2022/dedication-support-systems-and-hard-work-help-students-achieve-academic-success.html" target="_blank">Frank Young Outstanding Scholarship Award</a>: Rose-Hulman Institute of Technology, CSSE, 2022
-                        </li>
-                        <li>
-                          <a href="https://www.rose-hulman.edu/news/2022/dedication-support-systems-and-hard-work-help-students-achieve-academic-success.html" target="_blank">Michael Atkins Outstanding Senior Thesis Award</a> : Rose-Hulman Institute of Technology, CSSE, 2022
-                        </li>
-                      </ul>
+                      <ul role="list" class="list-news" id="award-items"></ul>
                     </div>
-                    <div data-w-tab="Services" class="tab-pane-sevices w-tab-pane">
-                      <ul role="list" class="list-news">
-                        <li>
-                          <a href="https://aaai.org/aaai-conference/" target="_blank">AAAI 2024</a> reviewer: 6 reviews
-                        </li>
-                        <li>
-                          <a href="https://2023.emnlp.org/" target="_blank">EMNLP 2023</a> reviewer: 5 reviews
-                        </li>
-                        <li>
-                          <a href="https://2023.aclweb.org/program/best_reviewers/" target="_blank">ACL 2023</a> reviewer: 6 reviews
-                        </li>
-                        <li>
-                          <a href="https://www.springer.com/journal/10849" target="_blank">Journal of Logic, Language and Information</a> 2023 reviewer: 2 reviews
-                        </li>
-                        <li>
-                          <a href="https://aaai.org/Conferences/AAAI-23/" target="_blank">AAAI 2023</a> reviewer: 3 reviews
-                        </li>
-                        <li>
-                          <a href="https://aaai.org/Magazine/magazine.php" target="_blank">AAAI Magazine</a> 2022 reviewer: 1 review
-                        </li>
-                        <li>
-                          <a href="https://aaai.org/Magazine/magazine.php" target="_blank">AAAI Magazine</a> 2021 reviewer: 3 reviews
-                        </li>
-                      </ul>
+
+                    <!-- Service Section-->
+                    <div data-w-tab="Service" class="tab-pane-sevices w-tab-pane">
+                      <ul role="list" class="list-news" id="service-items"></ul>
                     </div>
+
+                    <!-- Fun Section-->
                     <div data-w-tab="Fun" class="w-tab-pane">
                       <div class="w-richtext">
-                        <p>In my free time, I enjoy doing many different things! Too me, work-life balance is an important element of everyone&#x27;s career journey.</p>
+                        <p>In my free time, I enjoy doing many different things! Work-life balance is an important for everyone&#x27;s scientific career.</p>
                         <p>I am a musician. I play five different instruments: piano, flute, saxophone, piccolo, and cello. I enjoy playing classic music. </p>
                         <p>I also love to play tennis and lift weights in the gym.</p>
                         <p>I love traveling, visiting different places, and experiencing different cultures.</p>
                       </div>
                     </div>
+
                   </div>
                 </div>
               </div>
@@ -222,6 +171,50 @@
               <div class="center-div-full">
                 <h2 class="heading-tight"><strong><em>News</em></strong></h2>
               </div>
+              <!-- <div class="timeline p-4 block mb-4">
+
+                <div class="tl-item active">
+                  <div class="tl-dot b-warning"></div>
+                  <div class="tl-content">
+                      <div class="">Attending <a href="https://socalnlp.github.io/symp23/index.html">SoCal NLP</a>. Come say hi!</div>
+                      <div class="tl-date text-muted mt-1">November 2023</div>
+                  </div>
+                </div>
+
+                <div class="tl-item">
+                  <div class="tl-dot b-warning"></div>
+                  <div class="tl-content">
+                      <div class="">Invited talk at EPFL</div>
+                      <div class="tl-date text-muted mt-1">November 2023</div>
+                  </div>
+                </div>
+
+                <div class="tl-item">
+                    <div class="tl-dot b-primary"></div>
+                    <div class="tl-content">
+                        <div class="">Our work was featured in
+                        <a href="https://www.washingtonpost.com/technology/interactive/2023/ai-chatbot-learning/" target="_blank" rel="noopener">The Washington Post</a></div>
+                        <div class="tl-date text-muted mt-1">April 2023</div>
+                    </div>
+                </div>
+
+                <div class="tl-item">
+                  <div class="tl-dot b-warning"></div>
+                  <div class="tl-content">
+                      <div class="">Invited talk at Georgetown University</div>
+                      <div class="tl-date text-muted mt-1">April 2023</div>
+                  </div>
+              </div>
+
+                <div class="tl-item">
+                  <div class="tl-dot b-danger"></div>
+                  <div class="tl-content">
+                      <div class="">A new <a href="https://blog.allenai.org/from-interviewee-to-interviewer-68c36593b305" ,="" target="_blank" rel="noopener">blog post</a> about the behind the scenes of interviews
+                      </div>
+                      <div class="tl-date text-muted mt-1">February 2023</div>
+                  </div>
+              </div>
+            </div> -->
               <ul role="list" class="list-news" id="news-items"></ul>
               <div class="div-block-10">
                 <a data-w-id="93f354a5-dd01-6a72-ba58-b1447765f8ba" href="#" class="show-hide-button w-button">Show &amp; Hide More News</a>
@@ -237,7 +230,7 @@
     <div class="container-adjust-width w-container">
 
       <!-- Research Interest Section -->
-      <div id="research" class="white-wrapper">
+      <!-- <div id="research" class="white-wrapper">
         <div class="center-div-full">
           <h2 class="heading-tight">Research Interests</h2>
         </div>
@@ -252,7 +245,7 @@
           <a href="https://scholar.google.com/citations?user=-gqyv8cAAAAJ&amp;hl=en" target="_blank" class="button-small w-button">Google Scholar</a>
           <a href="https://www.semanticscholar.org/author/Zeming-Chen/2111435018" target="_blank" class="button-small w-button">Semantic Scholar</a>
         </div>
-      </div>
+      </div> -->
 
       <!-- Publications Section -->
       <div id="publications" data-current="Papers" data-easing="ease" data-duration-in="300" data-duration-out="100" class="w-tabs">
@@ -260,8 +253,8 @@
           <a data-w-tab="Papers" class="tab-tab-wide-left w-inline-block w-tab-link w--current">
             <h2 class="heading-tabs">Papers</h2>
           </a>
-          <a data-w-tab="Presentations" class="tab-tab w-inline-block w-tab-link">
-            <h2 class="heading-tabs">Presentations</h2>
+          <a data-w-tab="Talks" class="tab-tab w-inline-block w-tab-link">
+            <h2 class="heading-tabs">Talks</h2>
           </a>
           <a data-w-tab="Media" class="tab-tab-wide-right w-inline-block w-tab-link">
             <h2 class="heading-tabs">Media</h2>
@@ -269,183 +262,29 @@
         </div>
 
         <div class="w-tab-content">
-          <div data-w-tab="Papers" class="w-tab-pane w--tab-active">
+          <div data-w-tab="Papers" class="w-tab-pane w--tab-active" id="paper-items">
             <div class="space-10"></div>
+          </div>
 
+          <div data-w-tab="Talks" class="w-tab-pane">
+            <div class="space-10"></div>
             <div class="white-wrapper">
               <div class="w-row">
-                <div class="column-17 w-col w-col-4">
-                  <img width="2839" height="240" alt="" src="images/meta-kg.png" loading="lazy" srcset="images/meta-kg.png 500w, images/meta-kg.png 800w, images/meta-kg.png 1080w, images/meta-kg.png 1600w" sizes="(max-width: 479px) 100vw, (max-width: 767px) 89vw, 31vw" class="image-9"></div>
-                <div class="w-col w-col-8">
-                  <div class="wf-section">
-                    <h2 class="heading-15">RECKONING: Reasoning through Dynamic Knowledge Encoding</h2>
-                  </div>
-                  <div class="wf-section">
-                    <a href="https://arxiv.org/abs/2305.06349" target="_blank" class="label_link"><span class="post-info label label-primary">pdf</span></a>
-                    <div class="post-info mobile-mask">|</div>
-                    <a href="https://github.com/eric11eca/reckoning-metakg" target="_blank" class="label_link"><span class="post-info label label-code">code</span></a>
-                    <div class="post-info mobile-mask">|</div>
-                    <a href="https://nips.cc/" target="_blank" class="label_link"><span class="post-info label label-conference">NeurIPS2023</span></a>
-                  </div>
-                  <br>
-                  <div class="wf-section">
-                    <div class="post-info-noncaps">
-                      <i><u><b>Zeming Chen</b></u>, Gail Weiss, Eric Mitchell, Asli Celikyilmaz, Antoine Bosselut</i>
-                      <br>
-                      Proceedings of The Thirty-seventh Conference on Neural Information Processing Systems (NeurIPS 2023), accepted, to appear
-                    </div>
-                    <br><br>
-                    <b>TL;DR: </b> RECKONING is a bi-level learning algorithm that improves language models' reasoning ability by folding contextual knowledge into parametric knowledge through back-propagation. Compared to a fine-tuned in-context reasoning baseline initiated from the same pretrained model, we find that RECKONING shows better performance on multi-hop reasoning tasks, is more robust to distractors, and generalizes better to longer reasoning chains.
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="white-wrapper">
-              <div class="w-row">
-                <div class="column-17 w-col w-col-4">
-                  <img width="2839" height="240" alt="" src="images/subnetwork.png" loading="lazy" srcset="images/subnetwork.png 500w, images/subnetwork.png 800w, images/subnetwork.png 1080w, images/subnetwork.png 1600w" sizes="(max-width: 479px) 100vw, (max-width: 767px) 89vw, 31vw" class="image-9"></div>
-                <div class="w-col w-col-8">
-                  <div class="wf-section">
-                    <h2 class="heading-15">Discovering Knowledge-Critical Subnetworks in Pretrained Language Models</h2>
-                  </div>
-                  <div class="wf-section">
-                    <a href="https://arxiv.org/abs/2310.03084" target="_blank" class="label_link"><span class="post-info label label-primary">pdf</span></a>
-                  </div>
-                  <br>
-                  <div class="wf-section">
-                    <div class="post-info-noncaps">
-                      <i>Deniz Bayazit*, Negar Foroutan, <u><b>Zeming Chen</b></u>, Gail Weiss, Antoine Bosselut</i>
-                      <br>
-                      Arxiv Preprint
-                    </div>
-                    <br><br>
-                    <b>TL;DR: </b> This work investigates whether pretrained language models contain various knowledge-critical subnetworks: particular sparse computational subgraphs responsible for encoding specific knowledge the model has memorized, and proposes a multi-objective differentiable weight masking scheme to discover them.
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="white-wrapper">
-              <div class="w-row">
-                <div class="column-17 w-col w-col-4">
-                  <img width="2839" height="240" alt="" src="images/distillation.png" loading="lazy" srcset="images/distillation-p-500.png 500w, images/distillation-p-800.png 800w, images/distillation-p-1080.png 1080w, images/distillation-p-1600.png 1600w" sizes="(max-width: 479px) 100vw, (max-width: 767px) 89vw, 31vw" class="image-9"></div>
-                <div class="w-col w-col-8">
-                  <div class="wf-section">
-                    <h2 class="heading-15">DISCO: Distilling Counterfactuals with Large Language Models</h2>
-                  </div>
-                  <div class="wf-section">
-                    <a href="https://arxiv.org/abs/2212.10534" target="_blank" class="label_link"><span class="post-info label label-primary">pdf</span></a>
-                    <div class="post-info mobile-mask">|</div>
-                    <a href="https://github.com/eric11eca/disco" target="_blank" class="label_link"><span class="post-info label label-code">code</span></a>
-                    <div class="post-info mobile-mask">|</div>
-                    <a href="https://2023.aclweb.org" target="_blank" class="label_link"><span class="post-info label label-conference">ACL2023</span></a>
-                  </div>
-                  <br>
-                  <div class="wf-section">
-                    <div class="post-info-noncaps">
-                      <i><u><b>Zeming Chen</b></u>, Qiyue Gao, Antoine Bosselut, Ashish Sabharwal, Kyle Richardson</i>
-                      <br>
-                      Proceedings of The 61st Annual Meeting of the Association for Computational Linguistics (ACL 2023)
-                    </div>
-                    <br><br>
-                    <b>TL;DR: </b> DISCO is a framework for generating counterfactual data at scale, using a large language model to generate phrasal perturbations and a task-specific teacher model to distill the data into high-quality counterfactuals. Training on DISCO's data leads to a student model that is more robust and generalizes better across distributions, and is also more sensitive in differentiating original and counterfactual examples.
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="white-wrapper">
-              <div class="w-row">
-                <div class="column-17 w-col w-col-4"><img width="2839" height="240" alt="" src="images/bias_sources.png" loading="lazy" srcset="images/bias_sources.png 500w, images/bias_sources.png 800w, images/bias_sources.png 1080w, images/bias_sources.png 1600w" sizes="(max-width: 479px) 100vw, (max-width: 767px) 89vw, 31vw" class="image-9"></div>
-                <div class="w-col w-col-8">
-                  <div class="wf-section">
-                    <h2 class="heading-15">Mitigating Label Biases for In-context Learning</h2>
-                  </div>
-                  <div class="wf-section">
-                    <a href="https://arxiv.org/abs/2305.19148" target="_blank" class="label_link"><span class="post-info label label-primary">pdf</span></a>
-                    <!-- <div class="post-info mobile-mask">|</div> -->
-                    <!-- <a href="https://github.com/eric11eca/disco" target="_blank"><span class="post-info label label-code">code</span></a> -->
-                    <div class="post-info mobile-mask">|</div>
-                    <a href="https://2023.aclweb.org" target="_blank" class="label_link"><span class="post-info label label-conference">ACL2023</span></a>
-                  </div>
-                  <br>
-                  <div class="wf-section">
-                    <div class="post-info-noncaps">
-                      <i>Yu Fei*, Yifan Hou, <u><b>Zeming Chen</b></u>, Antoine Bosselut</i>
-                      <br>
-                      Proceedings of The 61st Annual Meeting of the Association for Computational Linguistics (ACL 2023)
-                    </div>
-                    <br><br>
-                    <b>TL;DR:</b> In-context learning (ICL), as a new paradigm for natural language processing (NLP), allows large language models (LLMs) to make predictions based on a few examples. However, ICL is susceptible to bias, which the choice and order of the in-context examples can cause. We propose a simple bias calibration method that significantly improves the ICL performance of GPT-J and GPT-3 on a wide range of tasks.
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="white-wrapper">
-              <div class="w-row">
-                <div class="column-17 w-col w-col-4"><img sizes="(max-width: 479px) 100vw, (max-width: 767px) 63vw, (max-width: 991px) 30vw, 300px" height="240" alt="" src="images/EvaluationPip.png" loading="lazy" srcset="images/EvaluationPip-p-500.png 500w, images/EvaluationPip-p-800.png 800w, images/EvaluationPip-p-1080.png 1080w, images/EvaluationPip-p-1600.png 1600w" class="image-9"></div>
-                <div class="w-col w-col-8">
-                  <div class="wf-section">
-                    <h2 class="heading-15">Curriculum: A Broad-Coverage Benchmark for Linguistic Phenomena in Natural Language Understanding</h2>
-                  </div>
-                  <div class="wf-section">
-                    <a href="https://aclanthology.org/2022.naacl-main.234/" target="_blank" class="label_link"><span class="post-info label label-primary">pdf</span></a>
-                    <div class="post-info mobile-mask">|</div>
-                    <a href="https://github.com/eric11eca/curriculum-ling" target="_blank" class="label_link"><span class="post-info label label-code">code</span></a>
-                    <div class="post-info mobile-mask">|</div>
-                    <a href="https://aclanthology.org/2022.naacl-main.234.mp4" target="_blank" class="label_link"><span class="post-info label label-video">video</span></a>
-                    <div class="post-info mobile-mask">|</div>
-                    <a href="https://2022.naacl.org" target="_blank" class="label_link"><span class="post-info label label-conference">NAACL2022</span></a>
-                  </div>
-                  <br>
-                  <div class="wf-section">
-                    <div class="post-info-noncaps">
-                      <i><u><b>Zeming Chen</b></u>, Qiyue Gao</i>
-                      <br>
-                      Proceedings of the 2022 Annual Conference of the North American Chapter of the Association for Computational Linguistics - Human Language Technologies (NAACL-HLT 2022)
-                    </div>
-                    <br><br>
-
-                    <font color="firebrick">
-                      <h4><b>Oral Presentation</b></h4>
-                    </font>
-
-                    <b>TL;DR: </b> Curriculum is introduced as a new format of NLI benchmark for evaluation of broad-coverage linguistic phenomena and it is shown that this linguistic-phenomena-driven benchmark can serve as an effective tool for diagnosing model behavior and verifying model learning quality.
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="white-wrapper">
-              <div class="w-row">
-                <div class="column-16 w-col w-col-4 w-col-medium-4"><img sizes="(max-width: 479px) 100vw, (max-width: 767px) 63vw, (max-width: 991px) 30vw, 300px" height="240" alt="" src="images/inferencekg_probe.png" loading="lazy" srcset="images/inferencekg_probe-p-500.png 500w, images/inferencekg_probe-p-800.png 800w, images/inferencekg_probe-p-1080.png 1080w, images/inferencekg_probe-p-1600.png 1600w, images/inferencekg_probe-p-2000.png 2000w, images/inferencekg_probe-p-2600.png 2600w, images/inferencekg_probe-p-3200.png 3200w" class="image-9"></div>
+                <div class="column-16 w-col w-col-4 w-col-medium-4"><img sizes="(max-width: 479px) 0px, 100vw" height="240" alt="" src="images/intern-final.png" loading="lazy" srcset="images/intern-final-p-500.png 500w, images/intern-final-p-800.png 800w, images/intern-final-p-1080.png 1080w, images/intern-final-p-1600.png 1600w, images/intern-final-p-2000.png 2000w, images/intern-final-p-2600.png 2600w, images/intern-final.png 2923w" class="image-9"></div>
                 <div class="w-col w-col-8 w-col-medium-8">
                   <div class="wf-section">
-                    <h2 class="heading-15">Probing Linguistic Information For Logical Inference In Pre-trained Language Models</h2>
+                    <h2 class="heading-15">Distilling Counterfactual Data from Large Language Models</h2>
                   </div>
                   <div class="wf-section">
-                    <a href="https://arxiv.org/abs/2112.01753" target="_blank" class="label_link"><span class="post-info label label-primary">pdf</span></a>
-                    <div class="post-info mobile-mask">|</div>
-                    <a href="https://github.com/eric11eca/inference-information-probing" target="_blank" class="label_link"><span class="post-info label label-code">code</span></a>
-                    <div class="post-info mobile-mask">|</div>
-                    <a href="https://aaai.org/Conferences/AAAI-22/" target="_blank" class="label_link"><span class="post-info label label-conference">AAAI2022</span></a>
-                  </div>
-                  <br>
-                  <div class="wf-section">
-                    <div class="post-info-noncaps">
-                      <i><u><b>Zeming Chen</b></u>, Qiyue Gao</i>
-                      <br>
-                      The 36th AAAI Conference on Artificial Intelligence, 2022
+                    <div class="post-info">
+                      Final presentation AI2 Internship
                     </div>
-                    <br><br>
-
-                    <font color="firebrick">
-                      <h4><b>Oral Presentation</b></h4>
-                    </font>
-
-                    <b>TL;DR: </b> This work proposes a methodology for probing knowledge for inference that logical systems require but often lack in pre-trained language model representations, and demonstrates language models' potential as semantic and background knowledge bases for supporting symbolic inference methods.
+                    <div class="post-info">
+                      |
+                    </div>
+                    <div class="post-info">
+                      Oct 2022
+                    </div>
                   </div>
                 </div>
               </div>
@@ -453,157 +292,48 @@
 
             <div class="white-wrapper">
               <div class="w-row">
-                <div class="column-16 w-col w-col-4 w-col-medium-4"><img sizes="(max-width: 479px) 100vw, (max-width: 767px) 63vw, (max-width: 991px) 30vw, 300px" height="240" alt="" src="images/NeuralLog.png" loading="lazy" srcset="images/NeuralLog-p-500.png 500w, images/NeuralLog-p-800.png 800w, images/NeuralLog-p-1080.png 1080w, images/NeuralLog-p-1600.png 1600w" class="image-9"></div>
+                <div class="column-16 w-col w-col-4 w-col-medium-4"><img sizes="(max-width: 479px) 0px, 100vw" height="240" alt="" src="images/neuro-symbolic.png" loading="lazy" srcset="images/neuro-symbolic-p-500.png 500w, images/neuro-symbolic-p-800.png 800w, images/neuro-symbolic-p-1080.png 1080w, images/neuro-symbolic-p-1600.png 1600w, images/neuro-symbolic-p-2000.png 2000w, images/neuro-symbolic-p-2600.png 2600w, images/neuro-symbolic.png 2920w" class="image-9"></div>
                 <div class="w-col w-col-8 w-col-medium-8">
                   <div class="wf-section">
-                    <h2 class="heading-15">NeuralLog: Natural Language Inference with Joint Neural and Logical Reasoning</h2>
+                    <h2 class="heading-15">Neuro-symbolic Reasoning in Modern AI</h2>
                   </div>
                   <div class="wf-section">
-                    <a href="https://aclanthology.org/2021.starsem-1.7/" target="_blank" class="label_link"><span class="post-info label label-primary">pdf</span></a>
-                    <div class="post-info mobile-mask">|</div>
-                    <a href="https://github.com/eric11eca/NeuralLog" target="_blank" class="label_link"><span class="post-info label label-code">code</span></a>
-                    <div class="post-info mobile-mask">|</div>
-                    <a href="https://sites.google.com/view/starsem2021/home" target="_blank" class="label_link"><span class="post-info label label-conference">*SEM2021</span></a>
-                  </div>
-                  <br>
-                  <div class="wf-section">
-                    <div class="post-info-noncaps">
-                      <i><u><b>Zeming Chen</b></u>, Qiyue Gao, Lawrence S. Moss</i>
-                      <br>
-                      The 10th Joint Conference on Lexical and Computational Semantics (*SEM), 2021
+                    <div class="post-info">
+                      Invited talk Rose-Hulman AI Class
                     </div>
-                    <br><br>
-                    <b>TL;DR: </b> This work proposes an inference framework called NeuralLog, which utilizes both a monotonicity-based logical inference engine and a neural network language model for phrase alignment, and shows that the joint logic and neural inference system improves accuracy on the NLI task and can achieve state-of-art accuracy onThe SICK and MED datasets.
+                    <div class="post-info">
+                      |
+                    </div>
+                    <div class="post-info">
+                      Oct 2022
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
+
+          </div>
+
+          <div data-w-tab="Media" class="w-tab-pane">
+            <div class="space-25"></div>
 
             <div class="white-wrapper">
               <div class="w-row">
-                <div class="column-16 w-col w-col-4 w-col-medium-4"><img sizes="(max-width: 479px) 100vw, (max-width: 767px) 71vw, 31vw" height="240" alt="" src="images/udep2mono.png" loading="lazy" srcset="images/udep2mono-p-500.png 500w, images/udep2mono.png 536w" class="image-9"></div>
+                <div class="column-16 w-col w-col-4 w-col-medium-4"><img sizes="(max-width: 479px) 0px, 100vw" height="240" alt="" src="images/media-rose.jpg" loading="lazy" srcset="images/media-rose-p-500.jpg 500w, images/media-rose.jpg 617w" class="image-9"></div>
                 <div class="w-col w-col-8 w-col-medium-8">
                   <div class="wf-section">
-                    <h2 class="heading-15">Monotonicity Marking from Universal Dependency Trees</h2>
+                    <h2 class="heading-15">Computer Science Duo Publish Four Joint Papers and Awarded Top Paper Honors at Prestigious NAACL Conference</h2>
                   </div>
                   <div class="wf-section">
-                    <a href="https://aclanthology.org/2021.iwcs-1.12/" target="_blank" class="label_link"><span class="post-info label label-primary">pdf</span></a>
-                    <div class="post-info mobile-mask">|</div>
-                    <a href="https://github.com/eric11eca/Udep2Mono" target="_blank" class="label_link"><span class="post-info label label-code">code</span></a>
-                    <div class="post-info mobile-mask">|</div>
-                    <a href="https://iwcs2021.github.io/index.html" target="_blank" class="label_link"><span class="post-info label label-conference">IWCS2021</span></a>
-                    <div class="post-info mobile-mask">|</div>
-                    <a href="https://iwcs2021.github.io/proceedings.html" target="_blank" class="label_link"> <span class="post-info label label-best">award</span></a>
-                  </div>
-                  <br>
-                  <div class="wf-section">
-                    <div class="post-info-noncaps">
-                      <i><u><b>Zeming Chen</b></u>, Qiyue Gao</i>
-                      <br>
-                      Proceedings of the 14th International Conference on Computational Semantics (IWCS), 2021
+                    <div class="post-info">
+                      Rose-Hulman News
                     </div>
-                    <br><br>
-                    <font color="firebrick">
-                      <h4><b>Outstanding Paper Award 🏆</b></h4>
-                    </font>
-                    <b>TL;DR: </b> This paper presents a system that automatically annotates monotonicity information based on Universal Dependency parse trees, which utilizes surface-level monotonicism facts about quantifiers, lexical items, and token-level polarity information. Evaluations on shwo that the proposed system achieves SOTA performance.
-                  </div>
-                </div>
-                </div>
-              </div>
-
-              <div class="white-wrapper">
-                <div class="w-row">
-                  <div class="column-16 w-col w-col-4 w-col-medium-4"><img sizes="125.54167175292969px" height="240" alt="" src="images/att_tree_lstm.png" loading="lazy" srcset="images/att_tree_lstm-p-500.png 500w, images/att_tree_lstm-p-800.png 800w, images/att_tree_lstm-p-1080.png 1080w, images/att_tree_lstm-p-1600.png 1600w, images/att_tree_lstm.png 1848w" class="image-9"></div>
-                  <div class="w-col w-col-8 w-col-medium-8">
-                    <div class="wf-section">
-                      <h2 class="heading-15">Attentive Tree-structured Network for Monotonicity Reasoning</h2>
+                    <div class="post-info">
+                      |
                     </div>
-                    <div class="wf-section">
-                      <a href="https://aclanthology.org/2021.naloma-1.3/" target="_blank" class="label_link"><span class="post-info label label-primary">pdf</span></a>
-                      <div class="post-info mobile-mask">|</div>
-                      <a href="https://typo.uni-konstanz.de/naloma21/index.html" target="_blank" class="label_link"><span class="post-info label label-workshop">NALOMA2020</span></a>
+                    <div class="post-info">
+                      May 2022
                     </div>
-                    <br>
-                    <div class="wf-section">
-                      <div class="post-info-noncaps">
-                        <i><u><b>Zeming Chen</b></u></i>
-                        <br>
-                        Proceedings of the 1st and 2nd Workshops on Natural Logic Meets Machine Learning (NALOMA 2020, 2021)
-                      </div>
-                      <br><br>
-                      <b>TL;DR: </b> An attentive tree-structured neural network that consists of a tree-based long-short-term-memory network (Tree-LSTM) with soft attention designed to model the syntactic parse tree information from the sentence pair of a reasoning task.
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div data-w-tab="Presentations" class="w-tab-pane">
-              <div class="space-10"></div>
-              <div class="white-wrapper">
-                <div class="w-row">
-                  <div class="column-16 w-col w-col-4 w-col-medium-4"><img sizes="(max-width: 479px) 0px, 100vw" height="240" alt="" src="images/intern-final.png" loading="lazy" srcset="images/intern-final-p-500.png 500w, images/intern-final-p-800.png 800w, images/intern-final-p-1080.png 1080w, images/intern-final-p-1600.png 1600w, images/intern-final-p-2000.png 2000w, images/intern-final-p-2600.png 2600w, images/intern-final.png 2923w" class="image-9"></div>
-                  <div class="w-col w-col-8 w-col-medium-8">
-                    <div class="wf-section">
-                      <h2 class="heading-15">Distilling Counterfactual Data from Large Language Models</h2>
-                    </div>
-                    <div class="wf-section">
-                      <div class="post-info">
-                        Final presentation AI2 Internship
-                      </div>
-                      <div class="post-info">
-                        |
-                      </div>
-                      <div class="post-info">
-                        Oct 2022
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="white-wrapper">
-                <div class="w-row">
-                  <div class="column-16 w-col w-col-4 w-col-medium-4"><img sizes="(max-width: 479px) 0px, 100vw" height="240" alt="" src="images/neuro-symbolic.png" loading="lazy" srcset="images/neuro-symbolic-p-500.png 500w, images/neuro-symbolic-p-800.png 800w, images/neuro-symbolic-p-1080.png 1080w, images/neuro-symbolic-p-1600.png 1600w, images/neuro-symbolic-p-2000.png 2000w, images/neuro-symbolic-p-2600.png 2600w, images/neuro-symbolic.png 2920w" class="image-9"></div>
-                  <div class="w-col w-col-8 w-col-medium-8">
-                    <div class="wf-section">
-                      <h2 class="heading-15">Neuro-symbolic Reasoning in Modern AI</h2>
-                    </div>
-                    <div class="wf-section">
-                      <div class="post-info">
-                        Invited talk Rose-Hulman AI Class
-                      </div>
-                      <div class="post-info">
-                        |
-                      </div>
-                      <div class="post-info">
-                        Oct 2022
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div data-w-tab="Media" class="w-tab-pane">
-              <div class="space-25"></div>
-              <div class="white-wrapper">
-                <div class="w-row">
-                  <div class="column-16 w-col w-col-4 w-col-medium-4"><img sizes="(max-width: 479px) 0px, 100vw" height="240" alt="" src="images/media-rose.jpg" loading="lazy" srcset="images/media-rose-p-500.jpg 500w, images/media-rose.jpg 617w" class="image-9"></div>
-                  <div class="w-col w-col-8 w-col-medium-8">
-                    <div class="wf-section">
-                      <h2 class="heading-15">Computer Science Duo Publish Four Joint Papers and Awarded Top Paper Honors at Prestigious NAACL Conference</h2>
-                    </div>
-                    <div class="wf-section">
-                      <div class="post-info">
-                        Rose-Hulman News
-                      </div>
-                      <div class="post-info">
-                        |
-                      </div>
-                      <div class="post-info">
-                        May 2022
-                      </div>
                   </div>
                   <br>
                   <div class="wf-section">
