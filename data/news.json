@@ -81,7 +81,9 @@
           "url": "https://nlp.epfl.ch/"
         }
       ]
-    },
+    }
+  ],
+  "oldNewsItems": [
     {
       "date": "Jun 2022",
       "content": "Started my internship at the Allen Institute for AI (AI2).",
@@ -91,9 +93,7 @@
           "url": "https://allenai.org/"
         }
       ]
-    }
-  ],
-  "oldNewsItems": [
+    },
     {
       "date": "Jul 2022",
       "content": "Presented Curriculum Benchmark at NAACL-HLT 2022.",

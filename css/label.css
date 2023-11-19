@@ -55,15 +55,15 @@ a.label:focus,a.label:hover{
 } */
 
 .label-journal {
-    background-color: #107733;
+    background-color: #2fcb63;
 }
 
 .label-arxiv {
-    background-color: #9b59b6;
+    background-color: #c784e2;
 }
 
 .label-conference {
-    background-color: #322288;
+    background-color: rgb(171, 152, 7);
 }
 
 .label-workshop {
@@ -71,23 +71,23 @@ a.label:focus,a.label:hover{
 }
 
 .label-video {
-    background-color: #ffd866;
+    background-color: #66edff;
 }
 
 .label-code {
-    background-color: #638fff;
+    background-color: #3f72f1;
 }	
 
 .label-poster {
-    background-color: #d27979;
+    background-color: #b72020;
 }
 
 .label-oral {
-    background-color: #ddcc76;
+    background-color: #b19b2d;
 }
 
 .label-best {
-    background-color: #e89b30;
+    background-color: #e89e30;
 }
 
 .label-bib {

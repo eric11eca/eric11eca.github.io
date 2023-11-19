@@ -1,0 +1,50 @@
+[
+    {
+        "conference": "ICLR 2024",
+        "url": "https://iclr.cc/",
+        "reviews": "1 review",
+        "role": "Program Committee"
+    },
+    {
+      "conference": "AAAI 2024",
+      "url": "https://aaai.org/aaai-conference/",
+      "reviews": "6 reviews",
+      "role": "Program Committee"
+    },
+    {
+      "conference": "EMNLP 2023",
+      "url": "https://2023.emnlp.org/",
+      "reviews": "5 reviews",
+      "role": "Program Committee"
+    },
+    {
+      "conference": "ACL 2023",
+      "url": "https://2023.aclweb.org/program/best_reviewers/",
+      "reviews": "6 reviews",
+      "role": "Program Committee"
+    },
+    {
+      "conference": "Journal of Logic, Language and Information 2023",
+      "url": "https://www.springer.com/journal/10849",
+      "reviews": "2 reviews",
+      "role": "<br>Invited Reviewer"
+    },
+    {
+      "conference": "AAAI 2023",
+      "url": "https://aaai.org/Conferences/AAAI-23/",
+      "reviews": "3 reviews",
+      "role": "Program Committee"
+    },
+    {
+      "conference": "AAAI Magazine 2022",
+      "url": "https://aaai.org/Magazine/magazine.php",
+      "reviews": "1 review",
+      "role": "Invited Reviewer"
+    },
+    {
+      "conference": "AAAI Magazine 2021",
+      "url": "https://aaai.org/Magazine/magazine.php",
+      "reviews": "3 reviews",
+      "role": "Invited Reviewer"
+    }
+]
