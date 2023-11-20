@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', function() {
       data.forEach(item => {
         console.log(item);
         let listItem = document.createElement('li');
-        let content = `<p><strong>${item.name}</strong></p><p>${item.event}</p>`;
+        let content = `<strong>${item.name}</strong><br>${item.event}`;
         content = content.replace(item.event, `<a href="${item.url}" target="_blank">${item.event}</a>`);
         listItem.innerHTML = content;
         awardItems.appendChild(listItem);
@@ -65,7 +65,7 @@ document.addEventListener('DOMContentLoaded', function() {
       data.forEach(item => {
         console.log(item);
         let listItem = document.createElement('li');
-        let content = `${item.conference}</strong>: ${item.role}, ${item.reviews}</p>`;
+        let content = `${item.conference}</strong>: ${item.role}, ${item.reviews}`;
         content = content.replace(item.conference, `<a href="${item.url}" target="_blank">${item.conference}</a>`);
         listItem.innerHTML = content;
         awardItems.appendChild(listItem);
