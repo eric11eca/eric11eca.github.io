@@ -109,9 +109,10 @@ a.label:focus,a.label:hover{
 }
 
 .nav {
-    width: 100%;
+    width:95%;
     display: flex;
-    margin-left: 1%;
+    margin-left: 2%;
+    align-self: center;
 }
 
 
