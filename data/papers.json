@@ -1,8 +1,8 @@
 [
     {
         "title": "MEDITRON-70B: Scaling Medical Pretraining for Large Language Models",
-        "imageSrc": "images/meditron-pipeline.png",
-        "imageSrcset": "images/meditron-pipeline.png 500w, images/meditron.png 800w, images/meditron.png 1080w, images/meditron-pipeline.png 1600w",
+        "imageSrc": "images/meditron.jpg",
+        "imageSrcset": "images/meditron.jpg 500w, images/meditron.jpg 800w, images/meditron.jpg 1080w, images/meditron.jpg 1600w",
         "pdfLink": "https://arxiv.org/abs/2311.16079",
         "codeLink": "https://github.com/epfLLM/meditron",
         "conferenceLink": null,

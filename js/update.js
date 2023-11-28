@@ -91,6 +91,9 @@ document.addEventListener('DOMContentLoaded', function() {
         // Image Column
         const imageCol = document.createElement('div');
         imageCol.className = 'column-17 w-col w-col-4';
+        if (item.imageSrc.includes('meditron')) {
+          imageCol.style = 'margin-top: 5%;';
+        }
         const img = document.createElement('img');
         img.src = item.imageSrc;
         img.srcset = item.imageSrcset;
