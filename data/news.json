@@ -1,6 +1,20 @@
 {
   "newsItems": [
     {
+      "date": "Nov 2023",
+      "content": "🔥 Our open-source 70B medical LLM, Meditron, is released on Arxiv and Huggingface. Meditron is here to help ensure equitable access to medical knoweldge and evidence!",
+      "links": [
+        {
+          "text": "Arxiv",
+          "url": "https://arxiv.org/abs/2311.16079"
+        },
+        {
+          "text": "Huggingface",
+          "url": "https://huggingface.co/epfl-llm/meditron-70b"
+        }
+      ]
+    },
+    {
       "date": "Oct 2023",
       "content": "🔥 Our new paper on discovering knowledge-critical subnetworks in pretrained LMs are released on Arxiv",
       "links": [
