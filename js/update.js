@@ -243,3 +243,61 @@ document.addEventListener('DOMContentLoaded', function() {
     })
     .catch(error => console.error('Error loading JSON:', error));
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+  fetch('../data/media.json')
+    .then(response => response.json())
+    .then(data => {
+      let mediaItems = document.getElementById('media-items');
+      data.forEach(item => {
+        const wrapperDiv = document.createElement('div');
+        wrapperDiv.className = 'white-wrapper';
+
+        const rowDiv = document.createElement('div');
+        rowDiv.className = 'w-row';
+
+        // Image
+        const imgDiv = document.createElement('div');
+        imgDiv.className = 'column-16 w-col w-col-4 w-col-medium-4';
+        const img = document.createElement('img');
+        img.src = item.imageSrc;
+        img.srcset = item.imageSrcSet;
+        img.height = 240;
+        img.className = 'image-9';
+        imgDiv.appendChild(img);
+
+        // Content
+        const contentDiv = document.createElement('div');
+        contentDiv.className = 'w-col w-col-8 w-col-medium-8';
+
+        // Title and Info
+        const titleSection = document.createElement('div');
+        titleSection.className = 'wf-section';
+        const title = document.createElement('h2');
+        title.className = 'heading-15';
+        title.textContent = item.title;
+        titleSection.appendChild(title);
+
+        const infoSection = document.createElement('div');
+        infoSection.className = 'wf-section';
+        infoSection.innerHTML = `<div class="post-info">${item.source}</div><div class="post-info"> | </div><div class="post-info">${item.date}</div>`;
+
+        // Overview
+        const overviewDiv = document.createElement('div');
+        overviewDiv.className = 'wf-section';
+        overviewDiv.innerHTML = `<b>Overview</b>: ${item.overview}<br><a href="${item.readMoreLink}" target="_blank" rel="noopener noreferrer">Read more</a>`;
+
+        // Append everything
+        contentDiv.appendChild(titleSection);
+        contentDiv.appendChild(infoSection);
+        contentDiv.appendChild(overviewDiv);
+
+        rowDiv.appendChild(imgDiv);
+        rowDiv.appendChild(contentDiv);
+
+        wrapperDiv.appendChild(rowDiv);
+        mediaItems.appendChild(wrapperDiv);
+      });
+    }
+  )
+});

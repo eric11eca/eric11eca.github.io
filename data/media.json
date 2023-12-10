@@ -1,0 +1,29 @@
+[
+  {
+    "title": "EPFL's new Large Language Model for Medical Knowledge",
+    "source": "Greater Geneva Bern area (GGBa)",
+    "date": "Nov 2023",
+    "overview": "EPFL researchers have unveiled Meditron, a groundbreaking open-source Large Language Model (LLM) specifically tailored for the medical field.",
+    "readMoreLink": "https://ggba.swiss/en/meditron-epfls-new-large-language-model-for-medical-knowledge/",
+    "imageSrc": "images/meditron-ggba.webp",
+    "imageSrcSet": "images/meditron-ggba.webp 500w, images/meditron-ggba.webp 617w"
+  },
+  {
+    "title": "EPFL's new Large Language Model for Medical Knowledge",
+    "source": "EPFL News",
+    "date": "Nov 2023",
+    "overview": "EPFL researchers have just released Meditron, the world’s best performing open source Large Language Model tailored to the medical field designed to help guide clinical decision-making.",
+    "readMoreLink": "https://actu.epfl.ch/news/epfl-s-new-large-language-model-for-medical-knowle/",
+    "imageSrc": "images/media-meditron.jpeg",
+    "imageSrcSet": "images/media-meditron.jpeg 500w, images/media-meditron.jpeg 617w"
+    },
+    {
+      "title": "Computer Science Duo Publish Four Joint Papers and Awarded Top Paper Honors at Prestigious NAACL Conference",
+      "source": "Rose-Hulman News",
+      "date": "May 2022",
+      "overview": "Zeming (Eric) Chen and Qiyue (Bert) Gao, as two computer science majors and Class of 2022 graduates, were research partners in the field of artificial intelligence (AI) and natural language processing and co-authored four conference papers.",
+      "readMoreLink": "https://www.rose-hulman.edu/news/2022/computer-science-duo-publish-four-joint-papers-and-awarded-top-paper-honors-at-prestigious-naacl-conference.html",
+      "imageSrc": "images/media-rose.jpg",
+      "imageSrcSet": "images/media-rose-p-500.jpg 500w, images/media-rose.jpg 617w"
+    }
+]
