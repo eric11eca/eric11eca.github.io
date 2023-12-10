@@ -231,6 +231,11 @@ document.addEventListener('DOMContentLoaded', function() {
           presentationTypeSection.innerHTML = `<font color="firebrick"><h4><b>${item.presentationType}</b></h4></font>`;
           contentCol.appendChild(presentationTypeSection);
         }
+        if (item.mediaInfo) {
+          const presentationTypeSection = document.createElement('div');
+          presentationTypeSection.innerHTML = `<font color="firebrick"><h4><b><a target="_blank" href=${item.mediaLink}>${item.mediaInfo}</a></b></h4></font>`;
+          contentCol.appendChild(presentationTypeSection);
+        }
         contentCol.appendChild(summary);
 
         // Append columns to row

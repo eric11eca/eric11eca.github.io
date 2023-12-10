@@ -10,6 +10,8 @@
         "authors": "Zeming Chen, Alejandro Hernández-Cano, Angelika Romanou, Antoine Bonnet, Kyle Matoba, Francesco Salvi, Matteo Pagliardini, Simin Fan, Andreas Köpf, Amirkeivan Mohtashami, Alexandre Sallinen, Alireza Sakhaeirad, Vinitra Swamy, Igor Krawczuk, Deniz Bayazit, Axel Marmet, Syrielle Montariol, Mary-Anne Hartley, Martin Jaggi, Antoine Bosselut",
         "publicationInfo": "Arxiv Preprint",
         "presentationType": null,
+        "mediaLink": "https://github.com/dair-ai/ML-Papers-of-the-Week/blob/main/#top-ml-papers-of-the-week-november-27---december-3",
+        "mediaInfo": "Top ML Papers of the Week (by dair.ai)",
         "summary": "Meditron is a suite of open-source medical Large Language Models (70B & 7B) adapted to the medical domain from Llama-2 through continued pretraining on a comprehensively curated medical corpus, including selected PubMed articles, abstracts, and internationally-recognized medical guidelines. Meditron-70B, finetuned on relevant training data, demonstrates high-level medical reasoning and improved domain-specific benchmark performance over Llama-2-70B, GPT-3.5, and Flan-PaLM. We democratize an optimized workflow to scale up domain-specific pretraining for medical LLMs to help revolutionize access to medical knowledge and evidence through open-source LLMs."
     },
     {
