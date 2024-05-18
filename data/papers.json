@@ -1,5 +1,20 @@
 [
     {
+        "title": "MEDITRON: Open Medical Foundation Models Adapted for Clinical Practice",
+        "imageSrc": "images/meditron-nature.png",
+        "imageSrcset": "images/meditron-nature.png 500w, images/meditron-nature.png 800w, images/meditron-nature.png 1080w, images/meditron-nature.png 1600w",
+        "pdfLink": "https://www.researchsquare.com/article/rs-4139743/v1",
+        "codeLink": "https://github.com/epfLLM/meditron",
+        "conferenceLink": null,
+        "conferenceLabel": null,
+        "authors": "Zeming Chen, Angelika Romanou, Antoine Bonnet, Alejandro Hernández-Cano, Badr Alkhamissi, Kyle Matoba, et al., Physician Evaluation Group, Noémie Boillat-Blanco, Kristina Keitel, Javier Elkin, Blaise Robert, Syrielle Montariol, Mary-Anne Hartley, Martin Jaggi, Antoine Bosselut",
+        "publicationInfo": "Research Square Preprint",
+        "presentationType": null,
+        "mediaLink": "https://ai.meta.com/blog/llama-2-3-meditron-yale-medicine-epfl-open-source-llm/",
+        "mediaInfo": "Spotlight Research blog by Meta AI",
+        "summary": "Meditron, a suite of open-source large multimodal foundation models tailored to the medical field and designed to assist with clinical decision-making and diagnosis, was built on Meta Llama 2 and trained on carefully curated, high-quality medical data sources with continual input from clinicians and experts in humanitarian response."
+    },
+    {
         "title": "MEDITRON-70B: Scaling Medical Pretraining for Large Language Models",
         "imageSrc": "images/meditron.jpg",
         "imageSrcset": "images/meditron.jpg 500w, images/meditron.jpg 800w, images/meditron.jpg 1080w, images/meditron.jpg 1600w",
