@@ -1,6 +1,20 @@
 {
   "newsItems": [
     {
+      "date": "May 2024",
+      "content": "🔥 Our new paper COM2 (COMplex COMmonsense) is accepted by ACL 2024 main track!",
+      "links": [
+        {
+          "text": "COM2",
+          "url": "https://arxiv.org/abs/2403.07398"
+        },
+        {
+          "text": "ACL 2024",
+          "url": "https://2024.aclweb.org/"
+        }
+      ]
+    },
+    {
       "date": "Dec 2023",
       "content": "🔥 Our official code repository for the Meditron project has reached over 1k stars on GitHub!!",
       "links": [
@@ -60,16 +74,6 @@
     },
     {
       "date": "May 2023",
-      "content": "Our new learning algorithm for knowledge & reasoning, called RECKONING, is released on Arxiv.",
-      "links": [
-        {
-          "text": "RECKONING",
-          "url": "https://arxiv.org/abs/2305.06349"
-        }
-      ]
-    },
-    {
-      "date": "May 2023",
       "content": "Both of our papers, DISCO and Label Bias Mitigation are accepted by ACL 2023 main conference!",
       "links": [
         {
@@ -88,6 +92,16 @@
     }
   ],
   "oldNewsItems": [
+    {
+      "date": "May 2023",
+      "content": "Our new learning algorithm for knowledge & reasoning, called RECKONING, is released on Arxiv.",
+      "links": [
+        {
+          "text": "RECKONING",
+          "url": "https://arxiv.org/abs/2305.06349"
+        }
+      ]
+    },
     {
       "date": "Dec 2022",
       "content": "Our new paper, DISCO, is released on Arxiv.",

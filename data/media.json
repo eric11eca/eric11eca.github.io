@@ -1,5 +1,14 @@
 [
   {
+    "title": "Meditron: An LLM suite especially suited for low-resource medical settings leveraging Meta Llama",
+    "source": "Meta AI",
+    "date": "April 2025",
+    "overview": "Researchers at EPFL's School of Computer and Communication Sciences and Yale School of Medicine have developed Meditron, an open-source large language model trained on carefully curated medical guidelines to improve access to evidence-based information for clinical decision-making. Meditron outperforms all other open-source models on a range of medical benchmarks and nears the performance of much larger closed models like GPT4. They are now evaluating its performance in the real world with a MOOVE [Massive Online Open Validation and Evaluation] led by volunteer doctors across various specialties.",
+    "readMoreLink": "https://ai.meta.com/blog/llama-2-3-meditron-yale-medicine-epfl-open-source-llm/",
+    "imageSrc": "images/meta-meditron.png",
+    "imageSrcSet": "images/meta-meditron.png 500w, images/meta-meditron.png 617w"
+  },
+  {
     "title": "EPFL's new Large Language Model for Medical Knowledge",
     "source": "Greater Geneva Bern area (GGBa)",
     "date": "Nov 2023",
@@ -16,14 +25,14 @@
     "readMoreLink": "https://actu.epfl.ch/news/epfl-s-new-large-language-model-for-medical-knowle/",
     "imageSrc": "images/media-meditron.jpeg",
     "imageSrcSet": "images/media-meditron.jpeg 500w, images/media-meditron.jpeg 617w"
-    },
-    {
-      "title": "Computer Science Duo Publish Four Joint Papers and Awarded Top Paper Honors at Prestigious NAACL Conference",
-      "source": "Rose-Hulman News",
-      "date": "May 2022",
-      "overview": "Zeming (Eric) Chen and Qiyue (Bert) Gao, as two computer science majors and Class of 2022 graduates, were research partners in the field of artificial intelligence (AI) and natural language processing and co-authored four conference papers.",
-      "readMoreLink": "https://www.rose-hulman.edu/news/2022/computer-science-duo-publish-four-joint-papers-and-awarded-top-paper-honors-at-prestigious-naacl-conference.html",
-      "imageSrc": "images/media-rose.jpg",
-      "imageSrcSet": "images/media-rose-p-500.jpg 500w, images/media-rose.jpg 617w"
-    }
+  },
+  {
+    "title": "Computer Science Duo Publish Four Joint Papers and Awarded Top Paper Honors at Prestigious NAACL Conference",
+    "source": "Rose-Hulman News",
+    "date": "May 2022",
+    "overview": "Zeming (Eric) Chen and Qiyue (Bert) Gao, as two computer science majors and Class of 2022 graduates, were research partners in the field of artificial intelligence (AI) and natural language processing and co-authored four conference papers.",
+    "readMoreLink": "https://www.rose-hulman.edu/news/2022/computer-science-duo-publish-four-joint-papers-and-awarded-top-paper-honors-at-prestigious-naacl-conference.html",
+    "imageSrc": "images/media-rose.jpg",
+    "imageSrcSet": "images/media-rose-p-500.jpg 500w, images/media-rose.jpg 617w"
+  }
 ]

@@ -15,6 +15,19 @@
         "summary": "Meditron is a suite of open-source medical Large Language Models (70B & 7B) adapted to the medical domain from Llama-2 through continued pretraining on a comprehensively curated medical corpus, including selected PubMed articles, abstracts, and internationally-recognized medical guidelines. Meditron-70B, finetuned on relevant training data, demonstrates high-level medical reasoning and improved domain-specific benchmark performance over Llama-2-70B, GPT-3.5, and Flan-PaLM. We democratize an optimized workflow to scale up domain-specific pretraining for medical LLMs to help revolutionize access to medical knowledge and evidence through open-source LLMs."
     },
     {
+        "title": "Complex Reasoning over Logical Queries on Commonsense Knowledge Graphs",
+        "imageSrc": "images/com2.png",
+        "imageSrcset": "images/com2.png 500w, images/com2.png 800w, images/com2.png 1080w, images/com2.png 1600w",
+        "pdfLink": "https://arxiv.org/abs/2403.07398",
+        "codeLink": null,
+        "conferenceLink": "https://2024.aclweb.org",
+        "conferenceLabel": "ACL2024",
+        "authors": "Tianqing Fang*, Zeming Chen, Yangqiu Song, Antoine Bosselut",
+        "publicationInfo": "Proceedings of The 62nd Annual Meeting of the Association for Computational Linguistics (ACL 2024), To appear",
+        "presentationType": null,
+        "summary": "We present COM2 (COMplex COMmonsense), a new dataset created by sampling multi-hop logical queries from CSKG and verbalizing them into multiple-choice and text generation questions. language models trained on COM2 exhibit significant improvements in complex reasoning ability, resulting in enhanced zero-shot performance in question answering and generative commonsense reasoning tasks, without expensive human annotations."
+      },
+    {
       "title": "RECKONING: Reasoning through Dynamic Knowledge Encoding",
       "imageSrc": "images/meta-kg.png",
       "imageSrcset": "images/meta-kg.png 500w, images/meta-kg.png 800w, images/meta-kg.png 1080w, images/meta-kg.png 1600w",
