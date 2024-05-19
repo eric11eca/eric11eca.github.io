@@ -231,7 +231,13 @@ document.addEventListener('DOMContentLoaded', function() {
           presentationTypeSection.innerHTML = `<font color="firebrick"><h4><b>${item.presentationType}</b></h4></font>`;
           contentCol.appendChild(presentationTypeSection);
         }
-        if (item.mediaInfo) {
+        if (item.mediaInfo && item.mediaLink && Array.isArray(item.mediaInfo) && Array.isArray(item.mediaLink) && item.mediaInfo.length === item.mediaLink.length) {
+          item.mediaInfo.forEach((info, index) => {
+            const presentationTypeSection = document.createElement('div');
+            presentationTypeSection.innerHTML = `<font color="firebrick"><h4><b><a target="_blank" href="${item.mediaLink[index]}">${info}</a></b></h4></font>`;
+            contentCol.appendChild(presentationTypeSection);
+          });
+        } else if (item.mediaInfo && item.mediaLink) {
           const presentationTypeSection = document.createElement('div');
           presentationTypeSection.innerHTML = `<font color="firebrick"><h4><b><a target="_blank" href=${item.mediaLink}>${item.mediaInfo}</a></b></h4></font>`;
           contentCol.appendChild(presentationTypeSection);
