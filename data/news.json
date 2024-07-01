@@ -2,6 +2,16 @@
   "newsItems": [
     {
       "date": "May 2024",
+      "content": "🔥 Meditron is highlighted in the 2024 AI Index Report by Stanford HAI Center!",
+      "links": [
+        {
+          "text": "2024 AI Index Report",
+          "url": "https://aiindex.stanford.edu/report/#individual-chapters"
+        }
+      ]
+    },
+    {
+      "date": "May 2024",
       "content": "🔥 Our new paper COM2 (COMplex COMmonsense) is accepted by ACL 2024 main track!",
       "links": [
         {
@@ -11,6 +21,16 @@
         {
           "text": "ACL 2024",
           "url": "https://2024.aclweb.org/"
+        }
+      ]
+    },
+    {
+      "data": "Apr 2024",
+      "content": "🔥 Meta AI released a reserach blog on Meditron!",
+      "links": [
+        {
+          "text": "blog",
+          "url": "https://ai.meta.com/blog/llama-2-3-meditron-yale-medicine-epfl-open-source-llm/"
         }
       ]
     },
@@ -40,7 +60,7 @@
     },
     {
       "date": "Oct 2023",
-      "content": "🔥 Our new paper on discovering knowledge-critical subnetworks in pretrained LMs are released on Arxiv",
+      "content": "Our new paper on discovering knowledge-critical subnetworks in pretrained LMs are released on Arxiv",
       "links": [
         {
           "text": "discovering knowledge-critical subnetworks",
@@ -50,7 +70,7 @@
     },
     {
       "date": "Sep 2023",
-      "content": "🔥 Our new paper, RECKONING on inference-time knowlegde encoding for reaosning is accepted by NeurIPS 2023 main track!",
+      "content": "Our new paper, RECKONING on inference-time knowlegde encoding for reaosning is accepted by NeurIPS 2023 main track!",
       "links": [
         {
           "text": "RECKONING",
@@ -61,10 +81,12 @@
           "url": "https://nips.cc/"
         }
       ]
-    },
+    }
+  ],
+  "oldNewsItems": [
     {
       "date": "July 2023",
-      "content": "🔥 I received an Outstanding Reviewer Award for ACL 2023",
+      "content": "I received an Outstanding Reviewer Award for ACL 2023",
       "links": [
         {
           "text": "Outstanding Reviewer Award",
@@ -89,9 +111,7 @@
           "url": "https://2023.aclweb.org/"
         }
       ]
-    }
-  ],
-  "oldNewsItems": [
+    },
     {
       "date": "May 2023",
       "content": "Our new learning algorithm for knowledge & reasoning, called RECKONING, is released on Arxiv.",
