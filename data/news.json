@@ -1,6 +1,16 @@
 {
   "newsItems": [
     {
+      "date": "July 2024",
+      "content": "🔥 Started my research internship @ Meta AI (FAIR)",
+      "links": [
+        {
+          "text": "Meta AI (FAIR)",
+          "url": "https://ai.meta.com/research/"
+        }
+      ]
+    },
+    {
       "date": "May 2024",
       "content": "🔥 Meditron is highlighted in the 2024 AI Index Report by Stanford HAI Center!",
       "links": [
@@ -59,16 +69,6 @@
       ]
     },
     {
-      "date": "Oct 2023",
-      "content": "Our new paper on discovering knowledge-critical subnetworks in pretrained LMs are released on Arxiv",
-      "links": [
-        {
-          "text": "discovering knowledge-critical subnetworks",
-          "url": "https://arxiv.org/abs/2310.03084"
-        }
-      ]
-    },
-    {
       "date": "Sep 2023",
       "content": "Our new paper, RECKONING on inference-time knowlegde encoding for reaosning is accepted by NeurIPS 2023 main track!",
       "links": [
@@ -84,6 +84,16 @@
     }
   ],
   "oldNewsItems": [
+    {
+      "date": "Oct 2023",
+      "content": "Our new paper on discovering knowledge-critical subnetworks in pretrained LMs are released on Arxiv",
+      "links": [
+        {
+          "text": "discovering knowledge-critical subnetworks",
+          "url": "https://arxiv.org/abs/2310.03084"
+        }
+      ]
+    },
     {
       "date": "July 2023",
       "content": "I received an Outstanding Reviewer Award for ACL 2023",
