@@ -38,7 +38,7 @@
         "conferenceLink": "https://2024.aclweb.org",
         "conferenceLabel": "ACL2024",
         "authors": "Tianqing Fang*, Zeming Chen, Yangqiu Song, Antoine Bosselut",
-        "publicationInfo": "Proceedings of The 62nd Annual Meeting of the Association for Computational Linguistics (ACL 2024), To appear",
+        "publicationInfo": "Proceedings of The 62nd Annual Meeting of the Association for Computational Linguistics (ACL 2024)",
         "presentationType": null,
         "summary": "We present COM2 (COMplex COMmonsense), a new dataset created by sampling multi-hop logical queries from CSKG and verbalizing them into multiple-choice and text generation questions. language models trained on COM2 exhibit significant improvements in complex reasoning ability, resulting in enhanced zero-shot performance in question answering and generative commonsense reasoning tasks, without expensive human annotations."
       },
