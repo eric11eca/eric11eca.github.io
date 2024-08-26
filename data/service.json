@@ -1,5 +1,17 @@
 [
     {
+        "conference": "EMNLP 2024",
+        "url": "https://2024.emnlp.org/",
+        "reviews": "4 reviews",
+        "role": "Program Committee"
+    },
+    {
+        "conference": "ACL 2024",
+        "url": "https://2024.aclweb.org/",
+        "reviews": "4 reviews",
+        "role": "Program Committee"
+    },
+    {
         "conference": "ICLR 2024",
         "url": "https://iclr.cc/",
         "reviews": "1 review",
