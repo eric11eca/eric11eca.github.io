@@ -35,11 +35,11 @@
       ]
     },
     {
-      "data": "Apr 2024",
+      "date": "Apr 2024",
       "content": "🔥 Meta AI released a reserach blog on Meditron!",
       "links": [
         {
-          "text": "blog",
+          "text": "research blog",
           "url": "https://ai.meta.com/blog/llama-2-3-meditron-yale-medicine-epfl-open-source-llm/"
         }
       ]
@@ -216,4 +216,3 @@
     }
   ]
 }
-
