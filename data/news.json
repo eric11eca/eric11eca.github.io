@@ -1,6 +1,20 @@
 {
   "newsItems": [
     {
+      "date": "Sep 2024",
+      "content": "🔥 Our new paper \"Knowledge-critical subnetworks in LLM\" is accepted by EMNLP 2024 main track!",
+      "links": [
+        {
+          "text": "Knowledge-critical subnetworks in LLM",
+          "url": "https://arxiv.org/abs/2310.03084"
+        },
+        {
+          "text": "EMNLP 2024",
+          "url": "https://2024.emnlp.org/"
+        }
+      ]
+    },
+    {
       "date": "July 2024",
       "content": "🔥 Started my research internship @ Meta AI (FAIR)",
       "links": [
