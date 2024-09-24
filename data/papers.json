@@ -38,7 +38,7 @@
         "conferenceLink": "https://2024.emnlp.org/",
         "conferenceLabel": "EMNLP 2024",
         "authors": "Deniz Bayazit*, Negar Foroutan, Zeming Chen, Gail Weiss, Antoine Bosselut",
-        "publicationInfo": "Proceedings of the 2024 Conference on Empirical Methods in Natural Language Processing",
+        "publicationInfo": "Proceedings of the 2024 Conference on Empirical Methods in Natural Language Processing (EMNLP 2024), To Appear",
         "presentationType": null,
         "summary": "This work investigates whether pretrained language models contain various knowledge-critical subnetworks: particular sparse computational subgraphs responsible for encoding specific knowledge the model has memorized, and proposes a multi-objective differentiable weight masking scheme to discover them."
     },
