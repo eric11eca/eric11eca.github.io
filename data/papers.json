@@ -11,8 +11,22 @@
         "publicationInfo": "Research Square Preprint",
         "presentationType": null,
         "mediaLink": "https://ai.meta.com/blog/llama-2-3-meditron-yale-medicine-epfl-open-source-llm/",
-        "mediaInfo": "Spotlight Research blog by Meta AI",
+        "mediaInfo": "Spotlight Research Blog by Meta AI",
         "summary": "Meditron, a suite of open-source large multimodal foundation models tailored to the medical field and designed to assist with clinical decision-making and diagnosis, was built on Meta Llama 2 and trained on carefully curated, high-quality medical data sources with continual input from clinicians and experts in humanitarian response."
+    },
+    {
+        "title": "INCLUDE: Evaluating Multilingual Language Understanding with Regional Knowledge",
+        "imageSrc": "images/include.png",
+        "imageSrcset": "images/include.png 500w, images/include.png 800w, images/include.png 1080w, images/include.png 1600w",
+        "pdfLink": "https://arxiv.org/abs/2411.19799",
+        "conferenceLink": null,
+        "conferenceLabel": null,
+        "authors": "Angelika Romanou*, Negar Foroutan, Anna Sotnikova, Zeming Chen, Sree Harsha Nelaturu, Shivalika Singh, Rishabh Maheshwary, Micol Altomare, Mohamed A. Haggag, Imanol Schlag, Marzieh Fadaee, Sara Hooker, Antoine Bosselut",
+        "publicationInfo": "Arxiv Preprint",
+        "presentationType": null,
+        "mediaLink": ["https://cohere.com/research/papers/include-evaluating-multilingual-language-understanding-with-regional-knowledge-2024-11-29"],
+        "mediaInfo": ["Spotlight Research Blog by Cohere for AI"],
+        "summary": "The development of functional LLMs in many languages is bottlenecked by the lack of high-quality evaluation resources in non-English languages that focus on the regional and cultural knowledge of the environments. In this work, we construct an evaluation suite of 197,243 QA pairs from local exam sources to measure the capabilities of multilingual LLMs in a variety of regional contexts. Our novel resource, INCLUDE, is a comprehensive knowledge- and reasoning-centric benchmark across 44 written languages that evaluates multilingual LLMs for performance in the actual language environments where they would be deployed."
     },
     {
         "title": "MEDITRON-70B: Scaling Medical Pretraining for Large Language Models",
@@ -28,6 +42,19 @@
         "mediaLink": ["https://aiindex.stanford.edu/wp-content/uploads/2024/04/HAI_AI-Index-Report-2024_Chapter5.pdf","https://github.com/dair-ai/ML-Papers-of-the-Week/blob/main/#top-ml-papers-of-the-week-november-27---december-3"],
         "mediaInfo": ["2024 AI Index Report Highlited Research for Science and Medicine", "Top ML Papers of the Week (by dair.ai)"],
         "summary": "Meditron is a suite of open-source medical Large Language Models (70B & 7B) adapted to the medical domain from Llama-2 through continued pretraining on a comprehensively curated medical corpus, including selected PubMed articles, abstracts, and internationally-recognized medical guidelines. Meditron-70B, finetuned on relevant training data, demonstrates high-level medical reasoning and improved domain-specific benchmark performance over Llama-2-70B, GPT-3.5, and Flan-PaLM. We democratize an optimized workflow to scale up domain-specific pretraining for medical LLMs to help revolutionize access to medical knowledge and evidence through open-source LLMs."
+    },
+    {
+        "title": "Could ChatGPT get an engineering degree? Evaluating higher education vulnerability to AI assistants",
+        "imageSrc": "images/nlp4edu.jpg",
+        "imageSrcset": "images/nlp4edu.jpg 500w, images/nlp4edu.jpg 800w, images/nlp4edu.jpg 1080w, images/nlp4edu.jpg 1600w",
+        "pdfLink": "https://www.pnas.org/doi/10.1073/pnas.2414955121",
+        "codeLink": null,
+        "journalLink": "https://www.pnas.org/",
+        "journalLabel": "PNAS",
+        "authors": "Beatriz Borges*, Negar Foroutan, Deniz Bayazit, Anna Sotnikova, Syrian Montariol, Tanya Nazaretzky, Mohammadreza Banaei, Alireza Sakhaeirad, Philippe Servant, Seyed Parsa Neshaei, Jibril Frej, Angelika Romanou, Gail Weiss, Sepideh Mamooler, Zeming Chen, Simin Fan, Silin Gao, Mete Ismayilzada, Debjit Paul, Philippe Schwaller, Sacha Friedli, Patrick Jermann, Tanja Käser, Antoine Bosselut, EPFL Grader Consortium, and EPFL Data Consortium",
+        "publicationInfo": "Proceedings of the National Academy of Sciences of the United States of America",
+        "presentationType": null,
+        "summary": "Universities primarily evaluate student learning through various course assessments. Our study demonstrates that AI assistants, such as ChatGPT, can answer at least 65.8% of examination questions correctly across 50 various courses in the technical and natural sciences. Our analysis demonstrates that these capabilities render many degree programs (and their teaching objectives) vulnerable to potential misuse of these systems. These findings call for attention to assessment design to mitigate the possibility that AI assistants could entertain students from acquiring the knowledge and critical thinking skills that university programs are meant to instill."
     },
     {
         "title": "Discovering Knowledge-Critical Subnetworks in Pretrained Language Models",
@@ -116,7 +143,7 @@
         "conferenceLink": "https://aaai.org/Conferences/AAAI-22/",
         "conferenceLabel": "AAAI 2022",
         "authors": "Zeming Chen, Qiyue Gao",
-        "publicationInfo": "The 36th AAAI Conference on Artificial Intelligence (AAAI 2022)",
+        "publicationInfo": "Proceedings of the 36th AAAI Conference on Artificial Intelligence (AAAI 2022)",
         "presentationType": "Oral Presentation",
         "summary": "This work proposes a methodology for probing knowledge for inference that logical systems require but often lack in pre-trained language model representations, and demonstrates language models' potential as semantic and background knowledge bases for supporting symbolic inference methods."
     },
@@ -129,7 +156,7 @@
         "conferenceLink": "https://sites.google.com/view/starsem2021/home",
         "conferenceLabel": "*SEM 2021",
         "authors": "Zeming Chen, Qiyue Gao, Lawrence S. Moss",
-        "publicationInfo": "The 10th Joint Conference on Lexical and Computational Semantics (*SEM), 2021",
+        "publicationInfo": "Proceedings of the 10th Joint Conference on Lexical and Computational Semantics (*SEM 2021)",
         "presentationType": null,
         "summary": "This work proposes an inference framework called NeuralLog, which utilizes both a monotonicity-based logical inference engine and a neural network language model for phrase alignment, and shows that the joint logic and neural inference system improves accuracy on the NLI task and can achieve state-of-art accuracy onThe SICK and MED datasets."
     },
@@ -144,7 +171,7 @@
         "awardLink": "https://iwcs2021.github.io/proceedings.html",
         "awardLabel": "Award",
         "authors": "Zeming Chen, Qiyue Gao",
-        "publicationInfo": "Proceedings of the 14th International Conference on Computational Semantics (IWCS), 2021",
+        "publicationInfo": "Proceedings of the 14th International Conference on Computational Semantics (IWCS 2021)",
         "presentationType": "🏆 Outstanding Paper Award 🏆",
         "summary": "This paper presents a system that automatically annotates monotonicity information based on Universal Dependency parse trees, which utilizes surface-level monotonicism facts about quantifiers, lexical items, and token-level polarity information. Evaluations on shwo that the proposed system achieves SOTA performance."
     },
