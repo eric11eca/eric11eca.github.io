@@ -19,7 +19,7 @@
         "imageSrc": "images/include.png",
         "imageSrcset": "images/include.png 500w, images/include.png 800w, images/include.png 1080w, images/include.png 1600w",
         "pdfLink": "https://arxiv.org/abs/2411.19799",
-        "conferenceLink": null,
+        "conferenceLink": "https://iclr.cc/Conferences/2025",
         "conferenceLabel": "ICLR 2025",
         "authors": "Angelika Romanou*, Negar Foroutan, Anna Sotnikova, Zeming Chen, Sree Harsha Nelaturu, Shivalika Singh, Rishabh Maheshwary, Micol Altomare, Mohamed A. Haggag, Imanol Schlag, Marzieh Fadaee, Sara Hooker, Antoine Bosselut",
         "publicationInfo": "Proceedings of The Thirteenth International Conference on Learning Representations (ICLR 2025), To Appear",
