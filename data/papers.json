@@ -10,8 +10,8 @@
         "authors": "Zeming Chen, Angelika Romanou, Antoine Bonnet, Alejandro Hernández-Cano, Badr Alkhamissi, Kyle Matoba, et al., Physician Evaluation Group, Noémie Boillat-Blanco, Kristina Keitel, Javier Elkin, Blaise Robert, Syrielle Montariol, Mary-Anne Hartley, Martin Jaggi, Antoine Bosselut",
         "publicationInfo": "Research Square Preprint",
         "presentationType": null,
-        "mediaLink": "https://ai.meta.com/blog/llama-2-3-meditron-yale-medicine-epfl-open-source-llm/",
-        "mediaInfo": "Spotlight Research Blog by Meta AI",
+        "mediaLink": ["https://ai.meta.com/blog/llama-2-3-meditron-yale-medicine-epfl-open-source-llm/", "https://ethrat.ch/wp-content/uploads/2025/03/ETHR_Geschaeftsbericht-2024_E_web.pdf"],
+        "mediaInfo": ["Spotlight Research Blog by Meta AI", "Spotlight Research - Annual Report Of The ETH Board On The ETH Domain 2024"],
         "summary": "Meditron, a suite of open-source large multimodal foundation models tailored to the medical field and designed to assist with clinical decision-making and diagnosis, was built on Meta Llama 2 and trained on carefully curated, high-quality medical data sources with continual input from clinicians and experts in humanitarian response."
     },
     {
