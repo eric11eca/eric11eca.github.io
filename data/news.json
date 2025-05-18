@@ -1,6 +1,20 @@
 {
   "newsItems": [
     {
+      "date": "Feb 2025",
+      "content": "🔥 Our new paper \"INCLUDE\" for LLM evaluation on multilinguality and regional knowledge is accepted by ICLR 2025 as a <strong>Spotlight</strong> paper!",
+      "links": [
+        {
+          "text": "INCLUDE",
+          "url": "https://arxiv.org/abs/2411.19799"
+        },
+        {
+          "text": "ICLR 2025",
+          "url": "https://iclr.cc/"
+        }
+      ]
+    },
+    {
       "date": "Sep 2024",
       "content": "🔥 Our new paper \"Knowledge-critical subnetworks in LLM\" is accepted by EMNLP 2024 main track!",
       "links": [
@@ -36,7 +50,7 @@
     },
     {
       "date": "May 2024",
-      "content": "🔥 Our new paper COM2 (COMplex COMmonsense) is accepted by ACL 2024 main track!",
+      "content": "Our new paper COM2 (COMplex COMmonsense) is accepted by ACL 2024 main track!",
       "links": [
         {
           "text": "COM2",
@@ -50,7 +64,7 @@
     },
     {
       "date": "Apr 2024",
-      "content": "🔥 Meta AI released a reserach blog on Meditron!",
+      "content": "Meta AI released a reserach blog on Meditron!",
       "links": [
         {
           "text": "research blog",
@@ -60,7 +74,7 @@
     },
     {
       "date": "Dec 2023",
-      "content": "🔥 Our official code repository for the Meditron project has reached over 1k stars on GitHub!!",
+      "content": "Our official code repository for the Meditron project has reached over 1k stars on GitHub!!",
       "links": [
         {
           "text": "Meditron",
@@ -70,7 +84,7 @@
     },
     {
       "date": "Nov 2023",
-      "content": "🔥 Our open-source 70B medical LLM, Meditron, is released on Arxiv and Huggingface. Meditron is here to help ensure equitable access to medical knoweldge and evidence!",
+      "content": "Our open-source 70B medical LLM, Meditron, is released on Arxiv and Huggingface. Meditron is here to help ensure equitable access to medical knoweldge and evidence!",
       "links": [
         {
           "text": "Arxiv",
@@ -81,7 +95,9 @@
           "url": "https://huggingface.co/epfl-llm/meditron-70b"
         }
       ]
-    },
+    }
+  ],
+  "oldNewsItems": [
     {
       "date": "Sep 2023",
       "content": "Our new paper, RECKONING on inference-time knowlegde encoding for reaosning is accepted by NeurIPS 2023 main track!",
@@ -95,9 +111,7 @@
           "url": "https://nips.cc/"
         }
       ]
-    }
-  ],
-  "oldNewsItems": [
+    },
     {
       "date": "Oct 2023",
       "content": "Our new paper on discovering knowledge-critical subnetworks in pretrained LMs are released on Arxiv",
