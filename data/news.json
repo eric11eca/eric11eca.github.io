@@ -1,6 +1,16 @@
 {
   "newsItems": [
     {
+      "date": "July 2025",
+      "content": "🔥 Our new work \"PERK\" on Long-Context Reasoning with Test-Time Learning is released!",
+      "links": [
+        {
+          "text": "PERK",
+          "url": "https://arxiv.org/abs/2507.06415"
+        }
+      ]
+    },
+    {
       "date": "Feb 2025",
       "content": "🔥 Our new paper \"INCLUDE\" for LLM evaluation on multilinguality and regional knowledge is accepted by ICLR 2025 as a <strong>Spotlight</strong> paper!",
       "links": [
@@ -81,7 +91,9 @@
           "url": "https://github.com/epfLLM/meditron"
         }
       ]
-    },
+    }
+  ],
+  "oldNewsItems": [
     {
       "date": "Nov 2023",
       "content": "Our open-source 70B medical LLM, Meditron, is released on Arxiv and Huggingface. Meditron is here to help ensure equitable access to medical knoweldge and evidence!",
@@ -95,9 +107,7 @@
           "url": "https://huggingface.co/epfl-llm/meditron-70b"
         }
       ]
-    }
-  ],
-  "oldNewsItems": [
+    },
     {
       "date": "Sep 2023",
       "content": "Our new paper, RECKONING on inference-time knowlegde encoding for reaosning is accepted by NeurIPS 2023 main track!",
