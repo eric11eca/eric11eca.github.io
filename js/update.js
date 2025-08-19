@@ -114,8 +114,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
       this.createButton(buttonBar, 'All', () => this.showSection('all'));
       this.createButton(buttonBar, 'Preprints', () => this.showSection('preprints-section'));
-      this.createButton(buttonBar, 'Journals', () => this.showSection('journals-section'));
       this.createButton(buttonBar, 'Conferences', () => this.showSection('conferences-section'));
+      this.createButton(buttonBar, 'Journals', () => this.showSection('journals-section'));
       this.createButton(buttonBar, 'Workshops', () => this.showSection('workshops-section'));
     }
 
@@ -130,8 +130,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     createSections() {
       this.sections.preprints = this.createSection('preprints-section', 'Preprints');
-      this.sections.journals = this.createSection('journals-section', 'Journals');
       this.sections.conferences = this.createSection('conferences-section', 'Conferences');
+      this.sections.journals = this.createSection('journals-section', 'Journals');
       this.sections.workshops = this.createSection('workshops-section', 'Workshops');
     }
 
