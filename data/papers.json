@@ -30,6 +30,34 @@
         "summary": "Meditron, a suite of open-source large multimodal foundation models tailored to the medical field and designed to assist with clinical decision-making and diagnosis, was built on Meta Llama 2 and trained on carefully curated, high-quality medical data sources with continual input from clinicians and experts in humanitarian response."
     },
     {
+        "title": "GeoExplorer: Active Geo-localization with Curiosity-Driven Exploration",
+        "imageSrc": "images/geoexplorer.png",
+        "imageSrcset": "images/geoexplorer.png 500w, images/geoexplorer.png 800w, images/geoexplorer.png 1080w, images/geoexplorer.png 1600w",
+        "pdfLink": "https://arxiv.org/abs/2508.00152",
+        "codeLink": "https://limirs.github.io/GeoExplorer",
+        "conferenceLink": "https://iccv.thecvf.com",
+        "conferenceLabel": "ICCV 2025",
+        "authors": "Li Mi, Manon Bechaz, Zeming Chen, Antoine Bosselut, Devis Tuia",
+        "publicationInfo": "Proceedings of the International Conference on Computer Vision ICCV 2025",
+        "presentationType": null,
+        "summary": "We propose GeoExplorer, an AGL agent that incorporates curiosity-driven exploration through intrinsic rewards. Unlike distance-based rewards, our curiosity-driven reward is goal-agnostic, enabling robust, diverse, and contextually relevant exploration based on effective environment modeling. These capabilities have been proven through extensive experiments across four AGL benchmarks, demonstrating the effectiveness and generalization ability of GeoExplorer in diverse settings, particularly in localizing unfamiliar targets and environments."
+    },
+    {
+        "title": "Do Vision-Language Models Have Internal World Models? Towards an Atomic Evaluation",
+        "imageSrc": "images/wmbench.png",
+        "imageSrcset": "images/wmbench.png 500w, images/wmbench.png 800w, images/wmbench.png 1080w, images/wmbench.png 1600w",
+        "pdfLink": "https://arxiv.org/abs/2506.21876",
+        "codeLink": "https://huggingface.co/datasets/maitrix-org/WM-ABench",
+        "conferenceLink": "https://2025.aclweb.org",
+        "conferenceLabel": "ACL 2025",
+        "authors": "Qiyue Gao, Xinyu Pi, Kevin Liu, Junrong Chen, Ruolan Yang, Xinqi Huang, Xinyu Fang, Lu Sun, Gautham Kishore, Bo Ai, Stone Tao, Mengyang Liu, Jiaxi Yang, Chao-Jung Lai, Chuanyang Jin, Jiannan Xiang, Benhao Huang, Zeming Chen, David Danks, Hao Su, Tianmin Shu, Ziqiao Ma, Lianhui Qin, Zhiting Hu",
+        "publicationInfo": "Proceedings of the 63rd Annual Meeting of the Association for Computational Linguistics (ACL 2025)",
+        "presentationType": null,
+        "summary": "we introduce WM-ABench, a large-scale benchmark comprising 23 fine-grained evaluation dimensions across 6 diverse simulated environments with controlled counterfactual simulations. Through 660 experiments on 15 latest commercial and open-source VLMs, we find that these models exhibit striking limitations in basic world modeling abilities. For instance, almost all models perform at near-random accuracy when distinguishing motion trajectories. Additionally, they lack disentangled understanding---e.g., some models tend to believe blue objects move faster than green ones.",
+        "mediaLink": ["https://huggingface.co/papers/date/2025-08-19"],
+        "mediaInfo": ["Hugging Face Daily Papers"]
+    },
+    {
         "title": "INCLUDE: Evaluating Multilingual Language Understanding with Regional Knowledge",
         "imageSrc": "images/include.png",
         "imageSrcset": "images/include.png 500w, images/include.png 800w, images/include.png 1080w, images/include.png 1600w",
