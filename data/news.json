@@ -1,6 +1,26 @@
 {
   "newsItems": [
     {
+      "date": "Nov 2025",
+      "content": "🔥 Meditron was highlighted in the Honorary Lecture of Martin Vetterli, Professor and President Emeritus of EPFL",
+      "links": [
+        {
+          "text": "Honorary Lecture",
+          "url": "https://memento.epfl.ch/event/honorary-lecture-of-martin-vetterli-when-science-o/"
+        }
+      ]
+    },
+    {
+      "date": "July 2025",
+      "content": "🔥 Started my 2nd research internship @ Meta FAIR Lab",
+      "links": [
+        {
+          "text": "Meta FAIR",
+          "url": "https://ai.meta.com/research/"
+        }
+      ]
+    },
+    {
       "date": "July 2025",
       "content": "🔥 Our new work \"PERK\" on Long-Context Reasoning with Test-Time Learning is released!",
       "links": [
