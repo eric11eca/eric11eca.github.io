@@ -152,7 +152,6 @@ document.addEventListener('DOMContentLoaded', function() {
     .then(data => {
       let awardItems = document.getElementById('award-items');
       data.forEach(item => {
-        console.log(item);
         let listItem = document.createElement('li');
         let content = `<strong>${item.name}</strong><br>${item.event}`;
         content = content.replace(item.event, `<a href="${item.url}" target="_blank">${item.event}</a>`);
@@ -169,7 +168,6 @@ document.addEventListener('DOMContentLoaded', function() {
     .then(data => {
       let awardItems = document.getElementById('service-items');
       data.forEach(item => {
-        console.log(item);
         let listItem = document.createElement('li');
         let content = `${item.conference}</strong>: ${item.role}, ${item.reviews}`;
         content = content.replace(item.conference, `<a href="${item.url}" target="_blank">${item.conference}</a>`);
