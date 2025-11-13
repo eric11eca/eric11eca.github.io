@@ -58,20 +58,6 @@
         "mediaInfo": ["Hugging Face Daily Papers"]
     },
     {
-        "title": "INCLUDE: Evaluating Multilingual Language Understanding with Regional Knowledge",
-        "imageSrc": "images/include.png",
-        "imageSrcset": "images/include.png 500w, images/include.png 800w, images/include.png 1080w, images/include.png 1600w",
-        "pdfLink": "https://arxiv.org/abs/2411.19799",
-        "conferenceLink": "https://iclr.cc/Conferences/2025",
-        "conferenceLabel": "ICLR 2025",
-        "authors": "Angelika Romanou*, Negar Foroutan, Anna Sotnikova, Zeming Chen, Sree Harsha Nelaturu, Shivalika Singh, Rishabh Maheshwary, Micol Altomare, Mohamed A. Haggag, Imanol Schlag, Marzieh Fadaee, Sara Hooker, Antoine Bosselut",
-        "publicationInfo": "Proceedings of The Thirteenth International Conference on Learning Representations (ICLR 2025)",
-        "presentationType": "Spotlight Paper (Top 25%)",
-        "mediaLink": ["https://cohere.com/research/papers/include-evaluating-multilingual-language-understanding-with-regional-knowledge-2024-11-29"],
-        "mediaInfo": ["Spotlight Research Blog by Cohere for AI"],
-        "summary": "The development of functional LLMs in many languages is bottlenecked by the lack of high-quality evaluation resources in non-English languages that focus on the regional and cultural knowledge of the environments. In this work, we construct an evaluation suite of 197,243 QA pairs from local exam sources to measure the capabilities of multilingual LLMs in a variety of regional contexts. Our novel resource, INCLUDE, is a comprehensive knowledge- and reasoning-centric benchmark across 44 written languages that evaluates multilingual LLMs for performance in the actual language environments where they would be deployed."
-    },
-    {
         "title": "MEDITRON-70B: Scaling Medical Pretraining for Large Language Models",
         "imageSrc": "images/meditron.jpg",
         "imageSrcset": "images/meditron.jpg 500w, images/meditron.jpg 800w, images/meditron.jpg 1080w, images/meditron.jpg 1600w",
@@ -85,6 +71,20 @@
         "mediaLink": ["https://aiindex.stanford.edu/wp-content/uploads/2024/04/HAI_AI-Index-Report-2024_Chapter5.pdf","https://github.com/dair-ai/ML-Papers-of-the-Week/blob/main/#top-ml-papers-of-the-week-november-27---december-3"],
         "mediaInfo": ["2024 AI Index Report Highlited Research for Science and Medicine", "Top ML Papers of the Week (by dair.ai)"],
         "summary": "Meditron is a suite of open-source medical Large Language Models (70B & 7B) adapted to the medical domain from Llama-2 through continued pretraining on a comprehensively curated medical corpus, including selected PubMed articles, abstracts, and internationally-recognized medical guidelines. Meditron-70B, finetuned on relevant training data, demonstrates high-level medical reasoning and improved domain-specific benchmark performance over Llama-2-70B, GPT-3.5, and Flan-PaLM. We democratize an optimized workflow to scale up domain-specific pretraining for medical LLMs to help revolutionize access to medical knowledge and evidence through open-source LLMs."
+    },
+    {
+        "title": "INCLUDE: Evaluating Multilingual Language Understanding with Regional Knowledge",
+        "imageSrc": "images/include_brand.png",
+        "imageSrcset": "images/include_brand.png 500w, images/include_brand.png 800w, images/include_brand.png 1080w, images/include_brand.png 1600w",
+        "pdfLink": "https://arxiv.org/abs/2411.19799",
+        "conferenceLink": "https://iclr.cc/Conferences/2025",
+        "conferenceLabel": "ICLR 2025",
+        "authors": "Angelika Romanou*, Negar Foroutan, Anna Sotnikova, Zeming Chen, Sree Harsha Nelaturu, Shivalika Singh, Rishabh Maheshwary, Micol Altomare, Mohamed A. Haggag, Imanol Schlag, Marzieh Fadaee, Sara Hooker, Antoine Bosselut",
+        "publicationInfo": "Proceedings of The Thirteenth International Conference on Learning Representations (ICLR 2025)",
+        "presentationType": "Spotlight Paper (Top 25%)",
+        "mediaLink": ["https://cohere.com/research/papers/include-evaluating-multilingual-language-understanding-with-regional-knowledge-2024-11-29"],
+        "mediaInfo": ["Spotlight Research Blog by Cohere for AI"],
+        "summary": "The development of functional LLMs in many languages is bottlenecked by the lack of high-quality evaluation resources in non-English languages that focus on the regional and cultural knowledge of the environments. In this work, we construct an evaluation suite of 197,243 QA pairs from local exam sources to measure the capabilities of multilingual LLMs in a variety of regional contexts. Our novel resource, INCLUDE, is a comprehensive knowledge- and reasoning-centric benchmark across 44 written languages that evaluates multilingual LLMs for performance in the actual language environments where they would be deployed."
     },
     {
         "title": "Could ChatGPT get an engineering degree? Evaluating higher education vulnerability to AI assistants",
@@ -230,5 +230,4 @@
         "presentationType": null,
         "summary": "An attentive tree-structured neural network that consists of a tree-based long-short-term-memory network (Tree-LSTM) with soft attention designed to model the syntactic parse tree information from the sentence pair of a reasoning task."
     }
-
 ]
