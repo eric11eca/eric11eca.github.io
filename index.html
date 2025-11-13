@@ -54,6 +54,7 @@
       <nav role="navigation" class="navigation-menu w-nav-menu">
         <a href="#about-me" class="navigation-link w-nav-link">About Me</a>
         <a href="#news-items" class="navigation-link w-nav-link">News</a>
+        <!-- <a href="#research-items" class="navigation-link w-nav-link">Research</a> -->
         <a href="#paper-items" class="navigation-link w-nav-link">Publications</a>
         <a href="cv.html" class="navigation-link w-nav-link">My CV</a>
       </nav>
@@ -126,13 +127,10 @@
               <!-- Research Section-->
               <div class="tab-pane fade" id="nav-research" role="tabpanel" aria-labelledby="nav-research-tab">
                 <ol role="list" class="list">
-
-                  <li><em class="italic-text-5">Test-Time Learning</em>: A crucial challenge for the current AI systems is "How to achieve continual learning?" I research on new methods for test-time learning, a paradigm where models continue to learn from new information and experiences at inference time. I am interested in reformulating AI reasoning as test-time learning with applications to RL post-training and Deep Research. Under this paradigm, I am also interested in developing latent-space reasoning algorithms that operates over latent states optimizable at test time.</li>
-                  <li><em class="italic-text-5">Large Foundation & Frontier Models</em>: I am interested in developing next-generation large language, multimodal, & reasoning models, and their applications to various professional domains and tasks. During my PhD, I developed the suite of medical LLMs and LMMs, <a href="https://github.com/epfLLM/meditron" target="_blank">MEDITRON</a>, which was the pioneer of large-scale open-soruce medical foundation and frontier models.</li>
-
-
-
-                  <li><em class="italic-text-5">Interpretability, benchmarking, and verified AI</em>: I want to develop new tools and theories that help interpret and probe model behaviors. I also want to build benchmarks that can evaluate models' ability and diagnose potential issues in data and learning, especially asses how reliable a model can be in real-life use cases. I recently started to explore the idea of verified AI, where the goal is to have provable assurances of correctness concerning mathematically-specified requirements.</li>
+                  <li><em class="italic-text-5">Learning & Reasoning Algorithms</em>: A crucial challenge for the current AI systems is "How to achieve continual learning?" I research on new methods for test-time learning, a paradigm where models continue to learn from new information and experiences at inference time. I am interested in reformulating AI reasoning as test-time learning with applications to RL post-training and Deep Research. Under this paradigm, I am also interested in developing latent-space reasoning algorithms that operates over latent states optimizable at test time.</li>
+                  <li><em class="italic-text-5">Large-scale AI Development (Foundation & Frontier models)</em>: I am interested in developing next-generation large language, multimodal, & reasoning models, and their applications to various professional domains and tasks.</li>
+                  <li><em class="italic-text-5">World Model</em>: Building spatially intelligent AI is the next decay of research advances. World model is a new type of generative models with the capabilities of understanding, reasoning, simulating and interaction with semantically, physically, geometrically and dynamically complex worlds. My research focuses on developing world models through large-scale video learning and simulation.</li>
+                  <li><em class="italic-text-5">Agentic AI for Research & Science</em>: Deep Research agents are advanced AI systems driven by powerful foundation models and reasoning algorithms that can solve complex and novel problems. Their cabilities include the generation of novel ideas, effective information gathering through search tools, and the execution of analyses or experiments prior to drafting research reports or papers. My research aims to build research agents that can discover new knowledge through test-time continual learning.</li>
                 </ol>
               </div>
 
@@ -179,10 +177,22 @@
 
     <div class="container-adjust-width w-container">
 
+      <!-- Research Section -->
+      <!-- <div class="white-wrapper" id="research-items">
+        <div class="center-div-full">
+          <h2 class="heading-tight"><strong>Research</strong></h2>
+        </div>
+        <div id="research-content"></div>
+      </div> -->
+
+      <div class="space-25"></div>
+
       <!-- Publications Section -->
       <nav>
         <div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
-            <a class="nav-item nav-link active" data-toggle="tab" data-target="#paper-items" role="tab" aria-controls="paper-items" aria-selected="true">
+            <a class="nav-item nav-link active" data-toggle="tab" data-target="#highlight-items" role="tab" aria-controls="highlight-items" aria-selected="true">
+              <font size="+2">Highlights</font></a>
+            <a class="nav-item nav-link" data-toggle="tab" data-target="#paper-items" role="tab" aria-controls="paper-items" aria-selected="false">
               <font size="+2">Publications</font></a>
             <a class="nav-item nav-link" data-toggle="tab" data-target="#github-items" role="tab" aria-controls="github-items" aria-selected="false">
               <font size="+2">Open-Source</font></a>
@@ -194,7 +204,11 @@
       </nav>
 
       <div class="tab-content" id="nav-tabContent">
-        <div class="tab-pane fade show active" id="paper-items" role="tabpanel" aria-labelledby="paper-items-tab">
+        <div class="tab-pane fade show active" id="highlight-items" role="tabpanel" aria-labelledby="highlight-items-tab">
+          <div class="space-10"></div>
+        </div>
+
+        <div class="tab-pane fade" id="paper-items" role="tabpanel" aria-labelledby="paper-items-tab">
           <div class="space-10"></div>
         </div>
 
