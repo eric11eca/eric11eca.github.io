@@ -1,680 +1,431 @@
-// document.addEventListener('DOMContentLoaded', function() {
-//   fetch('../data/research.json')
-//     .then(response => response.json())
-//     .then(data => {
-//       let researchContent = document.getElementById("research-content");
-//       researchContent.innerHTML = "";
+// Cached data store to avoid duplicate fetches
+const dataCache = {};
 
-//       data.forEach((item, index) => {
-//         // Create wrapper div
-//         const wrapperDiv = document.createElement('div');
-//         wrapperDiv.className = 'white-wrapper';
-//         wrapperDiv.style.marginBottom = '20px';
-//         wrapperDiv.style.padding = '20px';
-//         wrapperDiv.style.backgroundColor = '#f8f9fa';
-//         wrapperDiv.style.borderRadius = '8px';
+// Helper function to fetch and cache data
+async function fetchData(url) {
+  if (dataCache[url]) {
+    return dataCache[url];
+  }
+  const response = await fetch(url);
+  const data = await response.json();
+  dataCache[url] = data;
+  return data;
+}
 
-//         // Create row div
-//         const rowDiv = document.createElement('div');
-//         rowDiv.className = 'w-row';
-//         rowDiv.style.display = 'flex';
-//         rowDiv.style.alignItems = 'center';
+// Helper function to create list items with links (optimized)
+function createListItem(item, format) {
+  const li = document.createElement("li");
+  let content = format(item);
 
-//         // Create image column
-//         const imgCol = document.createElement('div');
-//         imgCol.className = 'column-16 w-col w-col-4 w-col-medium-4';
-//         const img = document.createElement('img');
-//         img.src = item.imageSrc;
-//         img.srcset = item.imageSrcset;
-//         img.alt = item.title;
-//         img.loading = 'lazy';
-//         img.height = 200;
-//         img.className = 'image-9';
-//         img.style.borderRadius = '5px';
-//         imgCol.appendChild(img);
+  // Batch replace links if they exist
+  if (item.links) {
+    item.links.forEach(link => {
+      content = content.replace(link.text, `<a href="${link.url}" target="_blank">${link.text}</a>`);
+    });
+  }
 
-//         // Create content column
-//         const contentCol = document.createElement('div');
-//         contentCol.className = 'w-col w-col-8 w-col-medium-8';
+  li.innerHTML = content;
+  return li;
+}
 
-//         // Add title
-//         const titleDiv = document.createElement('div');
-//         titleDiv.className = 'wf-section';
-//         const title = document.createElement('h3');
-//         title.className = 'heading-15';
-//         title.style.marginBottom = '10px';
-//         title.textContent = item.title;
-//         titleDiv.appendChild(title);
+// Consolidated initialization function
+async function initializeApp() {
+  try {
+    // Fetch all data in parallel
+    const [newsData, awardsData, serviceData, papersData] = await Promise.all([
+      fetchData('../data/news.json'),
+      fetchData('../data/awards.json'),
+      fetchData('../data/service.json'),
+      fetchData('../data/papers.json')
+    ]);
 
-//         // Add description
-//         const descDiv = document.createElement('div');
-//         descDiv.style.marginBottom = '15px';
-//         descDiv.innerHTML = `<p>${item.description}</p>`;
+    // Initialize news section with DocumentFragment for better performance
+    const newsItems = document.getElementById("news-items");
+    const newsItemsOld = document.getElementById("news-items-old");
 
-//         // Add links
-//         const linksDiv = document.createElement('div');
-//         linksDiv.style.marginBottom = '10px';
-//         item.links.forEach(link => {
-//           const anchor = document.createElement('a');
-//           anchor.href = link.url;
-//           anchor.target = '_blank';
-//           anchor.className = 'label_link';
-//           anchor.style.marginRight = '10px';
+    if (newsItems && newsItemsOld) {
+      const newsFragment = document.createDocumentFragment();
+      const oldNewsFragment = document.createDocumentFragment();
 
-//           const span = document.createElement('span');
-//           span.className = `post-info label ${link.type === 'code' ? 'label-code' : 'label-primary'}`;
-//           span.textContent = link.text;
+      newsData.newsItems.forEach(item => {
+        newsFragment.appendChild(createListItem(item, (i) => `<strong>[${i.date}]</strong>: ${i.content}`));
+      });
 
-//           anchor.appendChild(span);
-//           linksDiv.appendChild(anchor);
-//         });
+      newsData.oldNewsItems.forEach(item => {
+        oldNewsFragment.appendChild(createListItem(item, (i) => `<strong>[${i.date}]</strong>: ${i.content}`));
+      });
 
-//         // Add tags
-//         if (item.tags && item.tags.length > 0) {
-//           const tagsDiv = document.createElement('div');
-//           tagsDiv.style.marginTop = '10px';
-//           item.tags.forEach(tag => {
-//             const tagSpan = document.createElement('span');
-//             tagSpan.style.display = 'inline-block';
-//             tagSpan.style.marginRight = '8px';
-//             tagSpan.style.padding = '4px 10px';
-//             tagSpan.style.backgroundColor = '#e9ecef';
-//             tagSpan.style.borderRadius = '4px';
-//             tagSpan.style.fontSize = '0.85em';
-//             tagSpan.textContent = tag;
-//             tagsDiv.appendChild(tagSpan);
-//           });
-//           contentCol.appendChild(titleDiv);
-//           contentCol.appendChild(descDiv);
-//           contentCol.appendChild(linksDiv);
-//           contentCol.appendChild(tagsDiv);
-//         } else {
-//           contentCol.appendChild(titleDiv);
-//           contentCol.appendChild(descDiv);
-//           contentCol.appendChild(linksDiv);
-//         }
-
-//         // Assemble everything
-//         rowDiv.appendChild(imgCol);
-//         rowDiv.appendChild(contentCol);
-//         wrapperDiv.appendChild(rowDiv);
-//         researchContent.appendChild(wrapperDiv);
-//       });
-//     })
-//     .catch((error) => {console.error('Error loading research:', error);});
-// });
-
-document.addEventListener('DOMContentLoaded', function() {
-  fetch('../data/news.json')
-    .then(response => response.json())
-    .then(data => {
-      let newsItems = document.getElementById("news-items");
-      let newsItemsOld = document.getElementById("news-items-old");
       newsItems.innerHTML = "";
       newsItemsOld.innerHTML = "";
-
-      data.newsItems.forEach((item, index) => {
-        let li = document.createElement("li");
-        let content = item.content;
-
-        // Replace placeholders in content with actual links
-        item.links.forEach(link => {
-          content = content.replace(link.text, `<a href="${link.url}" target="_blank">${link.text}</a>`);
-        });
-
-        // Adding strong tag for date
-        li.innerHTML = `<strong>[${item.date}]</strong>: ${content}`;
-
-        newsItems.appendChild(li);
-      });
-
-      data.oldNewsItems.forEach((item, index) => {
-        let li = document.createElement("li");
-        let content = item.content;
-
-        // Replace placeholders in content with actual links
-        item.links.forEach(link => {
-          content = content.replace(link.text, `<a href="${link.url}" target="_blank">${link.text}</a>`);
-        });
-
-        // Adding strong tag for date
-        li.innerHTML = `<strong>[${item.date}]</strong>: ${content}`;
-
-        newsItemsOld.appendChild(li);
-      });
-    })
-    .catch((error) => {console.error('Error:', error);});
-});
-
-document.addEventListener('DOMContentLoaded', function() {
-  fetch('../data/awards.json')
-    .then(response => response.json())
-    .then(data => {
-      let awardItems = document.getElementById('award-items');
-      data.forEach(item => {
-        let listItem = document.createElement('li');
-        let content = `<strong>${item.name}</strong><br>${item.event}`;
-        content = content.replace(item.event, `<a href="${item.url}" target="_blank">${item.event}</a>`);
-        listItem.innerHTML = content;
-        awardItems.appendChild(listItem);
-      });
-    })
-    .catch(error => console.error('Error loading JSON:', error));
-});
-
-document.addEventListener('DOMContentLoaded', function() {
-  fetch('../data/service.json')
-    .then(response => response.json())
-    .then(data => {
-      let awardItems = document.getElementById('service-items');
-      data.forEach(item => {
-        let listItem = document.createElement('li');
-        let content = `${item.conference}</strong>: ${item.role}, ${item.reviews}`;
-        content = content.replace(item.conference, `<a href="${item.url}" target="_blank">${item.conference}</a>`);
-        listItem.innerHTML = content;
-        awardItems.appendChild(listItem);
-      });
-    })
-    .catch(error => console.error('Error loading JSON:', error));
-});
-
-document.addEventListener('DOMContentLoaded', () => {
-  class PaperManager {
-    constructor(dataUrl, containerId) {
-      this.dataUrl = dataUrl;
-      this.container = document.getElementById(containerId);
-      this.sections = {
-        all: null,
-        preprints: null,
-        conferences: null,
-        journals: null,
-        workshops: null,
-      };
-      this.initialize();
+      newsItems.appendChild(newsFragment);
+      newsItemsOld.appendChild(oldNewsFragment);
     }
 
-    async initialize() {
-      try {
-        const data = await this.fetchData(this.dataUrl);
-        this.createButtonBar();
-        this.createSections();
-        this.populateSections(data);
-        this.showSection('all');
-      } catch (error) {
-        console.error('Error loading JSON:', error);
+    // Initialize awards section
+    const awardItems = document.getElementById('award-items');
+    if (awardItems) {
+      const fragment = document.createDocumentFragment();
+      awardsData.forEach(item => {
+        const listItem = document.createElement('li');
+        listItem.innerHTML = `<strong>${item.name}</strong><br><a href="${item.url}" target="_blank">${item.event}</a>`;
+        fragment.appendChild(listItem);
+      });
+      awardItems.appendChild(fragment);
+    }
+
+    // Initialize service section
+    const serviceItems = document.getElementById('service-items');
+    if (serviceItems) {
+      const fragment = document.createDocumentFragment();
+      serviceData.forEach(item => {
+        const listItem = document.createElement('li');
+        listItem.innerHTML = `<a href="${item.url}" target="_blank">${item.conference}</a>: ${item.role}, ${item.reviews}`;
+        fragment.appendChild(listItem);
+      });
+      serviceItems.appendChild(fragment);
+    }
+
+    // Initialize paper managers (they share the same cached data now)
+    if (document.getElementById('paper-items')) {
+      new PaperManager(papersData, 'paper-items');
+    }
+    if (document.getElementById('highlight-items')) {
+      new HighlightsManager(papersData, 'highlight-items');
+    }
+
+    // Initialize media section
+    const mediaData = await fetchData('../data/media.json');
+    const mediaItems = document.getElementById('media-items');
+    if (mediaItems) {
+      const fragment = document.createDocumentFragment();
+      mediaData.forEach(item => {
+        fragment.appendChild(createMediaElement(item));
+      });
+      mediaItems.appendChild(fragment);
+    }
+  } catch (error) {
+    console.error('Error initializing app:', error);
+  }
+}
+
+// Helper function for media elements
+function createMediaElement(item) {
+  const wrapperDiv = document.createElement('div');
+  wrapperDiv.className = 'white-wrapper';
+
+  wrapperDiv.innerHTML = `
+    <div class="w-row">
+      <div class="column-16 w-col w-col-4 w-col-medium-4">
+        <img src="${item.imageSrc}" srcset="${item.imageSrcSet}" height="240" class="image-9" loading="lazy">
+      </div>
+      <div class="w-col w-col-8 w-col-medium-8">
+        <div class="wf-section">
+          <h2 class="heading-15">${item.title}</h2>
+        </div>
+        <div class="wf-section">
+          <div class="post-info">${item.source}</div>
+          <div class="post-info"> | </div>
+          <div class="post-info">${item.date}</div>
+        </div>
+        <div class="wf-section">
+          <b>Overview</b>: ${item.overview}<br>
+          <a href="${item.readMoreLink}" target="_blank" rel="noopener noreferrer">Read more</a>
+        </div>
+      </div>
+    </div>
+  `;
+
+  return wrapperDiv;
+}
+
+// Single DOMContentLoaded listener
+document.addEventListener('DOMContentLoaded', initializeApp);
+
+// Base class for shared paper rendering logic
+class BasePaperRenderer {
+  createElement(tag, attributes = {}, innerHTML = '') {
+    const element = document.createElement(tag);
+    for (const [key, value] of Object.entries(attributes)) {
+      if (key === 'style' && typeof value === 'object') {
+        Object.assign(element.style, value);
+      } else {
+        element[key] = value;
       }
     }
+    if (innerHTML) element.innerHTML = innerHTML;
+    return element;
+  }
 
-    async fetchData(url) {
-      const response = await fetch(url);
-      return response.json();
+  createImageColumn(item) {
+    const imageCol = this.createElement('div', { className: 'column-17 w-col w-col-4' });
+    const img = this.createElement('img', {
+      src: item.imageSrc,
+      srcset: item.imageSrcset,
+      alt: '',
+      loading: 'lazy',
+      width: '2839',
+      height: '240',
+      className: 'image-9',
+    });
+    imageCol.appendChild(img);
+    return imageCol;
+  }
+
+  createLinksSection(item) {
+    const linksSection = this.createElement('div', { className: 'wf-section' });
+    const links = [
+      { link: item.pdfLink, text: 'pdf', className: 'label label-primary' },
+      { link: item.codeLink, text: 'code', className: 'label label-code' },
+      { link: item.videoLink, text: 'video', className: 'label label-video' },
+      { link: item.conferenceLink, text: item.conferenceLabel, className: 'label label-conference' },
+      { link: item.journalLink, text: item.journalLabel, className: 'label label-journal' },
+      { link: item.workshopLink, text: item.workshopLabel, className: 'label label-workshop' },
+      { link: item.awardLink, text: item.awardLabel, className: 'label label-best' }
+    ];
+
+    const fragment = document.createDocumentFragment();
+    links.forEach(({ link, text, className }) => {
+      if (link) {
+        const anchor = this.createElement('a', { href: link, target: '_blank', className: 'label_link' });
+        const span = this.createElement('span', { className: `post-info ${className}` }, text);
+        anchor.appendChild(span);
+        fragment.appendChild(anchor);
+
+        const mobileMask = this.createElement('div', { className: 'post-info mobile-mask' }, '|');
+        fragment.appendChild(mobileMask);
+      }
+    });
+
+    // Remove last separator
+    if (fragment.lastChild) {
+      fragment.removeChild(fragment.lastChild);
     }
 
-    createButtonBar() {
-      const buttonBar = this.createElement('div', { id: 'button-bar', style: 'margin-bottom: 20px;' });
-      buttonBar.style.justifyContent = 'center';
-      buttonBar.style.textAlign = 'center';
-      this.container.appendChild(buttonBar);
+    linksSection.appendChild(fragment);
+    return linksSection;
+  }
 
-      this.createButton(buttonBar, 'All', () => this.showSection('all'));
-      this.createButton(buttonBar, 'Preprints', () => this.showSection('preprints-section'));
-      this.createButton(buttonBar, 'Conferences', () => this.showSection('conferences-section'));
-      this.createButton(buttonBar, 'Journals', () => this.showSection('journals-section'));
-      this.createButton(buttonBar, 'Workshops', () => this.showSection('workshops-section'));
+  createInfoSection(item) {
+    const infoSection = this.createElement('div', {
+      className: 'wf-section',
+      style: { paddingRight: '20px' }
+    });
+    const authorsInfo = this.createElement('div', { className: 'post-info-noncaps' });
+
+    const publication = `<br>✍️ <i>${item.authors.replace('Zeming Chen', '<b>Zeming Chen</b>')}</i><br><br>📚 <font size="+0">${item.publicationInfo}</font><br>`;
+    authorsInfo.innerHTML = publication;
+    infoSection.appendChild(authorsInfo);
+
+    return infoSection;
+  }
+
+  addPresentationType(parent, item) {
+    if (item.presentationType) {
+      const presentationTypeSection = this.createElement('div', {},
+        `<font color="firebrick"><h4><b>${item.presentationType}</b></h4></font>`);
+      parent.appendChild(presentationTypeSection);
     }
 
-    createButton(parent, text, onClick) {
-      const button = this.createElement('button', {}, text);
-      button.className = 'w-button';
+    if (item.mediaInfo && item.mediaLink) {
+      const mediaInfos = Array.isArray(item.mediaInfo) ? item.mediaInfo : [item.mediaInfo];
+      const mediaLinks = Array.isArray(item.mediaLink) ? item.mediaLink : [item.mediaLink];
+
+      mediaInfos.forEach((info, index) => {
+        const link = mediaLinks[index] || mediaLinks[0];
+        const mediaSection = this.createElement('div', {},
+          `<font color="firebrick"><h4><b><a target="_blank" href="${link}">${info}</a></b></h4></font>`);
+        parent.appendChild(mediaSection);
+      });
+    }
+  }
+
+  createContentColumn(item) {
+    const contentCol = this.createElement('div', { className: 'w-col w-col-8' });
+    const titleSection = this.createElement('div', { className: 'wf-section' },
+      `<h2 class="heading-15">${item.title}</h2>`);
+    const linksSection = this.createLinksSection(item);
+    const infoSection = this.createInfoSection(item);
+    const summary = this.createElement('details', {},
+      `<summary><strong>TL;DR</strong></summary><p>${item.summary}</p>`);
+
+    contentCol.appendChild(titleSection);
+    contentCol.appendChild(linksSection);
+    contentCol.appendChild(infoSection);
+    contentCol.appendChild(summary);
+    contentCol.appendChild(this.createElement('hr'));
+    this.addPresentationType(contentCol, item);
+
+    if (contentCol.lastChild && contentCol.lastChild.tagName === 'HR') {
+      contentCol.removeChild(contentCol.lastChild);
+    }
+    return contentCol;
+  }
+
+  createPaperElement(item) {
+    const whiteWrapper = this.createElement('div', { className: 'white-wrapper' });
+    const rowDiv = this.createElement('div', {
+      className: 'w-row',
+      style: { display: 'flex', alignItems: 'center' }
+    });
+
+    rowDiv.appendChild(this.createImageColumn(item));
+    rowDiv.appendChild(this.createContentColumn(item));
+    whiteWrapper.appendChild(rowDiv);
+
+    return whiteWrapper;
+  }
+}
+
+class PaperManager extends BasePaperRenderer {
+  constructor(data, containerId) {
+    super();
+    this.data = data;
+    this.container = document.getElementById(containerId);
+    this.sections = {
+      all: null,
+      preprints: null,
+      conferences: null,
+      journals: null,
+      workshops: null,
+    };
+    this.initialize();
+  }
+
+  initialize() {
+    try {
+      this.createButtonBar();
+      this.createSections();
+      this.populateSections(this.data);
+      this.showSection('all');
+    } catch (error) {
+      console.error('Error loading JSON:', error);
+    }
+  }
+
+  createButtonBar() {
+    const buttonBar = this.createElement('div', {
+      id: 'button-bar',
+      style: { marginBottom: '20px', justifyContent: 'center', textAlign: 'center' }
+    });
+    this.container.appendChild(buttonBar);
+
+    const buttons = [
+      { text: 'All', section: 'all' },
+      { text: 'Preprints', section: 'preprints-section' },
+      { text: 'Conferences', section: 'conferences-section' },
+      { text: 'Journals', section: 'journals-section' },
+      { text: 'Workshops', section: 'workshops-section' }
+    ];
+
+    buttons.forEach(({ text, section }) => {
+      const button = this.createElement('button', { className: 'w-button' }, text);
       button.style.borderRadius = '5px';
       button.style.marginRight = '10px';
-      button.addEventListener('click', onClick);
-      parent.appendChild(button);
-    }
+      button.addEventListener('click', () => this.showSection(section));
+      buttonBar.appendChild(button);
+    });
+  }
 
-    createSections() {
-      this.sections.preprints = this.createSection('preprints-section', 'Preprints');
-      this.sections.conferences = this.createSection('conferences-section', 'Conferences');
-      this.sections.journals = this.createSection('journals-section', 'Journals');
-      this.sections.workshops = this.createSection('workshops-section', 'Workshops');
-    }
+  createSections() {
+    this.sections.preprints = this.createSection('preprints-section', 'Preprints');
+    this.sections.conferences = this.createSection('conferences-section', 'Conferences');
+    this.sections.journals = this.createSection('journals-section', 'Journals');
+    this.sections.workshops = this.createSection('workshops-section', 'Workshops');
+  }
 
-    // Create a section with a title
-    createSection(id, title) {
-      const section = this.createElement('div', { id });
-      section.innerHTML = `<h2>${title}</h2>`;
-      this.container.appendChild(section);
-      return section;
-    }
+  createSection(id, title) {
+    const section = this.createElement('div', { id });
+    section.innerHTML = `<h2>${title}</h2>`;
+    this.container.appendChild(section);
+    return section;
+  }
 
-    // Populate sections with paper items
-    populateSections(data) {
-      data.forEach(item => {
-        const paperElement = this.createPaperElement(item);
+  populateSections(data) {
+    // Use DocumentFragments for better performance
+    const fragments = {
+      preprints: document.createDocumentFragment(),
+      conferences: document.createDocumentFragment(),
+      journals: document.createDocumentFragment(),
+      workshops: document.createDocumentFragment()
+    };
 
-        if (item.conferenceLink) {
-          this.sections.conferences.appendChild(paperElement);
-        } else if (item.journalLink) {
-          this.sections.journals.appendChild(paperElement);
-        } else if (item.workshopLink) {
-          this.sections.workshops.appendChild(paperElement);
-        } else {
-          this.sections.preprints.appendChild(paperElement);
-        }
-      });
-    }
+    data.forEach(item => {
+      const paperElement = this.createPaperElement(item);
 
-    createPaperElement(item) {
-      const whiteWrapper = this.createElement('div', { className: 'white-wrapper' });
-      const rowDiv = this.createElement('div', { className: 'w-row' });
-      rowDiv.style.display = 'flex';
-      rowDiv.style.alignItems = 'center';
-
-      const imageCol = this.createImageColumn(item);
-      const contentCol = this.createContentColumn(item);
-
-      rowDiv.appendChild(imageCol);
-      rowDiv.appendChild(contentCol);
-      whiteWrapper.appendChild(rowDiv);
-
-      return whiteWrapper;
-    }
-
-    createImageColumn(item) {
-      const imageCol = this.createElement('div', { className: 'column-17 w-col w-col-4' });
-      const img = this.createElement('img', {
-        src: item.imageSrc,
-        srcset: item.imageSrcset,
-        alt: '', // Add appropriate alt text for each image
-        loading: 'lazy',
-        width: '2839',
-        height: '240',
-        className: 'image-9',
-      });
-      imageCol.appendChild(img);
-      return imageCol;
-    }
-
-    createContentColumn(item) {
-      const contentCol = this.createElement('div', { className: 'w-col w-col-8' });
-      const titleSection = this.createElement('div', { className: 'wf-section' }, `<h2 class="heading-15">${item.title}</h2>`);
-      const linksSection = this.createLinksSection(item);
-      const infoSection = this.createInfoSection(item);
-      const summary = this.createElement(
-        'details',
-        {}, // any attributes, e.g. { open: true }
-        `
-          <summary><strong>TL;DR</strong></summary>
-          <p>${item.summary}</p>
-        `
-      );
-
-      contentCol.appendChild(titleSection);
-      contentCol.appendChild(linksSection);
-      contentCol.appendChild(infoSection);
-      contentCol.appendChild(summary);
-      contentCol.appendChild(this.createElement('hr'));
-      this.addPresentationType(contentCol, item);
-
-      // Check if 'hr' is the last child and remove it
-      if (contentCol.lastChild.tagName === 'HR') {
-        contentCol.removeChild(contentCol.lastChild);
-      }
-      return contentCol;
-    }
-
-    createLinksSection(item) {
-      const linksSection = this.createElement('div', { className: 'wf-section' });
-      const mobileMask = this.createElement('div', { className: 'post-info mobile-mask' }, '|');
-
-      if (item.pdfLink) {
-        this.appendLink(linksSection, item.pdfLink, 'pdf', 'label label-primary');
-        linksSection.appendChild(mobileMask);
-      }
-      if (item.codeLink) {
-        this.appendLink(linksSection, item.codeLink, 'code', 'label label-code');
-        linksSection.appendChild(mobileMask);
-      }
-      if (item.videoLink) {
-        this.appendLink(linksSection, item.videoLink, 'video', 'label label-video');
-        linksSection.appendChild(mobileMask.cloneNode(true));
-      }
       if (item.conferenceLink) {
-        this.appendLink(linksSection, item.conferenceLink, item.conferenceLabel, 'label label-conference');
-        linksSection.appendChild(mobileMask.cloneNode(true));
+        fragments.conferences.appendChild(paperElement);
+      } else if (item.journalLink) {
+        fragments.journals.appendChild(paperElement);
+      } else if (item.workshopLink) {
+        fragments.workshops.appendChild(paperElement);
+      } else {
+        fragments.preprints.appendChild(paperElement);
       }
-      if (item.journalLink) {
-        this.appendLink(linksSection, item.journalLink, item.journalLabel, 'label label-journal');
-        linksSection.appendChild(mobileMask.cloneNode(true));
-      }
-      if (item.workshopLink) {
-        this.appendLink(linksSection, item.workshopLink, item.workshopLabel, 'label label-workshop');
-        linksSection.appendChild(mobileMask.cloneNode(true));
-      }
-      if (item.awardLink) {
-        this.appendLink(linksSection, item.awardLink, item.awardLabel, 'label label-best');
-        linksSection.appendChild(mobileMask.cloneNode(true));
-      }
+    });
 
-      linksSection.removeChild(linksSection.lastChild);
-      return linksSection;
-    }
+    // Append all fragments at once
+    this.sections.conferences.appendChild(fragments.conferences);
+    this.sections.journals.appendChild(fragments.journals);
+    this.sections.workshops.appendChild(fragments.workshops);
+    this.sections.preprints.appendChild(fragments.preprints);
+  }
 
-    appendLink(parent, href, text, className) {
-      const anchor = this.createElement('a', { href, target: '_blank', className: 'label_link' });
-      const span = this.createElement('span', { className: `post-info ${className}` }, text);
-      anchor.appendChild(span);
-      parent.appendChild(anchor);
-    }
+  showSection(sectionId) {
+    Object.keys(this.sections).forEach(id => {
+      if (id === 'all') return;
+      this.sections[id].style.display = (sectionId === 'all' || id === sectionId.replace('-section', '')) ? 'block' : 'none';
+    });
+  }
+}
 
-    createInfoSection(item) {
-      const infoSection = this.createElement('div', { className: 'wf-section', style: 'padding-right: 20px;' });
-      const authorsInfo = this.createElement('div', { className: 'post-info-noncaps' });
+// Highlights Manager - Selected Publications by Research Area
+class HighlightsManager extends BasePaperRenderer {
+  constructor(data, containerId) {
+    super();
+    this.data = data;
+    this.container = document.getElementById(containerId);
+    this.highlightPapers = {
+      'Large-Scale AI Development': [
+        'MEDITRON-70B: Scaling Medical Pretraining for Large Language Models',
+        'MEDITRON: Open Medical Foundation Models Adapted for Clinical Practice',
+        'INCLUDE: Evaluating Multilingual Language Understanding with Regional Knowledge'
+      ],
+      'Reasoning as Test-Time Learning': [
+        'PERK: Long-Context Reasoning as Parameter-Efficient Test-Time Learning',
+        'RECKONING: Reasoning through Dynamic Knowledge Encoding'
+      ]
+    };
+    this.initialize();
+  }
 
-      const authors = `✍️ <i>${item.authors}</i><br><br>`;
-      const venue = `📚 <font size="+0">${item.publicationInfo}</font>`;
-      const publication = `<br>${authors}${venue}<br>`.replace('Zeming Chen', '<b>Zeming Chen</b>');
-
-      authorsInfo.innerHTML = publication;
-      infoSection.appendChild(authorsInfo);
-
-      return infoSection;
-    }
-
-    addPresentationType(parent, item) {
-      if (item.presentationType) {
-        const presentationTypeSection = this.createElement('div', {}, `<font color="firebrick"><h4><b>${item.presentationType}</b></h4></font>`);
-        parent.appendChild(presentationTypeSection);
-      }
-      if (item.mediaInfo && item.mediaLink) {
-        if (Array.isArray(item.mediaInfo) && Array.isArray(item.mediaLink) && item.mediaInfo.length === item.mediaLink.length) {
-          item.mediaInfo.forEach((info, index) => {
-            const mediaSection = this.createElement('div', {}, `<font color="firebrick"><h4><b><a target="_blank" href="${item.mediaLink[index]}">${info}</a></b></h4></font>`);
-            parent.appendChild(mediaSection);
-          });
-        } else {
-          const mediaSection = this.createElement('div', {}, `<font color="firebrick"><h4><b><a target="_blank" href="${item.mediaLink}">${item.mediaInfo}</a></b></h4></font>`);
-          parent.appendChild(mediaSection);
-        }
-      }
-    }
-
-    createElement(tag, attributes = {}, innerHTML = '') {
-      const element = document.createElement(tag);
-      for (const [key, value] of Object.entries(attributes)) {
-        element[key] = value;
-      }
-      element.innerHTML = innerHTML;
-      return element;
-    }
-
-    showSection(sectionId) {
-      Object.keys(this.sections).forEach(id => {
-        if (id === 'all') return; // Skip 'all' key
-        this.sections[id].style.display = (sectionId === 'all' || id === sectionId.replace('-section', '')) ? 'block' : 'none';
-      });
+  initialize() {
+    try {
+      this.populateHighlights(this.data);
+    } catch (error) {
+      console.error('Error loading highlights:', error);
     }
   }
 
-  new PaperManager('../data/papers.json', 'paper-items');
+  populateHighlights(allPapers) {
+    const fragment = document.createDocumentFragment();
 
-  // Highlights Manager - Selected Publications by Research Area
-  class HighlightsManager {
-    constructor(dataUrl, containerId) {
-      this.dataUrl = dataUrl;
-      this.container = document.getElementById(containerId);
-      this.highlightPapers = {
-        'Large-Scale AI Development': [
-          'MEDITRON-70B: Scaling Medical Pretraining for Large Language Models',
-          'MEDITRON: Open Medical Foundation Models Adapted for Clinical Practice',
-          'INCLUDE: Evaluating Multilingual Language Understanding with Regional Knowledge'
-        ],
-        'Reasoning as Test-Time Learning': [
-          'PERK: Long-Context Reasoning as Parameter-Efficient Test-Time Learning',
-          'RECKONING: Reasoning through Dynamic Knowledge Encoding'
-        ]
-      };
-      this.initialize();
-    }
+    Object.keys(this.highlightPapers).forEach(sectionTitle => {
+      // Create section heading
+      const sectionHeading = this.createElement('h2', {
+        style: { marginTop: '30px', marginBottom: '20px', textAlign: 'left' }
+      }, sectionTitle);
+      fragment.appendChild(sectionHeading);
 
-    async initialize() {
-      try {
-        const data = await this.fetchData(this.dataUrl);
-        this.populateHighlights(data);
-      } catch (error) {
-        console.error('Error loading highlights:', error);
-      }
-    }
+      // Filter papers for this section
+      const paperTitles = this.highlightPapers[sectionTitle];
+      const papers = allPapers.filter(paper => paperTitles.includes(paper.title));
 
-    async fetchData(url) {
-      const response = await fetch(url);
-      return response.json();
-    }
-
-    populateHighlights(allPapers) {
-      Object.keys(this.highlightPapers).forEach(sectionTitle => {
-        // Create section heading
-        const sectionHeading = this.createElement('h2', {
-          style: 'margin-top: 30px; margin-bottom: 20px; text-align: left;'
-        }, sectionTitle);
-        this.container.appendChild(sectionHeading);
-
-        // Filter papers for this section
-        const paperTitles = this.highlightPapers[sectionTitle];
-        const papers = allPapers.filter(paper => paperTitles.includes(paper.title));
-
-        // Add each paper
-        papers.forEach(paper => {
-          const paperElement = this.createPaperElement(paper);
-          this.container.appendChild(paperElement);
-        });
+      // Add each paper
+      papers.forEach(paper => {
+        fragment.appendChild(this.createPaperElement(paper));
       });
-    }
+    });
 
-    createPaperElement(item) {
-      const whiteWrapper = this.createElement('div', { className: 'white-wrapper' });
-      const rowDiv = this.createElement('div', { className: 'w-row' });
-      rowDiv.style.display = 'flex';
-      rowDiv.style.alignItems = 'center';
-
-      const imageCol = this.createImageColumn(item);
-      const contentCol = this.createContentColumn(item);
-
-      rowDiv.appendChild(imageCol);
-      rowDiv.appendChild(contentCol);
-      whiteWrapper.appendChild(rowDiv);
-
-      return whiteWrapper;
-    }
-
-    createImageColumn(item) {
-      const imageCol = this.createElement('div', { className: 'column-17 w-col w-col-4' });
-      const img = this.createElement('img', {
-        src: item.imageSrc,
-        srcset: item.imageSrcset,
-        alt: '',
-        loading: 'lazy',
-        width: '2839',
-        height: '240',
-        className: 'image-9',
-      });
-      imageCol.appendChild(img);
-      return imageCol;
-    }
-
-    createContentColumn(item) {
-      const contentCol = this.createElement('div', { className: 'w-col w-col-8' });
-      const titleSection = this.createElement('div', { className: 'wf-section' }, `<h2 class="heading-15">${item.title}</h2>`);
-      const linksSection = this.createLinksSection(item);
-      const infoSection = this.createInfoSection(item);
-      const summary = this.createElement(
-        'details',
-        {},
-        `
-          <summary><strong>TL;DR</strong></summary>
-          <p>${item.summary}</p>
-        `
-      );
-
-      contentCol.appendChild(titleSection);
-      contentCol.appendChild(linksSection);
-      contentCol.appendChild(infoSection);
-      contentCol.appendChild(summary);
-      contentCol.appendChild(this.createElement('hr'));
-      this.addPresentationType(contentCol, item);
-
-      if (contentCol.lastChild.tagName === 'HR') {
-        contentCol.removeChild(contentCol.lastChild);
-      }
-      return contentCol;
-    }
-
-    createLinksSection(item) {
-      const linksSection = this.createElement('div', { className: 'wf-section' });
-      const mobileMask = this.createElement('div', { className: 'post-info mobile-mask' }, '|');
-
-      if (item.pdfLink) {
-        this.appendLink(linksSection, item.pdfLink, 'pdf', 'label label-primary');
-        linksSection.appendChild(mobileMask.cloneNode(true));
-      }
-      if (item.codeLink) {
-        this.appendLink(linksSection, item.codeLink, 'code', 'label label-code');
-        linksSection.appendChild(mobileMask.cloneNode(true));
-      }
-      if (item.videoLink) {
-        this.appendLink(linksSection, item.videoLink, 'video', 'label label-video');
-        linksSection.appendChild(mobileMask.cloneNode(true));
-      }
-      if (item.conferenceLink) {
-        this.appendLink(linksSection, item.conferenceLink, item.conferenceLabel, 'label label-conference');
-        linksSection.appendChild(mobileMask.cloneNode(true));
-      }
-      if (item.journalLink) {
-        this.appendLink(linksSection, item.journalLink, item.journalLabel, 'label label-journal');
-        linksSection.appendChild(mobileMask.cloneNode(true));
-      }
-      if (item.workshopLink) {
-        this.appendLink(linksSection, item.workshopLink, item.workshopLabel, 'label label-workshop');
-        linksSection.appendChild(mobileMask.cloneNode(true));
-      }
-      if (item.awardLink) {
-        this.appendLink(linksSection, item.awardLink, item.awardLabel, 'label label-best');
-        linksSection.appendChild(mobileMask.cloneNode(true));
-      }
-
-      if (linksSection.lastChild) {
-        linksSection.removeChild(linksSection.lastChild);
-      }
-      return linksSection;
-    }
-
-    appendLink(parent, href, text, className) {
-      const anchor = this.createElement('a', { href, target: '_blank', className: 'label_link' });
-      const span = this.createElement('span', { className: `post-info ${className}` }, text);
-      anchor.appendChild(span);
-      parent.appendChild(anchor);
-    }
-
-    createInfoSection(item) {
-      const infoSection = this.createElement('div', { className: 'wf-section', style: 'padding-right: 20px;' });
-      const authorsInfo = this.createElement('div', { className: 'post-info-noncaps' });
-
-      const authors = `✍️ <i>${item.authors}</i><br><br>`;
-      const venue = `📚 <font size="+0">${item.publicationInfo}</font>`;
-      const publication = `<br>${authors}${venue}<br>`.replace('Zeming Chen', '<b>Zeming Chen</b>');
-
-      authorsInfo.innerHTML = publication;
-      infoSection.appendChild(authorsInfo);
-
-      return infoSection;
-    }
-
-    addPresentationType(parent, item) {
-      if (item.presentationType) {
-        const presentationTypeSection = this.createElement('div', {}, `<font color="firebrick"><h4><b>${item.presentationType}</b></h4></font>`);
-        parent.appendChild(presentationTypeSection);
-      }
-      if (item.mediaInfo && item.mediaLink) {
-        if (Array.isArray(item.mediaInfo) && Array.isArray(item.mediaLink) && item.mediaInfo.length === item.mediaLink.length) {
-          item.mediaInfo.forEach((info, index) => {
-            const mediaSection = this.createElement('div', {}, `<font color="firebrick"><h4><b><a target="_blank" href="${item.mediaLink[index]}">${info}</a></b></h4></font>`);
-            parent.appendChild(mediaSection);
-          });
-        } else {
-          const mediaSection = this.createElement('div', {}, `<font color="firebrick"><h4><b><a target="_blank" href="${item.mediaLink}">${item.mediaInfo}</a></b></h4></font>`);
-          parent.appendChild(mediaSection);
-        }
-      }
-    }
-
-    createElement(tag, attributes = {}, innerHTML = '') {
-      const element = document.createElement(tag);
-      for (const [key, value] of Object.entries(attributes)) {
-        element[key] = value;
-      }
-      element.innerHTML = innerHTML;
-      return element;
-    }
+    this.container.appendChild(fragment);
   }
-
-  new HighlightsManager('../data/papers.json', 'highlight-items');
-});
-
-
-document.addEventListener('DOMContentLoaded', function() {
-  fetch('../data/media.json')
-    .then(response => response.json())
-    .then(data => {
-      let mediaItems = document.getElementById('media-items');
-      data.forEach(item => {
-        const wrapperDiv = document.createElement('div');
-        wrapperDiv.className = 'white-wrapper';
-
-        const rowDiv = document.createElement('div');
-        rowDiv.className = 'w-row';
-
-        // Image
-        const imgDiv = document.createElement('div');
-        imgDiv.className = 'column-16 w-col w-col-4 w-col-medium-4';
-        const img = document.createElement('img');
-        img.src = item.imageSrc;
-        img.srcset = item.imageSrcSet;
-        img.height = 240;
-        img.className = 'image-9';
-        imgDiv.appendChild(img);
-
-        // Content
-        const contentDiv = document.createElement('div');
-        contentDiv.className = 'w-col w-col-8 w-col-medium-8';
-
-        // Title and Info
-        const titleSection = document.createElement('div');
-        titleSection.className = 'wf-section';
-        const title = document.createElement('h2');
-        title.className = 'heading-15';
-        title.textContent = item.title;
-        titleSection.appendChild(title);
-
-        const infoSection = document.createElement('div');
-        infoSection.className = 'wf-section';
-        infoSection.innerHTML = `<div class="post-info">${item.source}</div><div class="post-info"> | </div><div class="post-info">${item.date}</div>`;
-
-        // Overview
-        const overviewDiv = document.createElement('div');
-        overviewDiv.className = 'wf-section';
-        overviewDiv.innerHTML = `<b>Overview</b>: ${item.overview}<br><a href="${item.readMoreLink}" target="_blank" rel="noopener noreferrer">Read more</a>`;
-
-        // Append everything
-        contentDiv.appendChild(titleSection);
-        contentDiv.appendChild(infoSection);
-        contentDiv.appendChild(overviewDiv);
-
-        rowDiv.appendChild(imgDiv);
-        rowDiv.appendChild(contentDiv);
-
-        wrapperDiv.appendChild(rowDiv);
-        mediaItems.appendChild(wrapperDiv);
-      });
-    }
-  )
-});
+}
