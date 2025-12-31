@@ -385,14 +385,14 @@ class HighlightsManager extends BasePaperRenderer {
     this.data = data;
     this.container = document.getElementById(containerId);
     this.highlightPapers = {
+      'Reasoning as Test-Time Learning': [
+        'PERK: Long-Context Reasoning as Parameter-Efficient Test-Time Learning',
+        'RECKONING: Reasoning through Dynamic Knowledge Encoding'
+      ],
       'Large-Scale AI Development': [
         'MEDITRON-70B: Scaling Medical Pretraining for Large Language Models',
         'MEDITRON: Open Medical Foundation Models Adapted for Clinical Practice',
         'INCLUDE: Evaluating Multilingual Language Understanding with Regional Knowledge'
-      ],
-      'Reasoning as Test-Time Learning': [
-        'PERK: Long-Context Reasoning as Parameter-Efficient Test-Time Learning',
-        'RECKONING: Reasoning through Dynamic Knowledge Encoding'
       ]
     };
     this.initialize();
