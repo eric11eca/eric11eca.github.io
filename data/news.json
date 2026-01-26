@@ -1,6 +1,16 @@
 {
   "newsItems": [
     {
+      "date": "Jan 2026",
+      "content": "🔥 Our new work \"PERK\" on Long-Context Reasoning with Test-Time Learning is accepted by ICLR 2026!",
+      "links": [
+        {
+          "text": "PERK",
+          "url": "https://arxiv.org/abs/2507.06415"
+        }
+      ]
+    },
+    {
       "date": "Nov 2025",
       "content": "🔥 Meditron was highlighted in the Honorary Lecture of Martin Vetterli, Professor and President Emeritus of EPFL",
       "links": [
