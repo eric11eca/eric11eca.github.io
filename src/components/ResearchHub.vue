@@ -217,14 +217,14 @@ const getTabIcon = (icon) => {
             >
               <!-- Title Bar -->
               <div class="px-6 py-4 border-b border-[var(--theme-card-border)] bg-[var(--theme-surface-container)]/50">
-                <div class="flex items-center justify-between">
-                  <div>
-                    <h4 class="text-lg font-semibold text-[var(--theme-on-surface)] group-hover:text-[var(--theme-accent)] transition-colors">
+                <div class="flex items-start justify-between gap-3">
+                  <div class="flex-1 min-w-0">
+                    <h4 class="text-lg font-semibold text-[var(--theme-on-surface)] group-hover:text-[var(--theme-accent)] transition-colors leading-snug">
                       {{ item.title }}
                     </h4>
                     <p class="text-[var(--theme-accent)] text-sm font-medium mt-1">{{ item.subtitle }}</p>
                   </div>
-                  <div class="flex gap-2">
+                  <div class="flex gap-2 flex-shrink-0 whitespace-nowrap">
                     <span v-for="tag in item.tags.slice(0, 2)" :key="tag" class="hidden sm:inline-block px-3 py-1 text-xs rounded-full bg-[var(--theme-surface-container-higher)] text-[var(--theme-on-surface-variant)]">
                       {{ tag }}
                     </span>
@@ -361,11 +361,11 @@ const getTabIcon = (icon) => {
                   </div>
                   <!-- Details -->
                   <div class="flex-1 space-y-2">
-                    <div class="flex flex-wrap items-start justify-between gap-2">
-                      <a :href="pub.links.arxiv" target="_blank" class="text-base font-semibold text-[var(--theme-on-surface)] hover:text-[var(--theme-accent)] transition-colors leading-snug">
+                    <div class="flex items-start justify-between gap-3">
+                      <a :href="pub.links.arxiv" target="_blank" class="flex-1 min-w-0 text-base font-semibold text-[var(--theme-on-surface)] hover:text-[var(--theme-accent)] transition-colors leading-snug">
                         {{ pub.title }}
                       </a>
-                      <div class="flex items-center gap-2 flex-shrink-0">
+                      <div class="flex items-center gap-2 flex-shrink-0 whitespace-nowrap">
                         <span v-if="pub.award" class="px-2 py-0.5 text-xs font-medium rounded-full bg-yellow-500/20 text-yellow-400">{{ pub.award }}</span>
                         <span :class="['px-2 py-0.5 text-xs font-medium rounded-full', getTypeColor(pub.type)]">{{ pub.type }}</span>
                       </div>
@@ -440,12 +440,12 @@ const getTabIcon = (icon) => {
                 </div>
               </div>
               <div class="flex-1 space-y-3">
-                <div class="flex items-center justify-between">
-                  <div class="flex items-center gap-3">
-                    <a :href="project.github" target="_blank" class="text-lg font-semibold text-[var(--theme-on-surface)] hover:text-[var(--theme-accent)] transition-colors">{{ project.title }}</a>
-                    <span class="px-2 py-0.5 text-xs rounded-full bg-[var(--theme-surface-container-higher)] text-[var(--theme-on-surface-variant)]">{{ project.language }}</span>
+                <div class="flex items-start justify-between gap-3">
+                  <div class="flex items-center gap-3 flex-1 min-w-0">
+                    <a :href="project.github" target="_blank" class="text-lg font-semibold text-[var(--theme-on-surface)] hover:text-[var(--theme-accent)] transition-colors leading-snug min-w-0">{{ project.title }}</a>
+                    <span class="px-2 py-0.5 text-xs rounded-full bg-[var(--theme-surface-container-higher)] text-[var(--theme-on-surface-variant)] flex-shrink-0 whitespace-nowrap">{{ project.language }}</span>
                   </div>
-                  <div class="flex items-center gap-1 text-[var(--theme-on-surface-variant)]">
+                  <div class="flex items-center gap-1 text-[var(--theme-on-surface-variant)] flex-shrink-0 whitespace-nowrap">
                     <svg class="w-4 h-4 text-yellow-500" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" /></svg>
                     <span class="text-sm font-medium">{{ project.stars }}</span>
                   </div>
@@ -483,9 +483,9 @@ const getTabIcon = (icon) => {
                 </div>
               </div>
               <div class="flex-1 space-y-2">
-                <div class="flex flex-wrap items-start justify-between gap-2">
-                  <h3 class="text-base font-semibold text-[var(--theme-on-surface)] group-hover:text-[var(--theme-accent)] transition-colors">{{ talk.title }}</h3>
-                  <span class="px-2 py-0.5 text-xs font-medium rounded-full bg-[var(--theme-surface-container-higher)] text-[var(--theme-on-surface-variant)]">{{ talk.type }}</span>
+                <div class="flex items-start justify-between gap-3">
+                  <h3 class="flex-1 min-w-0 text-base font-semibold text-[var(--theme-on-surface)] group-hover:text-[var(--theme-accent)] transition-colors leading-snug">{{ talk.title }}</h3>
+                  <span class="px-2 py-0.5 text-xs font-medium rounded-full bg-[var(--theme-surface-container-higher)] text-[var(--theme-on-surface-variant)] flex-shrink-0 whitespace-nowrap">{{ talk.type }}</span>
                 </div>
                 <p class="text-[var(--theme-accent)] text-sm font-medium">{{ talk.event }}</p>
                 <div class="flex items-center gap-3 text-sm text-[var(--theme-on-surface-variant)]">
@@ -521,9 +521,9 @@ const getTabIcon = (icon) => {
                 </div>
               </div>
               <div class="flex-1 space-y-2">
-                <div class="flex flex-wrap items-start justify-between gap-2">
-                  <a :href="item.readMoreLink" target="_blank" class="text-base font-semibold text-[var(--theme-on-surface)] hover:text-[var(--theme-accent)] transition-colors">{{ item.title }}</a>
-                  <span class="px-2 py-0.5 text-xs font-medium rounded-full bg-[var(--theme-accent)]/20 text-[var(--theme-accent)]">{{ item.source }}</span>
+                <div class="flex items-start justify-between gap-3">
+                  <a :href="item.readMoreLink" target="_blank" class="flex-1 min-w-0 text-base font-semibold text-[var(--theme-on-surface)] hover:text-[var(--theme-accent)] transition-colors leading-snug">{{ item.title }}</a>
+                  <span class="px-2 py-0.5 text-xs font-medium rounded-full bg-[var(--theme-accent)]/20 text-[var(--theme-accent)] flex-shrink-0 whitespace-nowrap">{{ item.source }}</span>
                 </div>
                 <p class="text-sm text-[var(--theme-on-surface-variant)]">{{ item.date }}</p>
                 <p class="text-[var(--theme-on-surface-variant)] text-sm leading-relaxed">{{ item.overview }}</p>

@@ -105,7 +105,7 @@
   {
     "id": "include-2025",
     "title": "INCLUDE: Evaluating Multilingual Language Understanding with Regional Knowledge",
-    "authors": "Angelika Romanou*, Negar Foroutan, Anna Sotnikova, Zeming Chen, Sree Harsha Nelaturu, Shivalika Singh, Rishabh Maheshwary, Micol Altomare, Mohamed A. Haggag, Imanol Schlag, Marzieh Fadaee, Sara Hooker, Antoine Bosselut",
+    "authors": "Angelika Romanou, Negar Foroutan, Anna Sotnikova, Zeming Chen, Sree Harsha Nelaturu, Shivalika Singh, Rishabh Maheshwary, Micol Altomare, Mohamed A. Haggag, Imanol Schlag, Marzieh Fadaee, Sara Hooker, Antoine Bosselut",
     "venue": "ICLR 2025",
     "venueName": "The 13th International Conference on Learning Representations",
     "venueLink": "https://iclr.cc/Conferences/2025",
@@ -151,7 +151,7 @@
   {
     "id": "nlp4edu-2024",
     "title": "Could ChatGPT get an engineering degree? Evaluating higher education vulnerability to AI assistants",
-    "authors": "Beatriz Borges*, Negar Foroutan, Deniz Bayazit, Anna Sotnikova, Syrian Montariol, Tanya Nazaretzky, Mohammadreza Banaei, Alireza Sakhaeirad, Philippe Servant, Seyed Parsa Neshaei, Jibril Frej, Angelika Romanou, Gail Weiss, Sepideh Mamooler, Zeming Chen, Simin Fan, Silin Gao, Mete Ismayilzada, Debjit Paul, Philippe Schwaller, Sacha Friedli, Patrick Jermann, Tanja Käser, Antoine Bosselut, et al.",
+    "authors": "Beatriz Borges, Negar Foroutan, Deniz Bayazit, Anna Sotnikova, Syrian Montariol, Tanya Nazaretzky, Mohammadreza Banaei, Alireza Sakhaeirad, Philippe Servant, Seyed Parsa Neshaei, Jibril Frej, Angelika Romanou, Gail Weiss, Sepideh Mamooler, Zeming Chen, Simin Fan, Silin Gao, Mete Ismayilzada, Debjit Paul, Philippe Schwaller, Sacha Friedli, Patrick Jermann, Tanja Käser, Antoine Bosselut, et al.",
     "venue": "PNAS",
     "venueName": "Proceedings of the National Academy of Sciences",
     "venueLink": "https://www.pnas.org",
@@ -170,7 +170,7 @@
   {
     "id": "subnetwork-2024",
     "title": "Discovering Knowledge-Critical Subnetworks in Pretrained Language Models",
-    "authors": "Deniz Bayazit*, Negar Foroutan, Zeming Chen, Gail Weiss, Antoine Bosselut",
+    "authors": "Deniz Bayazit, Negar Foroutan, Zeming Chen, Gail Weiss, Antoine Bosselut",
     "venue": "EMNLP 2024",
     "venueName": "The 2024 Conference on Empirical Methods in Natural Language Processing",
     "venueLink": "https://2024.emnlp.org/",
@@ -189,7 +189,7 @@
   {
     "id": "com2-2024",
     "title": "Complex Reasoning over Logical Queries on Commonsense Knowledge Graphs",
-    "authors": "Tianqing Fang*, Zeming Chen, Yangqiu Song, Antoine Bosselut",
+    "authors": "Tianqing Fang, Zeming Chen, Yangqiu Song, Antoine Bosselut",
     "venue": "ACL 2024",
     "venueName": "The 62nd Annual Meeting of the Association for Computational Linguistics",
     "venueLink": "https://2024.aclweb.org",
@@ -272,7 +272,7 @@
   {
     "id": "label-bias-2023",
     "title": "Mitigating Label Biases for In-context Learning",
-    "authors": "Yu Fei*, Yifan Hou, Zeming Chen, Antoine Bosselut",
+    "authors": "Yu Fei, Yifan Hou, Zeming Chen, Antoine Bosselut",
     "venue": "ACL 2023",
     "venueName": "The 61st Annual Meeting of the Association for Computational Linguistics",
     "venueLink": "https://2023.aclweb.org",
