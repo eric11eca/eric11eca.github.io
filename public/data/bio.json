@@ -1,0 +1,22 @@
+{
+    "bio": "I am a PhD student from the EPFL NLP Lab, supervised by Dr. Antoine Bosselut. I am a researcher for AI, Machine Learning, and NLP. I work on building AI reasoning agents with broad cognitive abilities. My research focus on developing strong foundation models, designing novel reasoning algorithms, and adapting them to human-centered applications in critical areas like medicine and global fairness. My research topics include: Reasoning as Test-time Learning, Large-scale AI Development (Foundation & Frontier models), World Model, and Agentic AI for Research & Science. My current work involves defining AI reasoning as test-time continual learning with new algorithms in RL post-training and Deep Research agents.",
+    "links": [
+        {
+            "name": "EPFL NLP Lab",
+            "url": "https://nlp.epfl.ch"
+        },
+        {
+            "name": "Antoine Bosselut",
+            "url": "https://atcbosselut.github.io"
+        }
+    ],
+    "bold": [
+        "EPFL NLP Lab",
+        "Antoine Bosselut",
+        "AI Reasoning Agents",
+        "Reasoning as Test-time Learning",
+        "Large-scale AI Development",
+        "World Model",
+        "Agentic AI for Research & Science"
+    ]
+}

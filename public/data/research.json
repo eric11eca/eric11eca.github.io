@@ -1,0 +1,33 @@
+[
+  {
+    "title": "Large-Scale AI Development",
+    "description": "I am interested in developing next-generation large language, multimodal, & reasoning models, and their applications to various professional domains and tasks.",
+    "images": [
+      "/images/meditron-logo.png",
+      "/images/include_brand.png"
+    ],
+    "links": [
+      {
+        "url": "https://github.com/epfLLM/meditron",
+        "text": "GitHub",
+        "type": "code"
+      },
+      {
+        "url": "https://huggingface.co/epfl-llm",
+        "text": "Models",
+        "type": "model"
+      }
+    ],
+    "tags": ["Foundation Models", "Medical AI", "Open Source"]
+  },
+  {
+    "title": "Reasoning as Test-Time Learning",
+    "description": "A crucial challenge for the current AI systems is \"How to achieve continual learning?\" I research on new methods for test-time learning, a paradigm where models continue to learn from new information and experiences at inference time. I am interested in reformulating AI reasoning as test-time learning with applications to RL post-training and Deep Research.",
+    "images": [
+      "/images/perk_training.png",
+      "/images/meta-kg.png"
+    ],
+    "links": [],
+    "tags": ["Reasoning", "Test-Time Learning", "Agentic AI"]
+  }
+]

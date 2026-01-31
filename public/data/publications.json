@@ -1,0 +1,391 @@
+[
+  {
+    "id": "perk-2026",
+    "title": "PERK: Long-Context Reasoning as Parameter-Efficient Test-Time Learning",
+    "authors": "Zeming Chen, Angelika Romanou, Gail Weiss, Antoine Bosselut",
+    "venue": "ICLR 2026",
+    "venueName": "The 14th International Conference on Learning Representations",
+    "venueLink": "https://iclr.cc/Conferences/2026",
+    "year": 2026,
+    "type": "conference",
+    "award": null,
+    "presentation": null,
+    "abstract": "Can we meta-learn test-time learning to solve long-context reasoning? Our latest work, PERK is a scable novel meta-leanring algorithm that learns to encode long contexts through gradient updates to a memory scratchpad at test time, achieving long-context reasoning robust to complexity and length extrapolation while scaling efficiently at inference. PERK can be applied to existing pretrained language models without requiring architectural or parameter modifications to the base model.",
+    "thumbnail": "/images/perk_training.png",
+    "links": {
+      "arxiv": "https://arxiv.org/abs/2507.06415",
+      "code": "https://perk-long-context.web.app"
+    },
+    "media": [
+      { "name": "Hugging Face Daily Papers", "url": "https://huggingface.co/papers/date/2025-07-10" }
+    ],
+    "tags": ["Test-Time Learning", "Long-Context Reasoning", "LLM"]
+  },
+  {
+    "id": "micro-2025",
+    "title": "Mixture of Cognitive Reasoners: Modular Reasoning with Brain-Like Specialization",
+    "authors": "Badr AlKhamissi, C. Nicolò De Sabbata, Greta Tuckute, Zeming Chen, Martin Schrimpf, Antoine Bosselut",
+    "venue": "ICLR 2026",
+    "venueName": "The 14th International Conference on Learning Representations",
+    "venueLink": "https://iclr.cc/Conferences/2026",
+    "year": 2026,
+    "type": "conference",
+    "award": null,
+    "presentation": null,
+    "abstract": "Human cognitive behavior arises from the interaction of specialized brain networks dedicated to distinct functions, such as language, logic, and social reasoning. Inspired by this organization, we propose Mixture of Cognitive Reasoners (MiCRo): a modular, transformer-based architecture post-trained with a curriculum that induces functional specialization across experts. Concretely, we partition the layers of a pretrained language model into four expert modules aligned with well-studied cognitive networks in the human brain. MiCRo offers three key advantages over standard language models. (1) The specialized experts are interpretable and causally meaningful -- ablating a module causes substantial drops on benchmarks requiring its specialized domain. (2) MiCRo's behavior can be dynamically steered at inference time by routing tokens to particular experts (e.g., favoring social over logical reasoning), enabling fine-grained control over outputs. (3) MiCRo outperforms or matches comparable baselines on both machine-learning reasoning benchmarks (e.g., GSM8K, BBH) and alignment to human behavior (CogBench), while maintaining interpretability. Taken together, cognitively grounded functional specialization yields models that are both more human-like and more human-interpretable.",
+    "thumbnail": "/images/micro_neuro.JPG",
+    "links": {
+      "arxiv": "https://arxiv.org/abs/2506.13331",
+      "code": "https://cognitive-reasoners.epfl.ch"
+    },
+    "media": [],
+    "tags": ["Neuroscience AI", "Modular LLMs", "Mixture of Experts"]
+  },
+  {
+    "id": "tracking-2026",
+    "title": "Tracking the Limits of Knowledge Propagation: How LLMs Fail at Multi-Step Reasoning with Conflicting Knowledge",
+    "authors": "Yiyang Feng, Zeming Chen, Haotian Wu, Jiawei Zhou, Antoine Bosselut",
+    "venue": "EACL 2026",
+    "venueName": "The 19th Conference of the European Chapter of the Association for Computational Linguistics",
+    "venueLink": "https://2026.eacl.org/",
+    "year": 2026,
+    "type": "conference",
+    "award": null,
+    "presentation": null,
+    "abstract": "A common solution for mitigating outdated or incorrect information in Large Language Models (LLMs) is to provide updated facts in-context or through knowledge editing. However, these methods introduce knowledge conflicts when the knowledge update fails to overwrite the model's parametric knowledge, which propagate to faulty reasoning. Current benchmarks for this problem, however, largely focus only on single knowledge updates and fact recall without evaluating how these updates affect downstream reasoning. In this work, we introduce TRACK (Testing Reasoning Amid Conflicting Knowledge), a new benchmark for studying how LLMs propagate new knowledge through multi-step reasoning when it conflicts with the model's initial parametric knowledge. Spanning three reasoning-intensive scenarios (WIKI, CODE, and MATH), TRACK introduces multiple, realistic conflicts to mirror real-world complexity. Our results on TRACK reveal that providing updated facts to models for reasoning can worsen performance compared to providing no updated facts to a model, and that this performance degradation exacerbates as more updated facts are provided. We show this failure stems from both inability to faithfully integrate updated facts, but also flawed reasoning even when knowledge is integrated. TRACK provides a rigorous new benchmark to measure and guide future progress on propagating conflicting knowledge in multi-step reasoning.",
+    "thumbnail": "/images/tracking_kg.jpg",
+    "links": {
+      "arxiv": "https://arxiv.org/abs/2601.15495"
+    },
+    "media": [],
+    "tags": ["Knowledge Conflicts", "Reasoning", "LLM"]
+  },
+  {
+    "id": "geoexplorer-2025",
+    "title": "GeoExplorer: Active Geo-localization with Curiosity-Driven Exploration",
+    "authors": "Li Mi, Manon Bechaz, Zeming Chen, Antoine Bosselut, Devis Tuia",
+    "venue": "ICCV 2025",
+    "venueName": "The IEEE/CVF International Conference on Computer Vision",
+    "venueLink": "https://iccv.thecvf.com",
+    "year": 2025,
+    "type": "conference",
+    "award": null,
+    "presentation": null,
+    "abstract": "We propose GeoExplorer, an AGL agent that incorporates curiosity-driven exploration through intrinsic rewards. Unlike distance-based rewards, our curiosity-driven reward is goal-agnostic, enabling robust, diverse, and contextually relevant exploration based on effective environment modeling. These capabilities have been proven through extensive experiments across four AGL benchmarks, demonstrating the effectiveness and generalization ability of GeoExplorer in diverse settings, particularly in localizing unfamiliar targets and environments.",
+    "thumbnail": "/images/geoexplorer.png",
+    "links": {
+      "arxiv": "https://arxiv.org/abs/2508.00152",
+      "code": "https://limirs.github.io/GeoExplorer"
+    },
+    "media": [],
+    "tags": ["RL", "Agents", "Geospatial AI"]
+  },
+  {
+    "id": "wmbench-2025",
+    "title": "Do Vision-Language Models Have Internal World Models? Towards an Atomic Evaluation",
+    "authors": "Qiyue Gao, Xinyu Pi, Kevin Liu, Junrong Chen, Ruolan Yang, Xinqi Huang, Xinyu Fang, Lu Sun, Gautham Kishore, Bo Ai, Stone Tao, Mengyang Liu, Jiaxi Yang, Chao-Jung Lai, Chuanyang Jin, Jiannan Xiang, Benhao Huang, Zeming Chen, David Danks, Hao Su, Tianmin Shu, Ziqiao Ma, Lianhui Qin, Zhiting Hu",
+    "venue": "ACL 2025",
+    "venueName": "The 63rd Annual Meeting of the Association for Computational Linguistics",
+    "venueLink": "https://2025.aclweb.org",
+    "year": 2025,
+    "type": "conference",
+    "award": null,
+    "presentation": null,
+    "abstract": "We introduce WM-ABench, a large-scale benchmark comprising 23 fine-grained evaluation dimensions across 6 diverse simulated environments with controlled counterfactual simulations. Through 660 experiments on 15 latest commercial and open-source VLMs, we find that these models exhibit striking limitations in basic world modeling abilities.",
+    "thumbnail": "/images/wmbench.png",
+    "links": {
+      "arxiv": "https://arxiv.org/abs/2506.21876",
+      "code": "https://huggingface.co/datasets/maitrix-org/WM-ABench"
+    },
+    "media": [
+      { "name": "Hugging Face Daily Papers", "url": "https://huggingface.co/papers/date/2025-08-19" }
+    ],
+    "tags": ["World Models", "VLM", "Multimodal Benchmark"]
+  },
+  {
+    "id": "include-2025",
+    "title": "INCLUDE: Evaluating Multilingual Language Understanding with Regional Knowledge",
+    "authors": "Angelika Romanou*, Negar Foroutan, Anna Sotnikova, Zeming Chen, Sree Harsha Nelaturu, Shivalika Singh, Rishabh Maheshwary, Micol Altomare, Mohamed A. Haggag, Imanol Schlag, Marzieh Fadaee, Sara Hooker, Antoine Bosselut",
+    "venue": "ICLR 2025",
+    "venueName": "The 13th International Conference on Learning Representations",
+    "venueLink": "https://iclr.cc/Conferences/2025",
+    "year": 2025,
+    "type": "conference",
+    "award": "Spotlight",
+    "presentation": "Spotlight Paper (Top 25%)",
+    "abstract": "The development of functional LLMs in many languages is bottlenecked by the lack of high-quality evaluation resources in non-English languages that focus on the regional and cultural knowledge of the environments. In this work, we construct an evaluation suite of 197,243 QA pairs from local exam sources to measure the capabilities of multilingual LLMs in a variety of regional contexts. Our novel resource, INCLUDE, is a comprehensive knowledge- and reasoning-centric benchmark across 44 written languages that evaluates multilingual LLMs for performance in the actual language environments where they would be deployed.",
+    "thumbnail": "/images/include_brand.png",
+    "links": {
+      "arxiv": "https://arxiv.org/abs/2411.19799",
+      "code": "https://github.com/epfl-nlp/INCLUDE",
+      "dataset": "https://huggingface.co/datasets/CohereLabs/include-base-44"
+    },
+    "media": [
+      { "name": "Spotlight Research Blog by Cohere for AI", "url": "https://cohere.com/research/papers/include-evaluating-multilingual-language-understanding-with-regional-knowledge-2024-11-29" }
+    ],
+    "tags": ["Multilingual", "Evaluation", "Inclusive AI"]
+  },
+  {
+    "id": "meditron-nature-2024",
+    "title": "MEDITRON: Open Medical Foundation Models Adapted for Clinical Practice",
+    "authors": "Zeming Chen, Angelika Romanou, Antoine Bonnet, Alejandro Hernández-Cano, Badr Alkhamissi, Kyle Matoba, et al., Physician Evaluation Group, Noémie Boillat-Blanco, Kristina Keitel, Javier Elkin, Blaise Robert, Syrielle Montariol, Mary-Anne Hartley, Martin Jaggi, Antoine Bosselut",
+    "venue": "Research Square Preprint",
+    "venueName": null,
+    "venueLink": null,
+    "year": 2024,
+    "type": "preprint",
+    "award": null,
+    "presentation": null,
+    "abstract": "Meditron, a suite of open-source large multimodal foundation models tailored to the medical field and designed to assist with clinical decision-making and diagnosis, was built on Meta Llama 2 and trained on carefully curated, high-quality medical data sources with continual input from clinicians and experts in humanitarian response.",
+    "thumbnail": "/images/meditron-nature.png",
+    "links": {
+      "arxiv": "https://www.researchsquare.com/article/rs-4139743/v1",
+      "code": "https://github.com/epfLLM/meditron"
+    },
+    "media": [
+      { "name": "Spotlight Research Blog by Meta AI", "url": "https://ai.meta.com/blog/llama-2-3-meditron-yale-medicine-epfl-open-source-llm/" },
+      { "name": "ETH Board Annual Report 2024", "url": "https://ethrat.ch/wp-content/uploads/2025/03/ETHR_Geschaeftsbericht-2024_E_web.pdf" }
+    ],
+    "tags": ["AI for Medicine", "LLM", "Clinical Science"]
+  },
+  {
+    "id": "nlp4edu-2024",
+    "title": "Could ChatGPT get an engineering degree? Evaluating higher education vulnerability to AI assistants",
+    "authors": "Beatriz Borges*, Negar Foroutan, Deniz Bayazit, Anna Sotnikova, Syrian Montariol, Tanya Nazaretzky, Mohammadreza Banaei, Alireza Sakhaeirad, Philippe Servant, Seyed Parsa Neshaei, Jibril Frej, Angelika Romanou, Gail Weiss, Sepideh Mamooler, Zeming Chen, Simin Fan, Silin Gao, Mete Ismayilzada, Debjit Paul, Philippe Schwaller, Sacha Friedli, Patrick Jermann, Tanja Käser, Antoine Bosselut, et al.",
+    "venue": "PNAS",
+    "venueName": "Proceedings of the National Academy of Sciences",
+    "venueLink": "https://www.pnas.org",
+    "year": 2024,
+    "type": "journal",
+    "award": null,
+    "presentation": null,
+    "abstract": "Universities primarily evaluate student learning through various course assessments. Our study demonstrates that AI assistants, such as ChatGPT, can answer at least 65.8% of examination questions correctly across 50 various courses in the technical and natural sciences. Our analysis demonstrates that these capabilities render many degree programs (and their teaching objectives) vulnerable to potential misuse of these systems.",
+    "thumbnail": "/images/nlp4edu.jpg",
+    "links": {
+      "arxiv": "https://www.pnas.org/doi/10.1073/pnas.2414955121"
+    },
+    "media": [],
+    "tags": ["AI for Education", "LLM", "Evaluation"]
+  },
+  {
+    "id": "subnetwork-2024",
+    "title": "Discovering Knowledge-Critical Subnetworks in Pretrained Language Models",
+    "authors": "Deniz Bayazit*, Negar Foroutan, Zeming Chen, Gail Weiss, Antoine Bosselut",
+    "venue": "EMNLP 2024",
+    "venueName": "The 2024 Conference on Empirical Methods in Natural Language Processing",
+    "venueLink": "https://2024.emnlp.org/",
+    "year": 2024,
+    "type": "conference",
+    "award": null,
+    "presentation": null,
+    "abstract": "This work investigates whether pretrained language models contain various knowledge-critical subnetworks: particular sparse computational subgraphs responsible for encoding specific knowledge the model has memorized, and proposes a multi-objective differentiable weight masking scheme to discover them.",
+    "thumbnail": "/images/subnetwork.png",
+    "links": {
+      "arxiv": "https://arxiv.org/abs/2310.03084"
+    },
+    "media": [],
+    "tags": ["Interpretability", "Knowledge Subnetworks", "LLM"]
+  },
+  {
+    "id": "com2-2024",
+    "title": "Complex Reasoning over Logical Queries on Commonsense Knowledge Graphs",
+    "authors": "Tianqing Fang*, Zeming Chen, Yangqiu Song, Antoine Bosselut",
+    "venue": "ACL 2024",
+    "venueName": "The 62nd Annual Meeting of the Association for Computational Linguistics",
+    "venueLink": "https://2024.aclweb.org",
+    "year": 2024,
+    "type": "conference",
+    "award": null,
+    "presentation": null,
+    "abstract": "We present COM2 (COMplex COMmonsense), a new dataset created by sampling multi-hop logical queries from CSKG and verbalizing them into multiple-choice and text generation questions. language models trained on COM2 exhibit significant improvements in complex reasoning ability, resulting in enhanced zero-shot performance in question answering and generative commonsense reasoning tasks, without expensive human annotations.",
+    "thumbnail": "/images/com2.png",
+    "links": {
+      "arxiv": "https://arxiv.org/abs/2403.07398"
+    },
+    "media": [],
+    "tags": ["Commonsense", "Reasoning", "Knowledge Graphs"]
+  },
+  {
+    "id": "meditron-2023",
+    "title": "MEDITRON-70B: Scaling Medical Pretraining for Large Language Models",
+    "authors": "Zeming Chen, Alejandro Hernández-Cano, Angelika Romanou, Antoine Bonnet, Kyle Matoba, Francesco Salvi, Matteo Pagliardini, Simin Fan, Andreas Köpf, Amirkeivan Mohtashami, Alexandre Sallinen, Alireza Sakhaeirad, Vinitra Swamy, Igor Krawczuk, Deniz Bayazit, Axel Marmet, Syrielle Montariol, Mary-Anne Hartley, Martin Jaggi, Antoine Bosselut",
+    "venue": "Arxiv Preprint",
+    "venueName": null,
+    "venueLink": null,
+    "year": 2023,
+    "type": "preprint",
+    "award": null,
+    "presentation": null,
+    "abstract": "Meditron is a suite of open-source medical Large Language Models (70B & 7B) adapted to the medical domain from Llama-2 through continued pretraining on a comprehensively curated medical corpus, including selected PubMed articles, abstracts, and internationally-recognized medical guidelines. Meditron-70B, finetuned on relevant training data, demonstrates high-level medical reasoning and improved domain-specific benchmark performance over Llama-2-70B, GPT-3.5, and Flan-PaLM. We democratize an optimized workflow to scale up domain-specific pretraining for medical LLMs to help revolutionize access to medical knowledge and evidence through open-source LLMs.",
+    "thumbnail": "/images/meditron.jpg",
+    "links": {
+      "arxiv": "https://arxiv.org/abs/2311.16079",
+      "code": "https://github.com/epfLLM/meditron",
+      "models": "https://huggingface.co/epfl-llm"
+    },
+    "media": [
+      { "name": "2024 AI Index Report (Stanford HAI)", "url": "https://aiindex.stanford.edu/wp-content/uploads/2024/04/HAI_AI-Index-Report-2024_Chapter5.pdf" },
+      { "name": "Top ML Papers of the Week (dair.ai)", "url": "https://github.com/dair-ai/ML-Papers-of-the-Week" }
+    ],
+    "tags": ["AI for Medicine", " LLM", "Open Source"]
+  },
+  {
+    "id": "reckoning-2023",
+    "title": "RECKONING: Reasoning through Dynamic Knowledge Encoding",
+    "authors": "Zeming Chen, Gail Weiss, Eric Mitchell, Asli Celikyilmaz, Antoine Bosselut",
+    "venue": "NeurIPS 2023",
+    "venueName": "The 37th Conference on Neural Information Processing Systems",
+    "venueLink": "https://nips.cc/",
+    "year": 2023,
+    "type": "conference",
+    "award": null,
+    "presentation": null,
+    "abstract": "RECKONING is a bi-level learning algorithm that improves language models' reasoning ability by folding contextual knowledge into parametric knowledge through back-propagation. Compared to a fine-tuned in-context reasoning baseline initiated from the same pretrained model, we find that RECKONING shows better performance on multi-hop reasoning tasks, is more robust to distractors, and generalizes better to longer reasoning chains.",
+    "thumbnail": "/images/meta-kg.png",
+    "links": {
+      "arxiv": "https://arxiv.org/abs/2305.06349",
+      "code": "https://github.com/eric11eca/reckoning-metakg"
+    },
+    "media": [],
+    "tags": ["LogicalReasoning", "Knowledge Encoding", "Meta-Learning"]
+  },
+  {
+    "id": "disco-2023",
+    "title": "DISCO: Distilling Counterfactuals with Large Language Models",
+    "authors": "Zeming Chen, Qiyue Gao, Antoine Bosselut, Ashish Sabharwal, Kyle Richardson",
+    "venue": "ACL 2023",
+    "venueName": "The 61st Annual Meeting of the Association for Computational Linguistics",
+    "venueLink": "https://2023.aclweb.org",
+    "year": 2023,
+    "type": "conference",
+    "award": null,
+    "presentation": null,
+    "abstract": "DISCO is a framework for generating counterfactual data at scale, using a large language model to generate phrasal perturbations and a task-specific teacher model to distill the data into high-quality counterfactuals. Training on DISCO's data leads to a student model that is more robust and generalizes better across distributions, and is also more sensitive in differentiating original and counterfactual examples.",
+    "thumbnail": "/images/distillation.png",
+    "links": {
+      "arxiv": "https://arxiv.org/abs/2212.10534",
+      "code": "https://github.com/eric11eca/disco"
+    },
+    "media": [],
+    "tags": ["Distillation", "Counterfactuals", "LLM"]
+  },
+  {
+    "id": "label-bias-2023",
+    "title": "Mitigating Label Biases for In-context Learning",
+    "authors": "Yu Fei*, Yifan Hou, Zeming Chen, Antoine Bosselut",
+    "venue": "ACL 2023",
+    "venueName": "The 61st Annual Meeting of the Association for Computational Linguistics",
+    "venueLink": "https://2023.aclweb.org",
+    "year": 2023,
+    "type": "conference",
+    "award": null,
+    "presentation": null,
+    "abstract": "In-context learning (ICL), as a new paradigm for natural language processing (NLP), allows large language models (LLMs) to make predictions based on a few examples. However, ICL is susceptible to bias, which the choice and order of the in-context examples can cause. We propose a simple bias calibration method that significantly improves the ICL performance of GPT-J and GPT-3 on a wide range of tasks.",
+    "thumbnail": "/images/bias_sources.png",
+    "links": {
+      "arxiv": "https://arxiv.org/abs/2305.19148"
+    },
+    "media": [],
+    "tags": ["In-Context Learning", "LLM Bias", "Bias Calibration"]
+  },
+  {
+    "id": "curriculum-2022",
+    "title": "Curriculum: A Broad-Coverage Benchmark for Linguistic Phenomena in Natural Language Understanding",
+    "authors": "Zeming Chen, Qiyue Gao",
+    "venue": "NAACL 2022",
+    "venueName": "The 2022 Conference of the North American Chapter of the Association for Computational Linguistics",
+    "venueLink": "https://2022.naacl.org",
+    "year": 2022,
+    "type": "conference",
+    "award": null,
+    "presentation": "Oral Presentation",
+    "abstract": "Curriculum is introduced as a new format of NLI benchmark for evaluation of broad-coverage linguistic phenomena and it is shown that this linguistic-phenomena-driven benchmark can serve as an effective tool for diagnosing model behavior and verifying model learning quality.",
+    "thumbnail": "/images/EvaluationPip.png",
+    "links": {
+      "arxiv": "https://aclanthology.org/2022.naacl-main.234/",
+      "code": "https://github.com/eric11eca/curriculum-ling",
+      "video": "https://aclanthology.org/2022.naacl-main.234.mp4"
+    },
+    "media": [],
+    "tags": ["LLM Benchmark", "Linguistics", "Natural Language Understanding"]
+  },
+  {
+    "id": "probing-2022",
+    "title": "Probing Linguistic Information For Logical Inference In Pre-trained Language Models",
+    "authors": "Zeming Chen, Qiyue Gao",
+    "venue": "AAAI 2022",
+    "venueName": "The 36th AAAI Conference on Artificial Intelligence",
+    "venueLink": "https://aaai.org/Conferences/AAAI-22/",
+    "year": 2022,
+    "type": "conference",
+    "award": null,
+    "presentation": "Oral Presentation",
+    "abstract": "This work proposes a methodology for probing knowledge for inference that logical systems require but often lack in pre-trained language model representations, and demonstrates language models' potential as semantic and background knowledge bases for supporting symbolic inference methods.",
+    "thumbnail": "/images/inferencekg_probe.png",
+    "links": {
+      "arxiv": "https://arxiv.org/abs/2112.01753",
+      "code": "https://github.com/eric11eca/inference-information-probing"
+    },
+    "media": [],
+    "tags": ["Probing", "Logical Inference", "Language Model"]
+  },
+  {
+    "id": "neurallog-2021",
+    "title": "NeuralLog: Natural Language Inference with Joint Neural and Logical Reasoning",
+    "authors": "Zeming Chen, Qiyue Gao, Lawrence S. Moss",
+    "venue": "*SEM 2021",
+    "venueName": "The 10th Joint Conference on Lexical and Computational Semantics",
+    "venueLink": "https://sites.google.com/view/starsem2021/home",
+    "year": 2021,
+    "type": "conference",
+    "award": null,
+    "presentation": null,
+    "abstract": "This work proposes an inference framework called NeuralLog, which utilizes both a monotonicity-based logical inference engine and a neural network language model for phrase alignment, and shows that the joint logic and neural inference system improves accuracy on the NLI task and can achieve state-of-art accuracy on the SICK and MED datasets.",
+    "thumbnail": "/images/NeuralLog.png",
+    "links": {
+      "arxiv": "https://aclanthology.org/2021.starsem-1.7/",
+      "code": "https://github.com/eric11eca/NeuralLog"
+    },
+    "media": [],
+    "tags": ["NLI", "Neuro-Symbolic", "Logical Reasoning"]
+  },
+  {
+    "id": "udep2mono-2021",
+    "title": "Monotonicity Marking from Universal Dependency Trees",
+    "authors": "Zeming Chen, Qiyue Gao",
+    "venue": "IWCS 2021",
+    "venueName": "The 14th International Conference on Computational Semantics",
+    "venueLink": "https://iwcs2021.github.io/index.html",
+    "year": 2021,
+    "type": "conference",
+    "award": "🏆 Outstanding Paper Award 🏆",
+    "presentation": "🏆 Outstanding Paper Award 🏆",
+    "abstract": "This paper presents a system that automatically annotates monotonicity information based on Universal Dependency parse trees, which utilizes surface-level monotonicism facts about quantifiers, lexical items, and token-level polarity information. Evaluations show that the proposed system achieves SOTA performance.",
+    "thumbnail": "/images/udep2mono.png",
+    "links": {
+      "arxiv": "https://aclanthology.org/2021.iwcs-1.12/",
+      "code": "https://github.com/eric11eca/Udep2Mono"
+    },
+    "media": [],
+    "tags": ["Monotonicity", "Universal Dependency", "Computational Semantics"]
+  },
+  {
+    "id": "tree-lstm-2020",
+    "title": "Attentive Tree-structured Network for Monotonicity Reasoning",
+    "authors": "Zeming Chen",
+    "venue": "NALOMA 2020 & 2021",
+    "venueName": "The 1st and 2nd Workshops on Natural Logic Meets Machine Learning",
+    "venueLink": "https://typo.uni-konstanz.de/naloma21/index.html",
+    "year": 2020,
+    "type": "workshop",
+    "award": null,
+    "presentation": null,
+    "abstract": "An attentive tree-structured neural network that consists of a tree-based long-short-term-memory network (Tree-LSTM) with soft attention designed to model the syntactic parse tree information from the sentence pair of a reasoning task.",
+    "thumbnail": "/images/att_tree_lstm.png",
+    "links": {
+      "arxiv": "https://aclanthology.org/2021.naloma-1.3/"
+    },
+    "media": [],
+    "tags": ["Tree-LSTM", "Monotonicity", "Natural Logic"]
+  }
+]

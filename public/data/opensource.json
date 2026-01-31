@@ -1,0 +1,41 @@
+[
+  {
+    "id": "meditron-repo",
+    "title": "Meditron",
+    "description": "Meditron is a suite of open-source medical Large Language Models (LLMs). We release Meditron-7B and 70B, adapted to the medical domain from Llama-2 through continued pretraining on a comprehensively curated medical corpus. Meditron-70B achieves state-of-the-art performance on medical reasoning benchmarks.",
+    "thumbnail": "/images/meditron-logo.png",
+    "github": "https://github.com/epfLLM/meditron",
+    "stars": "2.1k+",
+    "language": "Python",
+    "links": {
+      "huggingface": "https://huggingface.co/epfl-llm"
+    },
+    "tags": ["Medical AI", "LLM", "PyTorch"]
+  },
+  {
+    "id": "megatron-llm",
+    "title": "Megatron-LLM",
+    "description": "A training framework that enables pre-training and fine-tuning of large language models (LLMs) at scale, modification of the original Megatron-LM codebase by Nvidia to support domain-specific pretraining.",
+    "thumbnail": "/images/megatron-llm.png",
+    "github": "https://github.com/epfLLM/Megatron-LLM",
+    "stars": "600+",
+    "language": "Python",
+    "links": {
+      "docs": "https://github.com/epfLLM/Megatron-LLM#readme"
+    },
+    "tags": ["Training", "Distributed", "LLM"]
+  },
+  {
+    "id": "disco-repo",
+    "title": "DISCO",
+    "description": "Generating diverse counterfactual data for Natural Language Understanding tasks using Large Language Models (LLMs). The generator supports OpenAI models (2022-24)",
+    "thumbnail": "/images/distillation.png",
+    "github": "https://github.com/eric11eca/disco",
+    "stars": "38",
+    "language": "Python",
+    "links": {
+      "docs": "https://github.com/eric11eca/disco#readme"
+    },
+    "tags": ["Data Augmentation", "Counterfactuals"]
+  }
+]

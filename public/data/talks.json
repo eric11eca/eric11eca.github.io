@@ -1,0 +1,37 @@
+[
+  {
+    "id": "talk-meditron-epfl",
+    "title": "MediTron-70B: Scaling Up Medical Pretraining for Large Language Models",
+    "event": "LLM Symposium at ICRC",
+    "date": "Dec 2023",
+    "location": "ICRC, Geneva, Switzerland",
+    "description": "As part of the \"Engineering Humanitarian Action\" initiative, this symposium focused on the future of artificial intelligence in humanitarian efforts. I presented Meditron-70B, a large-scale medical foundation model that demonstrates state-of-the-art performance on medical reasoning tasks and its promising potential for clinical decision-support and humanitarian response.",
+    "thumbnail": "/images/meditrion_at_icir_llm_day.png",
+    "links": {
+      "event": "https://eha.swiss/educational-programmes/#:~:text=Overview:,of%20AI%20in%20humanitarian%20efforts."
+    },
+    "type": "invited"
+  },
+  {
+    "id": "talk-ai2-2022",
+    "title": "Distilling Counterfactual Data from Large Language Models",
+    "event": "AI2 Research Internship Final Presentation",
+    "date": "Oct 2022",
+    "location": "Allen Institute for AI, Seattle, USA",
+    "description": "Presented research on using large language models to generate high-quality counterfactual training data for robust NLU systems.",
+    "thumbnail": "/images/ai2.jpg",
+    "links": {},
+    "type": "presentation"
+  },
+  {
+    "id": "talk-rose-2022",
+    "title": "Neuro-symbolic Reasoning in Modern AI",
+    "event": "Rose-Hulman AI Class Invited Talk",
+    "date": "Oct 2022",
+    "location": "Rose-Hulman Institute of Technology, Terre Haute, USA",
+    "description": "Invited lecture on the integration of neural networks with symbolic reasoning for robust AI systems.",
+    "thumbnail": "/images/neuro-symbolic.png",
+    "links": {},
+    "type": "invited"
+  }
+]

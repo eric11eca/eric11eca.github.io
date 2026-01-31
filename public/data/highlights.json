@@ -1,0 +1,106 @@
+{
+  "categories": [
+    {
+      "id": "reasoning-ttl",
+      "title": "Reasoning as Test-Time Learning",
+      "thumbnail": "/images/ttl.svg"
+    },
+    {
+      "id": "large-scale-ai",
+      "title": "Large-Scale AI Development",
+      "thumbnail": "/images/meditron-logo-head.png"
+    }
+  ],
+  "featured": [
+    {
+      "id": "meditron-highlight",
+      "category": "large-scale-ai",
+      "title": "MEDITRON: Open-Source Medical LLMs",
+      "subtitle": "Democratizing Medical AI Foundation Models",
+      "description": "MEDITRON is a suite of open-source medical LLMs and VLMs (7B & 70B) that has become a pioneering work in large-scale medical foundation models. Led by EPFL and partnered with Yale School of Medicine, IDIAP, Opean-Assistant, Lausanne University Hospital, Inselspital University Hospital, and ICRC, Meditron aims to democratize access to medical knowledge and evidence-based information for clinical decision-support and humanitarian response. Meditron was Featured in Stanford HAI's 2024 AI Index Report as a leading example for Science and Medicine, Meta AI Research Blog, The ETH Board On The ETH Domain's 2024 Annual Report as a spolight research project, and various talks in conferences and workshops around the world such as AMLD and SXSW.",
+      "thumbnail": "/images/meditron-logo.png",
+      "stats": [
+        { "value": "2.1k+", "label": "GitHub Stars" },
+        { "value": "500k+", "label": "Model Downloads" },
+        { "value": "70B", "label": "Parameters" }
+      ],
+      "links": {
+        "paper1": "https://arxiv.org/abs/2311.16079",
+        "paper2": "https://www.researchsquare.com/article/rs-4139743/v1",
+        "code": "https://github.com/epfLLM/meditron",
+        "models": "https://huggingface.co/epfl-llm",
+        "dataset": "https://huggingface.co/datasets/epfl-llm/guidelines"
+      },
+      "media": [
+        { "name": "Stanford HAI AI Index 2024", "url": "https://aiindex.stanford.edu/report/#individual-chapters" },
+        { "name": "ETH Board On The ETH Domain's 2024 Annual Report", "url": "https://ethrat.ch/wp-content/uploads/2025/03/ETHR_Geschaeftsbericht-2024_E_web.pdf" },
+        { "name": "Meta AI Blog", "url": "https://ai.meta.com/blog/llama-2-3-meditron-yale-medicine-epfl-open-source-llm/" },
+        { "name": "Top ML Papers of the Week (by dair.ai)", "url": "https://github.com/dair-ai/ML-Papers-of-the-Week/blob/main/#top-ml-papers-of-the-week-november-27---december-3"},
+        { "name": "EPFL News", "url": "https://actu.epfl.ch/news/our-top-10-news-articles-from-2023" }
+      ],
+      "tags": ["AI for Medicine", "Large Foundation Models", "Open Source"]
+    },
+    {
+      "id": "perk-highlight",
+      "category": "reasoning-ttl",
+      "title": "PERK: Long-Context Reasoning as Parameter-Efficient Test-Time Learning",
+      "subtitle": "Meta-learn to reason through test-time learning",
+      "description": "A new reasoning paradigm where LLMs meta-learn to encode long contexts through gradient updates to a memory adapter at test time, achieving long-context reasoning robust to complexity and length extrapolation while scaling efficiently at inference.",
+      "tldr": "Can we meta-learn test-time learning to solve long-context reasoning? Our latest work, PERK is a scable novel meta-leanring algorithm that learns to encode long contexts through gradient updates to a memory scratchpad at test time, achieving long-context reasoning robust to complexity and length extrapolation while scaling efficiently at inference. PERK can be applied to existing pretrained language models without requiring architectural or parameter modifications to the base model.",
+      "thumbnail": "/images/perk_training.png",
+      "stats": [
+        { "value": "ICLR", "label": "2026" },
+        { "value": "TTL", "label": "LLM" }
+      ],
+      "links": {
+        "paper": "https://arxiv.org/abs/2507.06415",
+        "code": "https://perk-long-context.web.app"
+      },
+      "media": [
+        { "name": "Hugging Face Daily Papers", "url": "https://huggingface.co/papers/date/2025-07-10" }
+      ],
+      "tags": ["Reasoning", "Test-Time Learning", "Long-Context"]
+    },
+    {
+      "id": "reckoning-highlight",
+      "category": "reasoning-ttl",
+      "title": "RECKONING: Reasoning through Dynamic Knowledge Encoding",
+      "subtitle": "NeurIPS 2023",
+      "description": "RECKONING is a bi-level learning algorithm that improves language models' reasoning ability by folding contextual knowledge into parametric knowledge through back-propagation.",
+      "tldr": "RECKONING is a bi-level learning algorithm that improves language models' reasoning ability by internalizing contextual knowledge into parametric knowledge through back-propagation. Compared to a fine-tuned in-context reasoning baseline initiated from the same pretrained model, we find that RECKONING shows better performance on multi-hop reasoning tasks, is more robust to distractors, and generalizes better to longer reasoning chains.",
+      "thumbnail": "/images/meta-kg.png",
+      "stats": [
+        { "value": "NeurIPS", "label": "2023" },
+        { "value": "TTL", "label": "Knowledge" }
+      ],
+      "links": {
+        "paper": "https://arxiv.org/abs/2305.06349",
+        "code": "https://github.com/eric11eca/reckoning-metakg"
+      },
+      "media": [],
+      "tags": ["Reasoning", "Test-Time Learning", "Knowledge Encoding"]
+    },
+    {
+      "id": "include-highlight",
+      "category": "large-scale-ai",
+      "title": "INCLUDE: Multilingual Evaluation Benchmark",
+      "subtitle": "ICLR 2025 Spotlight",
+      "description": "INCLUDE, is a comprehensive knowledge- and reasoning-centric benchmark across 44 written languages that evaluates multilingual LLMs for performance in the actual language environments where they would be deployed.",
+      "tldr": "The development of functional LLMs in many languages is bottlenecked by the lack of high-quality evaluation resources in non-English languages that focus on the regional and cultural knowledge of the environments. In this work, we construct an evaluation suite of 197,243 QA pairs from local exam sources to measure the capabilities of multilingual LLMs in a variety of regional contexts. Our novel resource, INCLUDE, is a comprehensive knowledge- and reasoning-centric benchmark across 44 written languages that evaluates multilingual LLMs for performance in the actual language environments where they would be deployed.",
+      "thumbnail": "/images/include_brand.png",
+      "stats": [
+        { "value": "Spotlight", "label": "ICLR 2025" },
+        { "value": "44", "label": "Languages" }
+      ],
+      "links": {
+        "paper": "https://arxiv.org/abs/2411.19799",
+        "code": "https://github.com/epfl-nlp/INCLUDE",
+        "dataset": "https://huggingface.co/datasets/CohereLabs/include-base-44"
+      },
+      "media": [
+        { "name": "Cohere for AI Blog", "url": "https://cohere.com/research/papers/include-evaluating-multilingual-language-understanding-with-regional-knowledge-2024-11-29" }
+      ],
+      "tags": ["Multilingual", "Evaluation", "Inclusive AI"]
+    }
+  ]
+}

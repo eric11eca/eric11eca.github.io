@@ -1,0 +1,21 @@
+[
+    {
+        "name": "Yiyang Feng",
+        "type": "master thesis",
+        "occupation": "PhD Student",
+        "affiliation": "Stony Brook University",
+        "outcompe": "1 EACL 2026 Acceptance"
+    },
+    {
+        "name": "Haotian Wu",
+        "type": "master thesis",
+        "occupation": "Master Student",
+        "affiliation": "EPFL"
+    },
+    {
+        "name": "Benedek Balla",
+        "type": "master project",
+        "occupation": "Master Student",
+        "affiliation": "EPFL"
+    }
+]

@@ -1,0 +1,65 @@
+{
+  "experiences": [
+    {
+      "id": "meta-fair-2025",
+      "company": "Meta FAIR",
+      "logo": "images/meta_logo.svg",
+      "url": "https://metaai.com",
+      "role": "Research Scientist Intern",
+      "year": 2025,
+      "supervisors": [
+        { "name": "Barlas Oğuz", "url": "https://ai.meta.com/people/1474004249915770/barlas-oguz" },
+        { "name": "Scott Yih", "url": "https://scottyih.org" }
+      ]
+    },
+    {
+      "id": "meta-fair-2024",
+      "company": "Meta FAIR",
+      "logo": "images/meta_logo.svg",
+      "url": "https://metaai.com",
+      "role": "Research Scientist Intern",
+      "year": 2024,
+      "supervisors": [
+        { "name": "Ramakanth Pasunuru", "url": "http://www.rama-kanth.com" },
+        { "name": "Asli Celikyilmaz", "url": "http://asli.us" }
+      ]
+    },
+    {
+      "id": "ai2-2022",
+      "company": "AI2 (Allen Institute for AI)",
+      "logo": "images/Ai2_logo.svg",
+      "url": "https://allenai.org",
+      "role": "Research Scientist Intern",
+      "year": 2022,
+      "supervisors": [
+        { "name": "Kyle Richardson", "url": "https://www.nlp-kyle.com" },
+        { "name": "Ashish Sabharwal", "url": "https://allenai.org/team/ashishs" }
+      ]
+    }
+  ],
+  "education": [
+    {
+      "id": "epfl",
+      "institution": "EPFL",
+      "logo": "images/epfl_logo.svg",
+      "url": "https://www.epfl.ch",
+      "degree": "Ph.D. (In Progress)",
+      "majors": ["Computer Science", "AI", "NLP"],
+      "mentors": [
+        { "name": "Antoine Bosselut", "url": "https://atcbosselut.github.io", "affiliation": "EPFL" }
+      ]
+    },
+    {
+      "id": "rose-hulman",
+      "institution": "Rose-Hulman Institute of Technology",
+      "logo": "images/rose_hulman_logo.png",
+      "url": "https://www.rose-hulman.edu",
+      "degree": "Bachelor of Science",
+      "majors": ["Computer Science", "Mathematics"],
+      "mentors": [
+        { "name": "Larry Moss", "url": "https://iulg.sitehost.iu.edu/moss", "affiliation": "Indiana University" },
+        { "name": "Michael Wollowski", "url": "https://www.rose-hulman.edu/~wollowsk", "affiliation": "Rose-Hulman" }
+      ]
+    }
+  ]
+}
