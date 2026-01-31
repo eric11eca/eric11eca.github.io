@@ -1,0 +1,301 @@
+/* =====================================================
+   Dark Mode Stylesheet
+   ===================================================== */
+
+/* CSS Variables for Light Mode (Default) */
+:root {
+  --bg-primary: #ffffff;
+  --bg-secondary: #f5f5f5;
+  --bg-wrapper: #ffffff;
+  --text-primary: #333333;
+  --text-secondary: #666666;
+  --text-link: #0066cc;
+  --text-link-hover: #004499;
+  --border-color: #e0e0e0;
+  --nav-bg: #ffffff;
+  --nav-text: #333333;
+  --nav-hover-bg: #f0f0f0;
+  --button-bg: #f0f0f0;
+  --button-text: #333333;
+  --button-hover-bg: #e0e0e0;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+  --tab-active-bg: #ffffff;
+  --tab-inactive-bg: #f8f9fa;
+  --tab-border: #dee2e6;
+}
+
+/* CSS Variables for Dark Mode */
+[data-theme="dark"] {
+  --bg-primary: #1a1a1a;
+  --bg-secondary: #2d2d2d;
+  --bg-wrapper: #242424;
+  --text-primary: #e0e0e0;
+  --text-secondary: #b0b0b0;
+  --text-link: #6eb4ff;
+  --text-link-hover: #9eccff;
+  --border-color: #404040;
+  --nav-bg: #1f1f1f;
+  --nav-text: #e0e0e0;
+  --nav-hover-bg: #333333;
+  --button-bg: #333333;
+  --button-text: #e0e0e0;
+  --button-hover-bg: #404040;
+  --shadow-color: rgba(0, 0, 0, 0.5);
+  --tab-active-bg: #2d2d2d;
+  --tab-inactive-bg: #1f1f1f;
+  --tab-border: #404040;
+}
+
+/* Smooth Transitions for Theme Changes */
+body,
+.navigation-bar,
+.content-wrapper,
+.white-wrapper,
+.navigation-link,
+.w-nav,
+.nav-link,
+.tab-content,
+.w-richtext,
+.list,
+.list-news,
+.post-info,
+.heading-tight,
+.heading-15 {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Body and Main Background */
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+/* Content Wrapper */
+.content-wrapper {
+  background-color: var(--bg-primary);
+}
+
+/* White Wrapper (Cards/Sections) */
+.white-wrapper {
+  background-color: var(--bg-wrapper) !important;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 2px 8px var(--shadow-color);
+}
+
+/* Navigation Bar */
+.navigation-bar,
+.w-nav {
+  background-color: var(--nav-bg) !important;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.navigation-link,
+.w-nav-link {
+  color: var(--nav-text) !important;
+}
+
+.navigation-link:hover,
+.w-nav-link:hover {
+  background-color: var(--nav-hover-bg);
+}
+
+.site-name {
+  color: var(--text-primary);
+}
+
+/* Text Elements */
+h1, h2, h3, h4, h5, h6,
+.heading-tight,
+.heading-15 {
+  color: var(--text-primary) !important;
+}
+
+p, li, span, div {
+  color: var(--text-primary);
+}
+
+.w-richtext,
+.w-richtext p,
+.w-richtext li {
+  color: var(--text-primary) !important;
+}
+
+/* Links */
+a {
+  color: var(--text-link);
+}
+
+a:hover {
+  color: var(--text-link-hover);
+}
+
+.description-link-highlight {
+  color: var(--text-link) !important;
+}
+
+.description-link-highlight:hover {
+  color: var(--text-link-hover) !important;
+}
+
+/* Lists */
+.list,
+.list-news,
+.list-frontpage,
+.list-item-frontpage,
+.list-item-frontpage-smaller {
+  color: var(--text-primary);
+}
+
+/* Post Info */
+.post-info {
+  color: var(--text-secondary) !important;
+}
+
+/* Tabs */
+.nav-tabs {
+  border-bottom: 1px solid var(--tab-border);
+}
+
+.nav-tabs .nav-link {
+  background-color: var(--tab-inactive-bg);
+  color: var(--text-secondary) !important;
+  border: 1px solid var(--tab-border);
+}
+
+.nav-tabs .nav-link.active {
+  background-color: var(--tab-active-bg) !important;
+  color: var(--text-primary) !important;
+  border-bottom-color: transparent;
+}
+
+.nav-tabs .nav-link:hover {
+  background-color: var(--nav-hover-bg);
+}
+
+.tab-content {
+  background-color: var(--bg-wrapper);
+}
+
+/* Buttons */
+.show-hide-button,
+.w-button {
+  background-color: var(--button-bg);
+  color: var(--button-text) !important;
+  border: 1px solid var(--border-color);
+}
+
+.show-hide-button:hover,
+.w-button:hover {
+  background-color: var(--button-hover-bg);
+}
+
+/* Mobile Menu Button */
+.w-nav-button {
+  color: var(--nav-text);
+}
+
+.w-icon-nav-menu:before,
+.w-icon-nav-menu:after {
+  background: var(--nav-text);
+}
+
+/* Images - Adjust brightness in dark mode */
+[data-theme="dark"] img:not(.icon-image):not(.icon-nav-bar) {
+  opacity: 0.9;
+  filter: brightness(0.9);
+}
+
+[data-theme="dark"] .circle-profile-small-tight {
+  opacity: 1;
+  filter: brightness(1);
+  border: 2px solid var(--border-color);
+}
+
+/* Social Icons */
+.icon-image {
+  filter: var(--icon-filter, none);
+}
+
+[data-theme="dark"] .icon-image {
+  --icon-filter: brightness(0.9) invert(0.9);
+}
+
+/* Dark Mode Toggle Button Styles */
+.dark-mode-toggle {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  margin-left: 20px;
+  cursor: pointer;
+  padding: 8px 12px;
+  background-color: var(--button-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+
+.dark-mode-toggle:hover {
+  background-color: var(--button-hover-bg);
+}
+
+.dark-mode-toggle-icon {
+  font-size: 20px;
+  line-height: 1;
+  transition: transform 0.3s ease;
+}
+
+.dark-mode-toggle:hover .dark-mode-toggle-icon {
+  transform: rotate(20deg);
+}
+
+/* Adjust for mobile responsiveness */
+@media screen and (max-width: 991px) {
+  .dark-mode-toggle {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+
+  .w-nav-menu .dark-mode-toggle {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 10px 0;
+  }
+}
+
+/* Bootstrap Components in Dark Mode */
+[data-theme="dark"] .nav-tabs .nav-item.show .nav-link,
+[data-theme="dark"] .nav-tabs .nav-link.active {
+  background-color: var(--tab-active-bg) !important;
+  border-color: var(--tab-border) var(--tab-border) transparent;
+}
+
+/* Specific element overrides */
+[data-theme="dark"] .book-heading {
+  color: var(--text-primary) !important;
+}
+
+[data-theme="dark"] .italic-text-3,
+[data-theme="dark"] .italic-text-4,
+[data-theme="dark"] .italic-text-5,
+[data-theme="dark"] .italic-text-6 {
+  color: var(--text-secondary) !important;
+}
+
+/* Scrollbar Styling for Dark Mode */
+[data-theme="dark"] ::-webkit-scrollbar {
+  width: 12px;
+}
+
+[data-theme="dark"] ::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+}
+
+[data-theme="dark"] ::-webkit-scrollbar-thumb {
+  background: var(--button-bg);
+  border-radius: 6px;
+}
+
+[data-theme="dark"] ::-webkit-scrollbar-thumb:hover {
+  background: var(--button-hover-bg);
+}

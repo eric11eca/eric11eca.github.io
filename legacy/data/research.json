@@ -1,0 +1,29 @@
+[
+  {
+    "title": "Large-Scale AI Development",
+    "description": "Open-source suite of medical LLMs that has become a pioneering work in large-scale medical foundation models. MEDITRON-70B demonstrates state-of-the-art performance on medical reasoning tasks.",
+    "imageSrc": "images/meditron-logo.png",
+    "imageSrcset": "images/meditron-logo.png 500w, images/meditron-logo.png 800w, images/meditron-logo.png 1080w, images/meditron-logo.png 1600w, images/meditron-logo.png 2000w",
+    "links": [
+      {
+        "url": "https://github.com/epfLLM/meditron",
+        "text": "GitHub",
+        "type": "code"
+      },
+      {
+        "url": "https://huggingface.co/epfl-llm",
+        "text": "Models",
+        "type": "model"
+      }
+    ],
+    "tags": ["Foundation Models", "Medical AI", "Open Source"]
+  },
+  {
+    "title": "Reasoning as Test-Time Learning",
+    "description": "We research on a new paradigm of reasoning as test-time learning where models continue to learn from new information at inference time. Topics include dynamic knowledge integration, long-context reasoning, episodic memory, RL post-training, and Deep Research agents.",
+    "imageSrc": "images/perk_training.png",
+    "imageSrcset": "images/perk_training.png 500w, images/perk_training.png 800w",
+    "links": [],
+    "tags": ["Reasoning", "Test-Time Learning", "Agentic AI"]
+  }
+]
