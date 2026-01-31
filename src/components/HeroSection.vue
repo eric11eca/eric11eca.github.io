@@ -161,7 +161,7 @@ const themeIcons = {
         <!-- Left section: intro + photo -->
         <div class="flex-1 grid lg:grid-cols-2 gap-6 lg:gap-12 items-center">
         <!-- Left: Content -->
-        <div class="space-y-8 animate-fadeInUp">
+        <div class="space-y-8 animate-fadeInUp order-2 lg:order-1">
           <div class="space-y-4">
             <p class="text-[var(--theme-accent)] font-medium tracking-wide uppercase text-sm">
               Ph.D. Candidate @ EPFL NLP Lab
@@ -363,7 +363,7 @@ const themeIcons = {
         </div>
 
         <!-- Right: Photo -->
-        <div class="relative flex justify-center lg:justify-end animate-fadeInUp" style="animation-delay: 0.2s;">
+        <div class="relative flex justify-center lg:justify-end animate-fadeInUp order-1 lg:order-2" style="animation-delay: 0.2s;">
           <div class="relative">
             <!-- Decorative ring -->
             <div class="absolute inset-0 rounded-full bg-gradient-to-br from-[var(--theme-accent)]/20 to-[var(--theme-accent-secondary)]/20 blur-2xl scale-110"></div>
