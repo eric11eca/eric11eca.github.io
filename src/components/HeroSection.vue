@@ -60,10 +60,13 @@ const bioRest = computed(() => {
 })
 
 const socialLinks = [
-  { name: 'Google Scholar', url: 'https://scholar.google.com/citations?user=YOUR_ID', icon: 'scholar' },
+  { name: 'Google Scholar', url: 'https://scholar.google.com/citations?user=-gqyv8cAAAAJ&hl=en', icon: 'scholar' },
   { name: 'GitHub', url: 'https://github.com/eric11eca', icon: 'github' },
   { name: 'Twitter', url: 'https://twitter.com/ZemingEric', icon: 'twitter' },
   { name: 'LinkedIn', url: 'https://linkedin.com/in/zeming-chen', icon: 'linkedin' },
+  { name: 'Semantic Scholar', url: 'https://www.semanticscholar.org/author/Zeming-Chen/2111435018', icon: 'semantic' },
+  { name: 'Hugging Face', url: 'https://huggingface.co/zechen-nlp', icon: 'huggingface' },
+  { name: 'Email', url: 'mailto:zeming.chen@epfl.ch', icon: 'email' },
 ]
 
 const affiliations = [
