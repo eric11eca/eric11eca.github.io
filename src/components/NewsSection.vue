@@ -13,8 +13,12 @@ onMounted(async () => {
 })
 
 // Show all news items (users scroll to see more)
+// const displayedNews = computed(() => {
+//   return [...newsData.value.newsItems, ...newsData.value.oldNewsItems]
+// })
+
 const displayedNews = computed(() => {
-  return [...newsData.value.newsItems, ...newsData.value.oldNewsItems]
+  return [...newsData.value.newsItems]
 })
 
 const parseContent = (item) => {

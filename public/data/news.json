@@ -11,6 +11,16 @@
       ]
     },
     {
+      "date": "Jan 2026",
+      "content": "🔥 Our new work \"MiCRo\" on Modular Reasoning with Brain-Like Specialization is accepted by ICLR 2026!",
+      "links": [
+        {
+          "text": "MiCRo",
+          "url": "https://arxiv.org/abs/2506.13331"
+        }
+      ]
+    },
+    {
       "date": "Nov 2025",
       "content": "🔥 Meditron was highlighted in the Honorary Lecture of Martin Vetterli, Professor and President Emeritus of EPFL",
       "links": [
@@ -22,7 +32,7 @@
     },
     {
       "date": "July 2025",
-      "content": "🔥 Started my 2nd research internship @ Meta FAIR Lab",
+      "content": "🔥 Started my 2nd research internship @ Meta FAIR",
       "links": [
         {
           "text": "Meta FAIR",
@@ -53,7 +63,9 @@
           "url": "https://iclr.cc/"
         }
       ]
-    },
+    }
+  ],
+  "oldNewsItems": [
     {
       "date": "Sep 2024",
       "content": "🔥 Our new paper \"Knowledge-critical subnetworks in LLM\" is accepted by EMNLP 2024 main track!",
@@ -111,9 +123,7 @@
           "url": "https://ai.meta.com/blog/llama-2-3-meditron-yale-medicine-epfl-open-source-llm/"
         }
       ]
-    }
-  ],
-  "oldNewsItems": [
+    },
     {
       "date": "Dec 2023",
       "content": "Our official code repository for the Meditron project has reached over 1k stars on GitHub!!",
