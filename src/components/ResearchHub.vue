@@ -199,7 +199,7 @@ const getTabIcon = (icon) => {
         <div v-for="category in highlightsData.categories" :key="category.id" class="space-y-6">
           <!-- Category Header -->
           <div class="flex items-center gap-4 pb-4 border-b border-[var(--theme-card-border)]">
-            <div class="w-16 h-16 rounded-xl overflow-hidden bg-[var(--theme-surface-container-high)] flex-shrink-0">
+            <div class="w-16 h-16 rounded-xl overflow-hidden bg-[var(--theme-surface-container)] flex-shrink-0">
               <img :src="category.thumbnail" :alt="category.title" class="w-full h-full object-contain" :class="{ 'invert-on-dark': isSvg(category.thumbnail) }" />
             </div>
             <div>
@@ -237,7 +237,7 @@ const getTabIcon = (icon) => {
                 <div class="flex flex-col lg:flex-row gap-6">
                   <!-- Thumbnail -->
                   <div class="w-full sm:w-auto lg:w-64 flex-shrink-0">
-                    <div class="aspect-video rounded-xl overflow-hidden bg-[var(--theme-surface-container)] cursor-zoom-in"
+                  <div class="aspect-video rounded-xl overflow-hidden bg-[var(--theme-surface-container-high)] cursor-zoom-in"
                       @mouseenter="showImagePreview(item.thumbnail, $event)"
                       @mousemove="updatePreviewPosition($event)"
                       @mouseleave="hideImagePreview"
