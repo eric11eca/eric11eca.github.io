@@ -79,7 +79,7 @@ onMounted(async () => {
                 <h3 class="text-[var(--theme-on-surface)] font-medium text-sm hover:text-[var(--theme-accent)] transition-colors">
                   {{ service.conference }}
                 </h3>
-                <span class="text-xs px-2 py-0.5 rounded-full bg-[var(--theme-surface-container-higher)] text-[var(--theme-on-surface-variant)]">
+                <span v-if="service.reviews" class="text-xs px-2 py-0.5 rounded-full bg-[var(--theme-surface-container-higher)] text-[var(--theme-on-surface-variant)]">
                   {{ service.reviews }}
                 </span>
               </div>

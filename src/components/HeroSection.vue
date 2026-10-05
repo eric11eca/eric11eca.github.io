@@ -405,7 +405,7 @@ const themeIcons = {
                 <img
                   :src="img"
                   :alt="`${theme.title} - image ${imgIndex + 1}`"
-                  class="absolute inset-0 w-full h-full object-cover transform group-hover:scale-105 transition-all duration-500"
+                  class="absolute inset-0 w-full h-full object-contain p-2 transform group-hover:scale-105 transition-all duration-500"
                   :class="currentImageIndices[index] === imgIndex ? 'opacity-100' : 'opacity-0'"
                 />
               </template>
@@ -433,7 +433,7 @@ const themeIcons = {
                   {{ theme.title }}
                 </h3>
               </div>
-              <p class="text-[var(--theme-on-surface-variant)] text-sm leading-relaxed line-clamp-3">
+              <p class="text-[var(--theme-on-surface-variant)] text-sm leading-relaxed">
                 {{ theme.description }}
               </p>
               <div class="flex flex-wrap gap-2">
@@ -481,14 +481,6 @@ const themeIcons = {
 </template>
 
 <style scoped>
-.line-clamp-3 {
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  line-clamp: 3;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-}
-
 /* Hide scrollbar on mobile for research cards */
 @media (max-width: 639px) {
   .overflow-x-auto::-webkit-scrollbar {

@@ -237,12 +237,12 @@ const getTabIcon = (icon) => {
                 <div class="flex flex-col lg:flex-row gap-6">
                   <!-- Thumbnail -->
                   <div class="w-full sm:w-auto lg:w-64 flex-shrink-0">
-                  <div class="aspect-video rounded-xl overflow-hidden bg-[var(--theme-surface-container-high)] cursor-zoom-in"
+                  <div class="aspect-video rounded-xl overflow-hidden bg-[var(--theme-surface-container-high)] cursor-zoom-in flex items-center justify-center"
                       @mouseenter="showImagePreview(item.thumbnail, $event)"
                       @mousemove="updatePreviewPosition($event)"
                       @mouseleave="hideImagePreview"
                       @click="openImageModal(item.thumbnail)">
-                      <img :src="item.thumbnail" :alt="item.title" class="w-full h-full object-contain" />
+                      <img :src="item.thumbnail" :alt="item.title" class="max-w-full max-h-full rounded-xl" />
                     </div>
                     <div v-if="item.stats" class="flex flex-wrap gap-2 mt-3">
                       <div v-for="stat in item.stats" :key="stat.label" class="flex-1 basis-0 min-w-fit text-center p-2 rounded-lg bg-[var(--theme-surface-container)]">
@@ -351,12 +351,12 @@ const getTabIcon = (icon) => {
                 <div class="flex flex-col lg:flex-row gap-5">
                   <!-- Thumbnail -->
                   <div class="w-full sm:w-auto lg:w-48 flex-shrink-0">
-                    <div class="aspect-video rounded-lg overflow-hidden bg-[var(--theme-surface-container)] cursor-zoom-in"
+                    <div class="aspect-video rounded-lg overflow-hidden bg-[var(--theme-surface-container)] cursor-zoom-in flex items-center justify-center"
                       @mouseenter="showImagePreview(pub.thumbnail, $event)"
                       @mousemove="updatePreviewPosition($event)"
                       @mouseleave="hideImagePreview"
                       @click="openImageModal(pub.thumbnail)">
-                      <img :src="pub.thumbnail" :alt="pub.title" class="w-full h-full object-contain" />
+                      <img :src="pub.thumbnail" :alt="pub.title" class="max-w-full max-h-full rounded-lg" />
                     </div>
                   </div>
                   <!-- Details -->

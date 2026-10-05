@@ -19,6 +19,26 @@
     "tags": ["Test-Time Training", "Reasoning Aggregation", "LLM"]
   },
   {
+    "id": "dynaview-2026",
+    "title": "DynaVieW: Schema-Guided World Modeling for Understanding Hierarchical Visual Dynamics",
+    "authors": "Silin Gao*, Hao Zhao*, Zeming Chen, Sepideh Mamooler, Antara Raaghavi Bhattacharya, Qiyu Wu, Hiromi Wakaki, Yuki Mitsufuji, Li Mi, Syrielle Montariol, Antoine Bosselut",
+    "venue": "ICML 2026",
+    "venueName": "The 43rd International Conference on Machine Learning",
+    "venueLink": "https://icml.cc/Conferences/2026",
+    "year": 2026,
+    "type": "conference",
+    "award": null,
+    "presentation": null,
+    "abstract": "Multimodal LLMs struggle to systematically model the temporal evolution of visual scenes in videos or multi-image sequences. Such inputs require models to predict or simulate multiple levels of dynamic constituents, such as actions taken in the visual sequence, and the associated changes to the visual environment that result. To address this challenge, we propose a dynamic schema-guided world model, DynaVieW, optimized for visual dynamic prediction and simulation. DynaVieW achieves an in-depth understanding of visual dynamics by learning interleaved state-transition sequences, where states cover broad visual scenes from video keyframes, and transitions capture comprehensive dynamic constituents within a hierarchical schema. DynaVieW jointly models transition prediction and state simulation under a mixture-of-experts architecture, with a cross-expert selective attention and a schema token re-weighted loss, to ensure effective and robust learning. DynaVieW's understanding of visual dynamics boosts its downstream performance in visual narrative creation and world simulation, showing improved consistency, controllability, and instruction-following.",
+    "thumbnail": "/images/dynaview.png",
+    "links": {
+      "arxiv": "https://arxiv.org/abs/2607.04112",
+      "code": "https://github.com/Silin159/DynaVieW"
+    },
+    "media": [],
+    "tags": ["World Models", "Multimodal LLMs", "Visual Dynamics"]
+  },
+  {
     "id": "perk-2026",
     "title": "PERK: Long-Context Reasoning as Parameter-Efficient Test-Time Learning",
     "authors": "Zeming Chen, Angelika Romanou, Gail Weiss, Antoine Bosselut",

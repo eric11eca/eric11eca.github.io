@@ -1,5 +1,25 @@
 [
     {
+        "conference": "NeurIPS 2026",
+        "url": "https://neurips.cc/Conferences/2026",
+        "role": "Reviewer"
+    },
+    {
+        "conference": "ICML 2026",
+        "url": "https://icml.cc/Conferences/2026",
+        "role": "Reviewer"
+    },
+    {
+        "conference": "ICLR 2026",
+        "url": "https://iclr.cc/Conferences/2026",
+        "role": "Reviewer"
+    },
+    {
+        "conference": "NeurIPS 2025",
+        "url": "https://neurips.cc/Conferences/2025",
+        "role": "Reviewer"
+    },
+    {
         "conference": "EMNLP 2024",
         "url": "https://2024.emnlp.org/",
         "reviews": "4 reviews",
