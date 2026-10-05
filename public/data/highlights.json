@@ -41,6 +41,24 @@
       "tags": ["AI for Medicine", "Large Foundation Models", "Open Source"]
     },
     {
+      "id": "coral-highlight",
+      "category": "reasoning-ttl",
+      "title": "CORAL: Consolidating Reasoning with Test-Time Learning",
+      "subtitle": "Consolidate multi-agent reasoning by learning from them at test time",
+      "description": "CORAL learns from the reasoning trajectories of multiple agents at test time and consolidates them into a stronger collective solution. A meta-learned LoRA adapter internalizes the full ensemble of trajectories through test-time training, and the adapted model then synthesizes a stronger solution, even when no individual agent got it right.",
+      "tldr": "Can we learn from multi-agent reasoning trajectories at test time and consolidate them into a stronger collective solution? CORAL meta-learns to consolidate an ensemble of reasoning trajectories into a lightweight LoRA adapter via test-time training, then synthesizes a final solution from the adapted model. Trained on our new OpenParallelThinking corpus (12.8K math problems with trajectories from six LLMs), CORAL outperforms the best aggregation baselines by 20% on math and STEM benchmarks, stays robust to noisy trajectories, and can even recover correct solutions when every input trajectory is wrong.",
+      "thumbnail": "/images/coral.png",
+      "stats": [
+        { "value": "NeurIPS", "label": "2026" },
+        { "value": "TTT", "label": "Multi-Agent" }
+      ],
+      "links": {
+        "paper": "/papers/coral/index.html"
+      },
+      "media": [],
+      "tags": ["Reasoning", "Test-Time Training", "Parallel Thinking"]
+    },
+    {
       "id": "perk-highlight",
       "category": "reasoning-ttl",
       "title": "PERK: Long-Context Reasoning as Parameter-Efficient Test-Time Learning",

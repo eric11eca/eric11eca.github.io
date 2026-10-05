@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/jpeg" href="/images/zemingchen-identity.jpeg" />
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-E7EBQHCPGC"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-E7EBQHCPGC');
+    </script>
+    <script>
+      // Match the theme chosen on the main site (see src/composables/useTheme.js)
+      (function () {
+        var stored = null;
+        try { stored = localStorage.getItem('theme'); } catch (e) {}
+        var dark = stored ? stored === 'dark' : window.matchMedia('(prefers-color-scheme: dark)').matches;
+        document.documentElement.className = dark ? 'dark' : 'light';
+      })();
+    </script>
+
+    <title>CORAL: Consolidating Reasoning with Test-Time Learning | NeurIPS 2026</title>
+    <meta name="description" content="CORAL (Consolidating Reasoning with Test-Time Learning) — Haotian Wu, Zeming Chen, Hao Zhao, Antoine Bosselut. NeurIPS 2026." />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="CORAL: Consolidating Reasoning with Test-Time Learning" />
+    <meta property="og:description" content="Aggregating parallel reasoning trajectories by consolidating them into parametric memory with test-time training. NeurIPS 2026." />
+    <meta property="og:image" content="/images/coral.png" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+      :root, .dark {
+        --surface: #121317;
+        --surface-high: #212226;
+        --surface-higher: #2f3034;
+        --on-surface: #f8f9fc;
+        --on-surface-variant: #b2bbc5;
+        --accent: #4285f4;
+        --accent-hover: #5a9cf4;
+        --border: #2f3034;
+        color-scheme: dark;
+      }
+      .light {
+        --surface: #ffffff;
+        --surface-high: #f0f2f5;
+        --surface-higher: #e6eaf0;
+        --on-surface: #121317;
+        --on-surface-variant: #4b5563;
+        --accent: #2563eb;
+        --accent-hover: #1d4ed8;
+        --border: #e5e7eb;
+        color-scheme: light;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        font-family: 'Inter', system-ui, -apple-system, sans-serif;
+        line-height: 1.6;
+        background: var(--surface);
+        color: var(--on-surface);
+        -webkit-font-smoothing: antialiased;
+      }
+      main { max-width: 64rem; margin: 0 auto; padding: 2rem 1rem 3rem; }
+      a { color: var(--accent); }
+      .back { display: inline-block; font-size: 0.875rem; text-decoration: none; margin-bottom: 1.5rem; }
+      .back:hover { text-decoration: underline; }
+      .venue { font-size: 0.875rem; font-weight: 600; color: var(--accent); margin: 0; }
+      h1 {
+        font-family: 'Space Grotesk', 'Inter', system-ui, sans-serif;
+        font-size: clamp(1.5rem, 4vw, 2.25rem);
+        line-height: 1.2;
+        margin: 0.25rem 0 0.75rem;
+      }
+      .authors { color: var(--on-surface-variant); margin: 0; }
+      .authors strong { color: var(--on-surface); font-weight: 600; }
+      .note { color: var(--on-surface-variant); font-size: 0.8125rem; margin: 0.25rem 0 0; }
+      .actions { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 1.25rem 0; }
+      .btn {
+        display: inline-flex; align-items: center; padding: 0.5rem 0.875rem; border-radius: 0.5rem;
+        font-size: 0.8125rem; font-weight: 500; text-decoration: none;
+        background: var(--surface-higher); color: var(--on-surface);
+      }
+      .btn.primary { background: var(--accent); color: #fff; }
+      .btn.primary:hover { background: var(--accent-hover); }
+      figure { margin: 0 0 1.5rem; }
+      figure img { width: 100%; height: auto; border-radius: 0.75rem; background: #fff; padding: 0.5rem; }
+      details {
+        background: var(--surface-high); border: 1px solid var(--border);
+        border-radius: 0.75rem; padding: 1rem 1.25rem; margin-bottom: 1.5rem;
+      }
+      summary { cursor: pointer; font-weight: 600; }
+      details p { color: var(--on-surface-variant); margin: 0.75rem 0 0; }
+      .viewer {
+        width: 100%; height: 90vh; border: 1px solid var(--border);
+        border-radius: 0.75rem; background: var(--surface-high);
+      }
+      pre {
+        background: var(--surface-high); border: 1px solid var(--border); border-radius: 0.75rem;
+        padding: 1rem; overflow-x: auto; font-size: 0.8125rem;
+      }
+      h2 { font-size: 1.125rem; margin: 2rem 0 0.75rem; }
+    </style>
+  </head>
+  <body>
+    <main>
+      <a class="back" href="/">&larr; Zeming Chen</a>
+
+      <p class="venue">NeurIPS 2026</p>
+      <h1>CORAL: Consolidating Reasoning with Test-Time Learning</h1>
+      <p class="authors">Haotian Wu*, <strong>Zeming Chen*</strong>, Hao Zhao, Antoine Bosselut</p>
+      <p class="note">EPFL, Switzerland &middot; *Equal contribution</p>
+
+      <div class="actions">
+        <a class="btn primary" href="coral-neurips-2026.pdf" target="_blank" rel="noopener">Open PDF</a>
+        <a class="btn" href="coral-neurips-2026.pdf" download>Download PDF</a>
+      </div>
+
+      <figure>
+        <img src="/images/coral.png" alt="Overview of CORAL: an inner loop encodes reasoning trajectories into a LoRA reasoning aggregator via an NLL loss, and an outer loop trains it to synthesize the aggregated solution via distillation or RLVR." />
+      </figure>
+
+      <details>
+        <summary>Abstract</summary>
+        <p>Parallel thinking scales inference-time compute by generating multiple reasoning traces for a query and aggregating them to reach a final answer. However, most aggregation algorithms treat each reasoning trajectory independently, ignoring the complementary reasoning sub-processes across the full ensemble of trajectories. To learn from these parallel trajectories, we propose CORAL (Consolidating Reasoning with Test-Time Learning), a novel framework for aggregating trajectories by jointly consolidating them into parametric memory using test-time training. Our algorithm meta-learns <em>how to consolidate</em> using nested optimization at training time, where an inner loop encodes reasoning trajectories into a lightweight LoRA adapter, and an outer loop learns meta-parameters for the inner loop such that the consolidation is helpful for the model to synthesize a final solution.</p>
+        <p>As no standard datasets exist for training aggregation methods, we construct a novel <em>OpenParallelThinking</em> corpus composed of 12,810 math problems paired with a mixture of diverse trajectories from six LLMs. Evaluated on challenging mathematics and STEM benchmarks, CORAL consistently outperforms the best aggregation baselines by 20% overall. Importantly, we curate reasoning trajectories at multiple quality levels to simulate the reality of noisy parallel reasoning and demonstrate that CORAL is especially robust to the quality of thinking trajectories and able to learn useful knowledge from entirely wrong solutions. Additionally, CORAL can recover from unsuccessful trajectories and arrive at an improved solution through consolidation as test-time learning, an ability that scales with the number of incorrect trajectories available, while RL further improves the adapted policy's ability to reason over the consolidated trajectories. We will release CORAL and <em>OpenParallelThinking</em> for use in future work on reasoning aggregation.</p>
+      </details>
+
+      <object class="viewer" data="coral-neurips-2026.pdf#view=FitH" type="application/pdf" aria-label="CORAL paper PDF">
+        <p>Your browser cannot display the PDF inline. <a href="coral-neurips-2026.pdf">Open the PDF</a> instead.</p>
+      </object>
+
+      <h2>BibTeX</h2>
+      <pre><code>@inproceedings{wu2026coral,
+  title     = {Consolidating Reasoning with Test-Time Learning},
+  author    = {Wu, Haotian and Chen, Zeming and Zhao, Hao and Bosselut, Antoine},
+  booktitle = {Advances in Neural Information Processing Systems},
+  year      = {2026}
+}</code></pre>
+    </main>
+  </body>
+</html>

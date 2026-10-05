@@ -1,5 +1,24 @@
 [
   {
+    "id": "coral-2026",
+    "title": "CORAL: Consolidating Reasoning with Test-Time Learning",
+    "authors": "Haotian Wu*, Zeming Chen*, Hao Zhao, Antoine Bosselut",
+    "venue": "NeurIPS 2026",
+    "venueName": "The 40th Conference on Neural Information Processing Systems",
+    "venueLink": "https://neurips.cc/Conferences/2026",
+    "year": 2026,
+    "type": "conference",
+    "award": null,
+    "presentation": null,
+    "abstract": "Can we learn from multi-agent reasoning trajectories at test time and consolidate them into a stronger collective solution? CORAL meta-learns to consolidate an ensemble of reasoning trajectories into a lightweight LoRA adapter via test-time training, then synthesizes a final solution from the adapted model. Trained on our new OpenParallelThinking corpus (12.8K math problems with trajectories from six LLMs), CORAL outperforms the best aggregation baselines by 20% on math and STEM benchmarks, stays robust to noisy trajectories, and can even recover correct solutions when every input trajectory is wrong.",
+    "thumbnail": "/images/coral.png",
+    "links": {
+      "arxiv": "/papers/coral/index.html"
+    },
+    "media": [],
+    "tags": ["Test-Time Training", "Reasoning Aggregation", "LLM"]
+  },
+  {
     "id": "perk-2026",
     "title": "PERK: Long-Context Reasoning as Parameter-Efficient Test-Time Learning",
     "authors": "Zeming Chen, Angelika Romanou, Gail Weiss, Antoine Bosselut",

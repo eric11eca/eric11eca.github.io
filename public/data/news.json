@@ -1,6 +1,16 @@
 {
   "newsItems": [
     {
+      "date": "Sep 2026",
+      "content": "🔥 Our new work \"CORAL\" on Consolidating Reasoning with Test-Time Learning is accepted by NeurIPS 2026!",
+      "links": [
+        {
+          "text": "CORAL",
+          "url": "/papers/coral/index.html"
+        }
+      ]
+    },
+    {
       "date": "Jan 2026",
       "content": "🔥 Our new work \"PERK\" on Long-Context Reasoning with Test-Time Learning is accepted by ICLR 2026!",
       "links": [

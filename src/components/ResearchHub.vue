@@ -244,10 +244,10 @@ const getTabIcon = (icon) => {
                       @click="openImageModal(item.thumbnail)">
                       <img :src="item.thumbnail" :alt="item.title" class="w-full h-full object-contain" />
                     </div>
-                    <div v-if="item.stats" class="grid grid-cols-3 gap-2 mt-3">
-                      <div v-for="stat in item.stats" :key="stat.label" class="text-center p-2 rounded-lg bg-[var(--theme-surface-container)]">
-                        <p class="text-sm font-bold text-[var(--theme-accent)]">{{ stat.value }}</p>
-                        <p class="text-xs text-[var(--theme-on-surface-variant)]">{{ stat.label }}</p>
+                    <div v-if="item.stats" class="flex flex-wrap gap-2 mt-3">
+                      <div v-for="stat in item.stats" :key="stat.label" class="flex-1 basis-0 min-w-fit text-center p-2 rounded-lg bg-[var(--theme-surface-container)]">
+                        <p class="text-sm font-bold text-[var(--theme-accent)] whitespace-nowrap">{{ stat.value }}</p>
+                        <p class="text-xs text-[var(--theme-on-surface-variant)] whitespace-nowrap">{{ stat.label }}</p>
                       </div>
                     </div>
                   </div>
