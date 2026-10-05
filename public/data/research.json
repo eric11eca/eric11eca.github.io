@@ -24,6 +24,7 @@
     "title": "Reasoning as Test-Time Learning",
     "description": "A crucial challenge for the current AI systems is \"How to achieve continual learning?\" I research on new methods for test-time learning, a paradigm where models continue to learn from new information and experiences at inference time. I am interested in reformulating AI reasoning as test-time learning with applications to RL post-training and Deep Research.",
     "images": [
+      "/images/coral.png",
       "/images/perk_training.png",
       "/images/meta-kg.png"
     ],
